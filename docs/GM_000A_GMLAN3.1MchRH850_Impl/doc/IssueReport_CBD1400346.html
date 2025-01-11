@@ -1,0 +1,1466 @@
+---
+layout: default
+title: IssueReport_CBD1400346
+nav_order: 10
+parent: Component Implementation
+---
+{% raw %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title></title>
+  <meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
+  <meta name="created" content="00:00:00"/>
+  <meta name="changed" content="00:00:00"/>
+</head>
+<body>
+<h1></h1>
+<p><b>Issue Report</b></p>
+<p>1</p>
+<p><b>License Number</b></p>
+<p><b>Customer</b></p>
+<p>CBD1400346</p>
+<p>Nexteer Automotive Corporation</p>
+<p>Package: GMLAN 3.1</p>
+<p>Micro: R7F701308</p>
+<p>Compiler: GHS 2013.5.5</p>
+<p><b>Maintenance Expiry Date</b></p>
+<p>2014-08-01</p>
+<p><b>SIP Delivery Date</b></p>
+<p><b>SIP Version</b></p>
+<p>2014-07-03</p>
+<p>01.01.24</p>
+<p><b>SLP</b></p>
+<p><b>Delivery Number</b></p>
+<p>GMLAN 3.1</p>
+<p>D00</p>
+<p><b>Report Creation Date</b></p>
+<p>2014-07-11</p>
+<p><b>Contact</b></p>
+<p>In case of questions or the need for an update of the basic software delivery, please contact </p>
+<p>GMSupport@us.vector.com or your Vector contact person.</p>
+<p><b>Table of Contents</b></p>
+<p><b>1.</b></p>
+<p><b>Introduction</b></p>
+<p><b>1.1 Resolving Issues</b></p>
+<p><b>1.2 Issue Classification</b></p>
+<p><b>2.</b></p>
+<p><b>New Issues</b></p>
+<p><b>2.1 Runtime Issues without Workaround:</b> <b>2</b></p>
+<p><b>2.2 Runtime Issues with Workaround:</b> <b>6</b></p>
+<p><b>2.3 Apparent Issues:</b> <b>15</b></p>
+<p><b>2.4 Compiler Warnings:</b> <b>10</b></p>
+<p><b>3.</b></p>
+<p><b>New Issues for Information:</b></p>
+<p> </p>
+<p><b>0</b></p>
+<p><b>4.</b></p>
+<p><b>Report Legend</b></p>
+<p><b>5.</b></p>
+<p><b>Quality Management Contact</b></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>2</p>
+<p><b>1. Introduction</b></p>
+<p><b>1.1 Resolving Issues</b></p>
+<p>Reported issues are not necessarily fixed automatically by the next update delivery. If some of the </p>
+<p>reported issues shall be fixed, please contact Vector to establish an agreement about issues that </p>
+<p>shall be fixed in upcoming deliveries. Please note that Vector may fix additional issues without </p>
+<p>explicit request.</p>
+<p><b>1.2 Issue Classification</b></p>
+<p>This Issue Report provides issues that have been detected since the last report. The issues have </p>
+<p>been classified to facilitate the assessment of their impact:</p>
+<p>The chapter 'New Issues' lists issues that have been detected since the last report and which could </p>
+<p>not be excluded based on the use-case defined in the questionnaire. The issues are classified as </p>
+<p>follows:</p>
+<p>•</p>
+<p><b>Runtime Issues without Workaround: </b>Runtime issues without a workaround require an </p>
+<p>update of the basic software delivery in case the issue affects the ECU overall functionality. </p>
+<p>The effect of an issue to the ECU functionality has to be analyzed by the customer as the basic </p>
+<p>software usage and its configuration is not known by Vector. The risk of change has also to be </p>
+<p>taken into account.</p>
+<p>•</p>
+<p><b>Runtime Issues with Workaround: </b>It is not recommended to update a delivery due to a </p>
+<p>runtime issue with a documented workaround. The effect of an issue to the ECU functionality </p>
+<p>has to be analyzed by the customer as the basic software usage and its configuration is not </p>
+<p>known by Vector. The risk of change has also to be taken into account.</p>
+<p>•</p>
+<p><b>Compiler Warnings: </b>As a service we report the known compiler warnings. The occurrence of </p>
+<p>a compiler warning may depend on the used configuration and compiler settings.</p>
+<p>•</p>
+<p><b>Apparent Issues: </b>Apparent issues are detected immediately when using the basic software. </p>
+<p>If an issue does not show up while working with the basic software the ECU project is not </p>
+<p>affected by the issue. Apparent issues may or may not have workarounds.</p>
+<p>The chapter 'New Issues for Information' lists issues that are not relevant for the use case that </p>
+<p>has been documented in the questionnaire provided to Vector. The issues may, however, be </p>
+<p>relevant for other use cases. Additionally, issues that have been accepted or are tolerated by the </p>
+<p>OEM (as defined in the questionnaire) are reported here.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>3</p>
+<p><b>2. New Issues</b></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>4</p>
+<p><b>2.1 Runtime Issues without Workaround</b></p>
+<p>The lists contain issues that have been detected since the last report and which could not be </p>
+<p>excluded based on the use-cases defined in the questionnaire (see chapter ‘New Issues for </p>
+<p>Information’).</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>5</p>
+<p><b>ESCAN00074189</b></p>
+<p><b>Service 0x2C: A PID declined by the application via </b></p>
+<p><b>pre-handler is skipped for the DPID definition</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.06.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p> </p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>During the definition of a DPID with service 0x2C, when the application declines a PID in its pre-</p>
+<p>handler (by setting a NRC) a positive response is sent instead of a negative response with NRC </p>
+<p>0x31.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During runtime.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Protocol == KWP</p>
+<p>AND</p>
+<p>Service 0x2C is used</p>
+<p>AND</p>
+<p>Pre-Handler for PIDs are used</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>6</p>
+<p><b>ESCAN00076278</b></p>
+<p><b>StateOn flag return value may be incorrect</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Il_Vector_Gm@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p> </p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The value reported by the StateOn flag (IlGet&lt;signal&gt;RxStateOn) may be incorrect.</p>
+<p>- It may return true (non-zero) even though no relevant VN is active</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The issue is observed at runtime, but it is caused by an incorrectly generated macro. If the macro </p>
+<p>is generated incorrectly, the runtime behavior is consistent and reproducible (it occurs each and </p>
+<p>every time).</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In MultiChannel Configurations with State On Flags.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<p><b>2.2 Runtime Issues with Workaround</b></p>
+<p>It is not recommended to update a delivery due to a runtime issue with a documented </p>
+<p>workaround. The effect of an issue to the ECU functionality has to be analyzed by the customer as </p>
+<p>the basic software usage and its configuration is not known by Vector. Thereby the risk of change </p>
+<p>has also to be taken into account. </p>
+<p><b>Index</b></p>
+<p>ESCAN00027894</p>
+<p>Memory is overwritten when initializing the CANBedded Stack</p>
+<p>Nm_Gmlan_Gm@Implementation</p>
+<p>ESCAN00045854</p>
+<p>An incorrect timeout is issued for Flow Control and Consecutive Frame timing </p>
+<p>supervision.</p>
+<p>Tp_Iso15765@GenTool_Geny</p>
+<p>ESCAN00067827</p>
+<p>Rh850Rscan only: CAN communication shows undefined behavior</p>
+<p>DrvCan__baseRi14Hll@GenTool_Geny</p>
+<p>ESCAN00068912</p>
+<p>Positive response to service $A5 03 not suppressed</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00073999</p>
+<p>Signal handler names have wrong names after deletion of some signals of a </p>
+<p>DID</p>
+<p>Diag_CanDesc__coreBase@GenTool_Geny_CANdesc</p>
+<p>ESCAN00076096</p>
+<p>Periodic response of a DPID requested with service $AA return wrong data</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>7</p>
+<p><b>ESCAN00027894</b></p>
+<p><b>Memory is overwritten when initializing the </b></p>
+<p><b>CANBedded Stack</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Nm_Gmlan_Gm@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.30.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Memory is overwritten when initializing the CANBedded Stack.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The issue occurs always and immediately if CclInitPowerOn or IlInitPowerOn is called with the </p>
+<p>configuration mentioned below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Any configuration, where the number of Nm Channels differs from the number of Can Channels.</p>
+<p>Hint: The generated define in kCanNumberOfChannels in can_cfg.h differs from </p>
+<p>kNmNumberOfChannels generated to nm_cfg.h</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Do not call IlInitPowerOn in the application. Instead, call IlInit for each channel which uses the </p>
+<p>Interaction Layer.</p>
+<p>Note for GM ECUs: If the Interaction Layer is not used on the first channel in GENy (channel index </p>
+<p>0), the application must additionally call CanInitPowerOn before IlInit.</p>
+<p>Example:</p>
+<p>The ECU has three CAN channels, where the Interaction Layer is only used on the first two.</p>
+<p>IlInit(0); /* Initialize the IL on CAN channel 0 */</p>
+<p>IlInit(1); /* Initialize the IL on CAN channel 1 */</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>8</p>
+<p><b>ESCAN00045854</b></p>
+<p><b>An incorrect timeout is issued for Flow Control and </b></p>
+<p><b>Consecutive Frame timing supervision.</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Tp_Iso15765@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>An incorrect timeout is issued for Flow Control (TX) and Consecutive Frame (RX) timing </p>
+<p>supervision in case of large timeouts.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During runtime at transmission and/or reception of multi frames.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This can only appear if channel specific timing is activated (#if defined </p>
+<p>TP_CHANNEL_SPECIFIC_TIMING)</p>
+<p>AND </p>
+<p>the configured timeout values are greater than 255 &quot;ticks&quot;.</p>
+<p>Please note that the number of &quot;ticks&quot; is calculated by dividing the configured timeout value by </p>
+<p>the configured periodic cycle time of the TP.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Use smaller timeouts or increase the call-cycle of the TP task functions.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>9</p>
+<p><b>ESCAN00067827</b></p>
+<p><b>Rh850Rscan only: CAN communication shows </b></p>
+<p><b>undefined behavior</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>DrvCan__baseRi14Hll@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>2.06.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>CAN communication shows undefined behavior</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Anytime during runtime (init, rx, tx, ..)</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Only for platform Rh850 with Rscan cell</p>
+<p>All configurations that use any of the physical channels CAN5, CAN6 or CAN7</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Do not use physical channels CAN5, CAN6 or CAN7.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>10</p>
+<p><b>ESCAN00068912</b></p>
+<p><b>Positive response to service $A5 03 not suppressed</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.12.01</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The positive response to service $A5 03 is not suppressed. </p>
+<p>AND possibly</p>
+<p>The following compiler warning occurs:</p>
+<p> static void DescOemEnableProgrammingMode(DescMsgContext *pMsgContext)</p>
+<p> ^</p>
+<p>&quot;desc.c&quot;, Warning[Pe177]: </p>
+<p> function &quot;DescOemEnableProgrammingMode&quot; was declared but never referenced</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At runtime/compile time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Configurations created in an older delivery affected by ESCAN00061312:</p>
+<p>&quot;Not possible to support negative responses while suppressing positive response for service $A5 </p>
+<p>03&quot;</p>
+<p>AND</p>
+<p>The 'Reload all description files' button on the 'Diag_CanDesc_Kwp' page in GENy has NOT been </p>
+<p>pressed at least once since moving from the older delivery.</p>
+<p>Hint:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This issue has been analyzed thoroughly and will not be fixed due to the following reasons:</p>
+<p>a) In GENy there is no reasonable possibility to detect that an old configuration has been loaded </p>
+<p>which would require a reload of the CDD.</p>
+<p>b) The issue only occurs in a migration scenario with an old GENy configuration from a previous </p>
+<p>delivery and a new delivery using that configuration.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Press the 'Reload all description files' button on the 'Diag_CanDesc_Kwp' page in GENy and then </p>
+<p>save the configuration. This process only needs to be done once.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>11</p>
+<p><b>ESCAN00073999</b></p>
+<p><b>Signal handler names have wrong names after </b></p>
+<p><b>deletion of some signals of a DID</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@GenTool_Geny_CANdesc</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>After reloading a modified CDD-file, where signals of a DID were deleted, the signal handler the </p>
+<p>DID have the names of the deleted signals.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>After deleting some signals within a signal list of a DID in CANdela-Studio and reloading the </p>
+<p>modified CDD-File</p>
+<p>within GENy.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Signal handlers are used</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Empty the field &quot;CANdela document name&quot; and click &quot;Reload all description files&quot;. The </p>
+<p>configuration is now empty and no old names are stored. Afterwards import the CDD file again.</p>
+<p>OR</p>
+<p>For the affected signals change the Signal Handler Type to &quot;Direct Access&quot; and back to &quot;Signal </p>
+<p>Handler&quot; again</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>12</p>
+<p><b>ESCAN00076096</b></p>
+<p><b>Periodic response of a DPID requested with service </b></p>
+<p><b>$AA return wrong data</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.02.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The periodic response for a DPID requested with service $AA contains wrong data</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During runtime when the following situation occurs:</p>
+<p>- One or more DPIDs are requested with service $AA in a specific rate</p>
+<p>- For one DPID the data of it's source PIDs is currently read from the application</p>
+<p>- During the read out process the reporting of all DPIDs is stopped</p>
+<p>- Before the reading is finished the reporting of a DPID is requested again</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Service $AA is used </p>
+<p>AND</p>
+<p>((Service $2C is used) OR (The source PIDs of a DPID are asynchronous))</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Use the High-Performance Mode in CANdesc. The utilization is described in the TechnicalReference </p>
+<p>in the API description of &quot;DescMayCallStateTaskAgain&quot;.</p>
+<p>In case at least one source PID used for DPIDs is asynchronous (that means the application can't </p>
+<p>always provide the data for the PID in the first function call to the application), change the </p>
+<p>application so the data is always available on the first call of the application function (make the </p>
+<p>PID synchronous).</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>13</p>
+<p><b>2.3 Apparent Issues</b></p>
+<p>Apparent issues are detected immediately when using the basic software. If an issue does not </p>
+<p>show up while working with the basic software the ECU project is not affected by the issue. </p>
+<p>Apparent issues may or may not have workarounds. </p>
+<p><b>Index</b></p>
+<p>ESCAN00049589</p>
+<p>Compile error: direct signal access feature in CANdesc does not consider far </p>
+<p>memory pointers</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00055957</p>
+<p>appdesc.c missing line feed (LF) after carraige return (CR) on some lines</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00069542</p>
+<p>Missing description that initially active VNs are no more activated upon power </p>
+<p>on</p>
+<p>Nm_Gmlan_Gm@Doc_TechRef</p>
+<p>ESCAN00069732</p>
+<p>Objects are not handled by interrupt or polling as configured in the Individual </p>
+<p>Polling view</p>
+<p>DrvCan__baseRi15@GenTool_Geny</p>
+<p>ESCAN00069876</p>
+<p>Incorrect Description for Calibration Attribute nmMaxApplShutDownDenyCnt</p>
+<p>CBD_TechRef_GmlanCalibration@Doc_TechRef</p>
+<p>ESCAN00070445</p>
+<p>The P2 timings can be changed in the tool GUI but the new values have no </p>
+<p>effect on CANdesc code generation</p>
+<p>Diag_CanDesc__coreBase@GenTool_Geny_CANdesc</p>
+<p>ESCAN00070517</p>
+<p>Compiler error: missing constant kDescStateSessionDefault</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00071069</p>
+<p>The description of service 0x12 is out-dated</p>
+<p>Diag_CanDesc_Oem@Doc_TechRef_Kwp_Gm</p>
+<p>ESCAN00071131</p>
+<p>Wrong API name &quot;DescApplSendSpontaneousResponse&quot; in Technical Reference</p>
+<p>Diag_CanDesc__coreBase@Doc_TechRef</p>
+<p>ESCAN00073848</p>
+<p>Tester present timeout occurs too early after a 0x28 request</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00074878</p>
+<p>a2l error: The parameter SAMPLE_RATE is always 0</p>
+<p>Cp_XcpOnCan@GenTool_Geny</p>
+<p>ESCAN00075459</p>
+<p>TpRxGetAssignedDestination returns wrong destination</p>
+<p>Tp_Iso15765@Implementation</p>
+<p>ESCAN00076138</p>
+<p>GENy does not respond when importing CDD files</p>
+<p>Diag_Geny_coreBase@GenTool_Geny</p>
+<p>ESCAN00076840</p>
+<p>Missing pre-conditions in the API description of </p>
+<p>DescApplSendSpontaneousResponse</p>
+<p>Diag_CanDesc__coreBase@Doc_TechRef</p>
+<p>ESCAN00076879</p>
+<p>Comment for Messages wrong - Generated code is not affected</p>
+<p>DrvCan__base@GenTool_Geny</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>14</p>
+<p><b>ESCAN00049589</b></p>
+<p><b>Compile error: direct signal access feature in </b></p>
+<p><b>CANdesc does not consider far memory pointers</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compile error for mismatching pointer type assignment.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At compile time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>- CANdesc</p>
+<p>AND</p>
+<p>- Direct signal access to RAM/ROM objects is used.</p>
+<p>AND</p>
+<p>- FAR memory</p>
+<p>Some services such as the UDS ones 0x22/0x2A and 0x2E, can be processed on signal level. If </p>
+<p>they are processed on signal level it is possible to choose &quot;Direct Access&quot; as Signal </p>
+<p>Handler Type. In this case, CANdesc reads or writes the value of signal direct of/to a variable. </p>
+<p>(The name of the variable is configured in the cdd file or GENy.) If this variable</p>
+<p>is located in FAR memory a Compiler/Linker warning or error will occur. </p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Avoid direct signal access to such objects and implement the main-handler within the application </p>
+<p>code. (Choose &quot;Signal Handler&quot; for the Signal Handler Type and copy the</p>
+<p>data that is located in the FAR memory in the application callback for this signal.)</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>15</p>
+<p><b>ESCAN00055957</b></p>
+<p><b>appdesc.c missing line feed (LF) after carraige </b></p>
+<p><b>return (CR) on some lines</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.07.26</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The appdesc.c file is missing the line feed (LF) character at the end of certain lines. It should </p>
+<p>follow the carraige return (CR) character. This will cause compilers and debuggers to display the </p>
+<p>incorrect line of source code. Additionally, some IDEs will complain that the line feed character is </p>
+<p>missing.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At generation time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>All configurations.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>16</p>
+<p><b>ESCAN00069542</b></p>
+<p><b>Missing description that initially active VNs are no </b></p>
+<p><b>more activated upon power on</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Nm_Gmlan_Gm@Doc_TechRef</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.01.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Chapters 3.3 &quot;VN Concept&quot; and 4.2 &quot;Normal Operation&quot; states that initially active VNs are </p>
+<p>activated upon power on.</p>
+<p>This is not correct. Since implementation version 4.02.00 initially active VNs are only activated </p>
+<p>upon reception or transmission of a HLVW message.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When reading the technical reference.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In configurations with initially active VNs.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>17</p>
+<p><b>ESCAN00069732</b></p>
+<p><b>Objects are not handled by interrupt or polling as </b></p>
+<p><b>configured in the Individual Polling view</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>DrvCan__baseRi15@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>1.05.01</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Not all configured BasicCAN objects are visible in the Individual Polling view of GENy.</p>
+<p>AND</p>
+<p>Any objects are not handled by interrupt or polling as configured in the Individual Polling view.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always after adding a further CAN channel while configuring and then anytime during runtime.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Individual Polling is enabled</p>
+<p>AND</p>
+<p>Multiple BasicCAN is enabled</p>
+<p>AND</p>
+<p>more than one BasicCAN object is configured</p>
+<p>AND</p>
+<p>more than one CAN channel is configured</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>API Extensions:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No extension of the API.</p>
+<p>API Changes:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No modification of the API.</p>
+<p>Module handling changes:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No modification of the module handling.</p>
+<p>For a detailed description of the API and the handling of the module refer to the Technical </p>
+<p>Reference.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>18</p>
+<p><b>ESCAN00069876</b></p>
+<p><b>Incorrect Description for Calibration Attribute </b></p>
+<p><b>nmMaxApplShutDownDenyCnt</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>CBD_TechRef_GmlanCalibration@Doc_TechRef</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.01.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The description in chapter 6.7 for calibration attribute nmMaxApplShutDownDenyCnt suggests </p>
+<p>that this attribute can be modified in the GENy GUI, but the selection doesn't exist. The </p>
+<p>documentation will be updated to remove this suggestion.</p>
+<p>nmMaxApplShutDownDenyCnt can be modified in the generated handler calibrations file gmlcal.c.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>All</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>19</p>
+<p><b>ESCAN00070445</b></p>
+<p><b>The P2 timings can be changed in the tool GUI but </b></p>
+<p><b>the new values have no effect on CANdesc code </b></p>
+<p><b>generation</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@GenTool_Geny_CANdesc</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The user is able to modify the default P2 timings in the GENtool GUI, but the new values are not </p>
+<p>used during the CANdesc code generation. As a result the default P2 timings are only applicable.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At CANdesc configuration resp. code generation time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Any KWP2000 configuration that shall use P2 timings other than the default ones.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The P2/P2* timings are set automatically according to the GM specification to the values of 75 ms/</p>
+<p>5000 ms. Usually, there should be no need to change the P2/P2* timings in GENy to a different </p>
+<p>value.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>20</p>
+<p><b>ESCAN00070517</b></p>
+<p><b>Compiler error: missing constant </b></p>
+<p><b>kDescStateSessionDefault</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.05</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compile error for missing constant kDescStateSessionDefault</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At compile time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>CANdesc Full is used</p>
+<p>AND</p>
+<p>In the used CDD the name of the default session state is different from &quot;Default&quot;.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Rename the default session state in the CDD to &quot;Default&quot;</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>21</p>
+<p><b>ESCAN00071069</b></p>
+<p><b>The description of service 0x12 is out-dated</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc_Oem@Doc_TechRef_Kwp_Gm</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The description of service 0x12 doesn't consider the changes made with CANdesc 6.</p>
+<p>Only one application callback on SID level is generated instead of two, for each sub-function.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Any.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>6.2 Service ReadFailureRecordData ($12)</p>
+<p>CANdesc generates only one function callback (main-handler) for all service $12 requests and </p>
+<p>does not offer any special support for this service. Therefore all dispatching and validation steps </p>
+<p>(e.g. dispatching on sub-function level, check the request length or validate the PID parameter if </p>
+<p>applicable), as well as the assembly of the response message (including the sub-function byte) </p>
+<p>have to be performed by the application.</p>
+<p>6.2.1 Service ReadFailureRecordIdentifiers ($12 $01)</p>
+<p>Depending on the report type requested (PID or DPID) the application must place one of the </p>
+<p>following values into the first data byte of the response message:</p>
+<p> 0x00 - for report by PID</p>
+<p> 0x01 - for report by DPID</p>
+<p> </p>
+<p> Note</p>
+<p>The ECU can support either reports by PID or DPID, but not both.</p>
+<p> </p>
+<p>6.2.2 Service ReadFailureRecordParameters ($12 $02)</p>
+<p>CANdesc does not automatically include the PID parameter in the response message for service </p>
+<p>$12 $02. The application must perform this task.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>22</p>
+<p><b>ESCAN00071131</b></p>
+<p><b>Wrong API name </b></p>
+<p><b>&quot;DescApplSendSpontaneousResponse&quot; in Technical </b></p>
+<p><b>Reference</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Doc_TechRef</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.05.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Wrong API name in Technical Reference:</p>
+<p>DescApplSendSpontaneousResponse is stated in the Technical Reference but the correct name is </p>
+<p>DescSendApplSpontaneousResponse</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>23</p>
+<p><b>ESCAN00073848</b></p>
+<p><b>Tester present timeout occurs too early after a </b></p>
+<p><b>0x28 request</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.05.04</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The positive response $60 after a tester present timeout is sent too early (&lt;5000 ms).</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>- Send service 0x28 (DisableNormalCommunication) request</p>
+<p>- Do not send a valid TesterPresent request</p>
+<p>- Wait for the tester present timeout to occur (&gt;5000 ms)</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>DiagProtocol == KWP</p>
+<p>AND</p>
+<p>Service 0x28 DisableNormalCommunication is active</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>1.) Increase the tester present timeout slightly by creating a UserConfig.cfg-file with the following </p>
+<p>content:</p>
+<p>----------------</p>
+<p>#ifdef kDescS1TimerTicks</p>
+<p># undef kDescS1TimerTicks</p>
+<p># define kDescS1TimerTicks 503</p>
+<p>#endif</p>
+<p>----------------</p>
+<p>2.) Load the UserConfig.cfg-file into GENy </p>
+<p>3.) Generate the source files</p>
+<p>After these steps, the tester present timeout should be between the required timespan 5000 ms </p>
+<p>to 5100 ms.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>24</p>
+<p><b>ESCAN00074878</b></p>
+<p><b>a2l error: The parameter SAMPLE_RATE is always 0</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Cp_XcpOnCan@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.07.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>1.08.03</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The parameter SAMPLE_RATE in the generated CanXcp.a2l file is generated with a fixed value of 0 </p>
+<p>and does not reflect the parameter as configured in the bus timing configuration.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always and immediately</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>all configurations</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>The file CanXcp.a2l is only used ECU externally for the XCP Master and can be patched manually.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>25</p>
+<p><b>ESCAN00075459</b></p>
+<p><b>TpRxGetAssignedDestination returns wrong </b></p>
+<p><b>destination</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Tp_Iso15765@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.73.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>TpRxGetAssignedDestination returns kTpRequestDiagPhysical, although the current connection is </p>
+<p>functional.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During reception of a functional request with normal fixed, extended or mixed29 addressing</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>- multiple addressing AND</p>
+<p>- application precopy callback must be enabled (TP_USE_APPL_PRECOPY == kTpOn)</p>
+<p>- fast Precopy is disabled</p>
+<p>- new ApplTpCheckTA API is used (introduced in TP version 2.73.00)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The upper layer which implements the CheckTA / ApplPrecopy callback have to store the </p>
+<p>information if the reception is functional or physical.</p>
+<p>This information have to be used by the code which want to use TpRxGetAssignedDestination().</p>
+<p> </p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>26</p>
+<p><b>ESCAN00076138</b></p>
+<p><b>GENy does not respond when importing CDD files</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Geny_coreBase@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.12.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>GENy shows 'busy icon' and will not respond for a long time</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always when importing a CDD file</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>All with periodic DIDs, delay increases with number of periodic DIDs</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The tool is not crashing, so an unreasonable amount of patience can help.</p>
+<p>Larger CDD files can take more than a day to load, so this workaround is not possible for all use-</p>
+<p>cases.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>27</p>
+<p><b>ESCAN00076840</b></p>
+<p><b>Missing pre-conditions in the API description of </b></p>
+<p><b>DescApplSendSpontaneousResponse</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Doc_TechRef</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.05.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Only service 0x86 is listed as pre-condition in the description of the API </p>
+<p>DescApplSendSpontaneousResponse.</p>
+<p>However there are additional conditions for that API.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When Service 0x86 is not supported or the feature to send a spontaneous response is disabled in </p>
+<p>GENy</p>
+<p>AND</p>
+<p>FBL behavior according to HIS is supported by CANdesc</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Additional pre-conditions:</p>
+<p>The API is also available for specific OEMs in case FBL behavior according to HIS is required </p>
+<p>(please refer to chapter 11.8).</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>28</p>
+<p><b>ESCAN00076879</b></p>
+<p><b>Comment for Messages wrong - Generated code is </b></p>
+<p><b>not affected</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>DrvCan__base@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The comment if a message is a BasicCan or a FullCan message is wrong in certain cases</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During configuration time</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>- A message is sent and received ( RX and TX message ) AND</p>
+<p>- FullCan Flag configured for Rx OR Tx message</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>29</p>
+<p><b>2.4 Compiler Warnings </b></p>
+<p>As a service we also provide the known compiler warnings. The occurrence of a compiler warning </p>
+<p>may depend on the used basic software configuration and compiler settings.</p>
+<p><b>Index</b></p>
+<p>ESCAN00027751</p>
+<p>Compiler warning for cast to smaller type for &quot;failedByteMask&quot;</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00029697</p>
+<p>Compiler warning for useless assignment on API DescPmClientCheckPid</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00031035</p>
+<p>Compiler Warning: variable &quot;timer&quot; in &quot;DescRdpiDeletePid&quot; is possibly </p>
+<p>uninitialized</p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p>ESCAN00032552</p>
+<p>Compiler warning statement not reached in Internal Assertion</p>
+<p>DrvCan__coreHll@Implementation</p>
+<p>ESCAN00044044</p>
+<p>Compiler Warning: condition is always false</p>
+<p>Cp_Xcp@Implementation</p>
+<p>ESCAN00047283</p>
+<p>IL flags are declared without the &quot;volatile&quot; keyword.</p>
+<p>Il_Vector@Implementation</p>
+<p>ESCAN00058378</p>
+<p>Compiler warning: narrowing or signed-to-unsigned type conversion found</p>
+<p>Diag_CanDescGgdaExt_Gm@Implementation</p>
+<p>ESCAN00059701</p>
+<p>Compiler warning: condition is always true&quot; in the IlTxTimerTask, </p>
+<p>IlTxStateTask and IlTxRepetitionsAreActive</p>
+<p>Il_Vector@Implementation</p>
+<p>ESCAN00066833</p>
+<p>Compiler warning: Redefined macro name when compiling a main GENy </p>
+<p>project with a sub-project</p>
+<p>GenTool_GenyDriverBase@GenTool_Geny</p>
+<p>ESCAN00067350</p>
+<p>Compiler warning: Redefined macro name when compiling a main GENy </p>
+<p>project with a sub-project</p>
+<p>GenTool_GenyVcfgNameDecorator@GenTool_Geny</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>30</p>
+<p><b>ESCAN00027751</b></p>
+<p><b>Compiler warning for cast to smaller type for </b></p>
+<p><b>&quot;failedByteMask&quot;</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.01.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler warning message for the assignment:</p>
+<p>*failedByteMask = (vuint8)(0x02 &lt;&lt; *failedByteMask);</p>
+<p>But there is no real danger of losing information by casting down to a smaller type since the code </p>
+<p>generator does not allow more than 7 (seven) sub-service bytes in the request message. So </p>
+<p>skipping the SID (bit 0) does not lead to losing the MSB and the value of the failedByteMask </p>
+<p>cannot be greater than six.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At compile time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>-CANdesc/CANdescBasic</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Ignore the warning</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This ESCAN will not be resolved, since the fix might require more resources on the ECU. The code </p>
+<p>generator assures that there will be no overflow on the shift operation.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>31</p>
+<p><b>ESCAN00029697</b></p>
+<p><b>Compiler warning for useless assignment on API </b></p>
+<p><b>DescPmClientCheckPid</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.02.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler generates a warning message for useless assignment (a = a;) .</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At compile time.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>- CANdesc</p>
+<p>_AND_</p>
+<p>- Service 0x22 is supported with multiple DIDs in single request.</p>
+<p>_AND_</p>
+<p>- Service 0x2C is not supported.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Ignore this warning since it is only because of an useless assignment.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue will not be corrected, since the solution will require more ROM resources.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>32</p>
+<p><b>ESCAN00031035</b></p>
+<p><b>Compiler Warning: variable &quot;timer&quot; in </b></p>
+<p><b>&quot;DescRdpiDeletePid&quot; is possibly uninitialized</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDesc__coreBase@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler produces the warning &quot;variable 'timer' is possibly uninitialized&quot; when compiling </p>
+<p>desc.c. </p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At compile time</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If service 0xAA supported and at least one periodic transmission mode is supported (i.e. not only </p>
+<p>&quot;send one response&quot; is supported).</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This warning is incorrect and can be safely ignored.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>33</p>
+<p><b>ESCAN00032552</b></p>
+<p><b>Compiler warning statement not reached in </b></p>
+<p><b>Internal Assertion</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>DrvCan__coreHll@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.06.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler warning &quot;statement not reached&quot; may occur in the following line:</p>
+<p> assertInternal( ((kCanNumberOfTxObjects + CanTxQueuePadBits[kCanNumberOfChannels-1]) </p>
+<p>&lt;= 65536u), kCanAllChannels, kErrorTxQueueTooManyHandle) </p>
+<p>or</p>
+<p> assertInternal( ((kCanNumberOfTxObjects + CanTxQueuePadBits[kCanNumberOfChannels-1]) </p>
+<p>&lt;= 256u), kCanAllChannels, kErrorTxQueueTooManyHandle)</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At compile time</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In the following circumstances:</p>
+<p>- transmit queue (C_ENABLE_TRANSMIT_QUEUE is defined) </p>
+<p>AND</p>
+<p>- assertion check (C_ENABLE_INTERNAL_CHECK is defined)</p>
+<p>AND</p>
+<p>- multi channel (C_MULTIPLE_RECEIVE_CHANNEL is defined)</p>
+<p>AND</p>
+<p>- the CAN driver supports the Bit Queue algorithm. (DRVCAN__HLLTXQUEUEBIT_VERSION is </p>
+<p>defined in can_def.h and NOT in can_drv.c)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This warning can be ignored since there is no danger for the software normal functioning.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>34</p>
+<p><b>ESCAN00044044</b></p>
+<p><b>Compiler Warning: condition is always false</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Cp_Xcp@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.26.02</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiling file: ../../BSW/Xcp/xcpProf.c</p>
+<p>0 errors, 5 warnings</p>
+<p>ctc W549: [&quot;../../BSW/Xcp/xcpProf.c&quot; 2518/22] condition is always false</p>
+<p>ctc W549: [&quot;../../BSW/Xcp/xcpProf.c&quot; 2522/22] condition is always false</p>
+<p>ctc W549: [&quot;../../BSW/Xcp/xcpProf.c&quot; 2526/22] condition is always false</p>
+<p>ctc W549: [&quot;../../BSW/Xcp/xcpProf.c&quot; 2659/22] condition is always false</p>
+<p>ctc W549: [&quot;../../BSW/Xcp/xcpProf.c&quot; 2663/22] condition is always false</p>
+<p>0 errors, 5 warnings</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens when XCP_DISABLE_WRITE_PROTECTION and XCP_DISABLE_WRITE_EEPROM are </p>
+<p>defined.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>see above</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Enable</p>
+<p>XCP_DISABLE_WRITE_PROTECTION or XCP_DISABLE_WRITE_EEPROM</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>35</p>
+<p><b>ESCAN00047283</b></p>
+<p><b>IL flags are declared without the &quot;volatile&quot; keyword.</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Il_Vector@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.10.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>IL flags (Indication, FirstValue, Confirmation, Timeout) are declared without the &quot;volatile&quot; </p>
+<p>keyword. Read and Write access to IL flags has no effect due to a Read-Modify-Write problematic.</p>
+<p>e.g.</p>
+<p>FlagA and FlagB are in the same byte and set on interrupt level</p>
+<p>this sequence is executed on task level:</p>
+<p>disable int; </p>
+<p>clear FlagA; /*1*/</p>
+<p>enable int;</p>
+<p>... /*3*/</p>
+<p>disable int;</p>
+<p>clear FlagB; /*2*/</p>
+<p>enable int;</p>
+<p>The compiler might optimize this sequence and the flag read and write ALWAYS fails:</p>
+<p>read the byte at 1), modify the local copy and write the byte at 2)</p>
+<p>if the byte is written on interrupt level at 3), the data is lost.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At runtime (This Problem has been found by a review and has never been detected in a ECU)</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>- This issue highly depends on the used compiler and compiler options.</p>
+<p>- Preemptive IL flag access is used (e.g. interrupt system)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Review the optimization configuration of your compiler.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>36</p>
+<p><b>ESCAN00058378</b></p>
+<p><b>Compiler warning: narrowing or signed-to-unsigned </b></p>
+<p><b>type conversion found</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_CanDescGgdaExt_Gm@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The following compiler warning occurs:</p>
+<p>warning (dcc:1643): narrowing or signed-to-unsigned type conversion found: unsigned int to </p>
+<p>unsigned short</p>
+<p>This warning occurs for the following code in GgdaRdiRxTask:</p>
+<p> /* send the DTC number and the FTB */</p>
+<p> vuint16 DTCNr = ((vuint16) ggdaContexts[context].uudtPrimBuffer[1] &lt;&lt; 8)</p>
+<p> | (vuint16) ggdaContexts[context].uudtPrimBuffer[2];</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Configurations which use service $A9.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning can be safely ignored.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>37</p>
+<p><b>ESCAN00059701</b></p>
+<p><b>Compiler warning: condition is always true&quot; in the </b></p>
+<p><b>IlTxTimerTask, IlTxStateTask and </b></p>
+<p><b>IlTxRepetitionsAreActive</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Il_Vector@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.42.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler warns for &quot;condition is always true&quot; in the IlTxTimerTask, IlTxStateTask and </p>
+<p>IlTxRepetitionsAreActive API. This may happen depending on the configuration.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>IlTxTimerTask, IlTxStateTask: Any configuration with exactly one tx message.</p>
+<p>IlTxRepetitionsAreActive: Any configuration with exactly one tx message and the API is </p>
+<p>configured. (IL_ENABLE_SYS_TX_REPETITIONS_ARE_ACTIVE_FCT must be defined)</p>
+<p>Hint:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler warning is known and has been analyzed thoroughly for its impact on the code. </p>
+<p>Nevertheless it will not be fixed due to the rare configuration. The code uses a while loop with a </p>
+<p>counter and can probably replaced by a for loop, but other compilers or codeanalysers may warn </p>
+<p>about a useless loop. The code exists for about 15 Years and will not be changed.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>38</p>
+<p><b>ESCAN00066833</b></p>
+<p><b>Compiler warning: Redefined macro name when </b></p>
+<p><b>compiling a main GENy project with a sub-project</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>GenTool_GenyDriverBase@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>2.10.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler generates warning on the following macro redefinitions:</p>
+<p>v_cfg_1.h(180) : CC78K0R warning W0816: Redefined macro name </p>
+<p>'V_ATOMIC_BIT_ACCESS_IN_BITFIELD'</p>
+<p>v_cfg_1.h(181) : CC78K0R warning W0816: Redefined macro name </p>
+<p>'V_ATOMIC_VARIABLE_ACCESS'</p>
+<p>v_cfg_1.h(196) : CC78K0R warning W0816: Redefined macro name 'kComNumberOfNodes'</p>
+<p>v_cfg_1.h(197) : CC78K0R warning W0816: Redefined macro name 'ComSetCurrentECU'</p>
+<p>v_cfg_1.h(198) : CC78K0R warning W0816: Redefined macro name 'comMultipleECUCurrent'</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When two GENy projects are compiled together (e.g. CAN, LIN), one is setup as &quot;main project&quot; </p>
+<p>and the other is setup as &quot;sub-project&quot;</p>
+<p> </p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>39</p>
+<p><b>ESCAN00067350</b></p>
+<p><b>Compiler warning: Redefined macro name when </b></p>
+<p><b>compiling a main GENy project with a sub-project</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>GenTool_GenyVcfgNameDecorator@GenTool_Geny</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.19.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>2.26.01, 2.27.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler generates warning on the following macro redefinitions:</p>
+<p>v_cfg_1.h(180) : CC78K0R warning W0816: Redefined macro name </p>
+<p>'V_ATOMIC_BIT_ACCESS_IN_BITFIELD'</p>
+<p>v_cfg_1.h(181) : CC78K0R warning W0816: Redefined macro name </p>
+<p>'V_ATOMIC_VARIABLE_ACCESS'</p>
+<p>v_cfg_1.h(196) : CC78K0R warning W0816: Redefined macro name 'kComNumberOfNodes'</p>
+<p>v_cfg_1.h(197) : CC78K0R warning W0816: Redefined macro name 'ComSetCurrentECU'</p>
+<p>v_cfg_1.h(198) : CC78K0R warning W0816: Redefined macro name 'comMultipleECUCurrent'</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When two GENy projects are compiled together (e.g. CAN, LIN), one is setup as &quot;main project&quot; </p>
+<p>and the other is setup as &quot;sub-project&quot;</p>
+<p> </p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>40</p>
+<p><b>3. New Issues for Information</b></p>
+<p>Issues which should not have an effect on the usage of the license as the issues are relevant for </p>
+<p>use cases other than those defined in the questionnaire. The list contains issues that have been </p>
+<p>detected since the last report.</p>
+<p>Issues listed in this section are not relevant for the use case that has been documented in the </p>
+<p>questionnaire provided to Vector. However, the issues may be relevant for other use cases.  Also </p>
+<p>issues that have been accepted or are tolerated by the OEM (as defined in the questionnaire) are </p>
+<p>reported here. </p>
+<p>No issue to be reported.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>41</p>
+<p><b>4. Report Legend</b></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>42</p>
+<p><b>5. Quality Management Contact</b></p>
+<p>Diemo Krüger </p>
+<p>PES Quality Management Engineer  </p>
+<p>Productline Embedded Software (PES)  </p>
+<p> </p>
+<p>Vector Informatik GmbH  </p>
+<p>Ingersheimer Str. 24  </p>
+<p>D-70499 Stuttgart  </p>
+<p> </p>
+<p>Phone: +49 711 80670-3477 </p>
+<p>Fax: +49 711 80670-399  </p>
+<p>eMail: diemo.krueger@vector.com</p>
+</body>
+</html>
+{% endraw %}

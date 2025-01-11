@@ -1,0 +1,2829 @@
+---
+layout: default
+title: SafetyManual_CBD1400351_D04
+nav_order: 557
+parent: Implementation
+---
+{% raw %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title></title>
+  <meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
+  <meta name="created" content="00:00:00"/>
+  <meta name="changed" content="00:00:00"/>
+</head>
+<body>
+<h1></h1>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><b>Safety Manual </b></p>
+<p>CBD1400351 D04 </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>ID </p>
+<p>SPECDOC22553 </p>
+<p>Status </p>
+<p>Released </p>
+<p>Generated on </p>
+<p>2016-09-16 11:23 </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>2 / 52 </p>
+<p>Contents </p>
+<p><b>Safety Manual ....................................................................................................................... 7</b></p>
+<p><b> </b></p>
+<p><b>1 General Part ...................................................................................................................... 8</b></p>
+<p><b> </b></p>
+<p>1.1 Introduction.................................................................................................................. 8</p>
+<p> </p>
+<p>1.1.1 Purpose ............................................................................................................... 8</p>
+<p> </p>
+<p>1.1.2 Scope .................................................................................................................. 8</p>
+<p> </p>
+<p>1.1.3 Definitions ............................................................................................................ 8</p>
+<p> </p>
+<p>1.1.4 References .......................................................................................................... 9</p>
+<p> </p>
+<p>1.1.5 Overview .............................................................................................................. 9</p>
+<p> </p>
+<p>1.2 Concept ....................................................................................................................... 9</p>
+<p> </p>
+<p>1.2.1 Technical Safety Requirements .......................................................................... 10</p>
+<p> </p>
+<p>1.2.1.1 Initialization................................................................................................. 10</p>
+<p> </p>
+<p>1.2.1.2 Self-test ...................................................................................................... 10</p>
+<p> </p>
+<p>1.2.1.3 Reset of ECU ............................................................................................. 10</p>
+<p> </p>
+<p>1.2.1.4 Non-volatile memory ................................................................................... 11</p>
+<p> </p>
+<p>1.2.1.4.1 Saving data ......................................................................................... 11</p>
+<p> </p>
+<p>1.2.1.4.2 Loading data ....................................................................................... 11</p>
+<p> </p>
+<p>1.2.1.5 Scheduling.................................................................................................. 12</p>
+<p> </p>
+<p>1.2.1.5.1 Deterministic, hard real-time scheduling .............................................. 12</p>
+<p> </p>
+<p>1.2.1.6 Partitioning ................................................................................................. 12</p>
+<p> </p>
+<p>1.2.1.6.1 Memory partitioning ............................................................................. 12</p>
+<p> </p>
+<p>1.2.1.6.2 Time partitioning .................................................................................. 12</p>
+<p> </p>
+<p>1.2.1.7 Communication protection .......................................................................... 13</p>
+<p> </p>
+<p>1.2.1.7.1 Inter ECU communication ................................................................... 13</p>
+<p> </p>
+<p>1.2.1.7.2 Intra ECU communication ................................................................... 13</p>
+<p> </p>
+<p>1.2.1.8 Watchdog services ..................................................................................... 14</p>
+<p> </p>
+<p>1.2.1.8.1 Program flow monitoring ..................................................................... 14</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>3 / 52 </p>
+<p>1.2.1.8.2 Alive monitoring ................................................................................... 14</p>
+<p> </p>
+<p>1.2.1.8.3 Deadline monitoring ............................................................................ 14</p>
+<p> </p>
+<p>1.2.1.9 Peripheral in- and output ............................................................................ 14</p>
+<p> </p>
+<p>1.2.1.9.1 Peripheral input ................................................................................... 14</p>
+<p> </p>
+<p>1.2.1.9.2 Peripheral output ................................................................................. 14</p>
+<p> </p>
+<p>1.2.2 Environment ....................................................................................................... 14</p>
+<p> </p>
+<p>1.2.2.1 Safety Concept ........................................................................................... 14</p>
+<p> </p>
+<p>1.2.2.2 Use of MICROSAR Safe Components ........................................................ 16</p>
+<p> </p>
+<p>1.2.2.3 Partitioning ................................................................................................. 18</p>
+<p> </p>
+<p>1.2.2.4 Resources .................................................................................................. 19</p>
+<p> </p>
+<p>1.2.3 Process .............................................................................................................. 19</p>
+<p> </p>
+<p><b>2 Safety Manual BswM ....................................................................................................... 22</b></p>
+<p><b> </b></p>
+<p>2.1 Safety features .......................................................................................................... 22</p>
+<p> </p>
+<p>2.2 Configuration constraints ........................................................................................... 22</p>
+<p> </p>
+<p>2.3 Additional Verification measures ................................................................................ 22</p>
+<p> </p>
+<p>2.4 Dependencies to other components .......................................................................... 22</p>
+<p> </p>
+<p>2.4.1 Safety features required from other components ................................................ 22</p>
+<p> </p>
+<p>2.4.2 Coexistence with other components ................................................................... 22</p>
+<p> </p>
+<p>2.5 Dependencies to hardware ........................................................................................ 22</p>
+<p> </p>
+<p><b>3 Safety Manual Crc ........................................................................................................... 23</b></p>
+<p><b> </b></p>
+<p>3.1 Safety features .......................................................................................................... 23</p>
+<p> </p>
+<p>3.2 Configuration constraints ........................................................................................... 23</p>
+<p> </p>
+<p>3.3 Additional verification measures ................................................................................ 23</p>
+<p> </p>
+<p>3.4 Dependencies to other components .......................................................................... 23</p>
+<p> </p>
+<p>3.4.1 Safety features required from other components ................................................ 23</p>
+<p> </p>
+<p>3.4.2 Coexistence with other components ................................................................... 23</p>
+<p> </p>
+<p>3.5 Dependencies to hardware ........................................................................................ 23</p>
+<p> </p>
+<p><b>4 Safety Manual Dem ......................................................................................................... 24</b></p>
+<p><b> </b></p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>4 / 52 </p>
+<p>4.1 Safety features .......................................................................................................... 24</p>
+<p> </p>
+<p>4.2 Configuration constraints ........................................................................................... 24</p>
+<p> </p>
+<p>4.3 Additional verification measures ................................................................................ 24</p>
+<p> </p>
+<p>4.4 Safety features required from other components ....................................................... 27</p>
+<p> </p>
+<p>4.5 Dependencies to hardware ........................................................................................ 27</p>
+<p> </p>
+<p><b>5 Safety Manual Det ........................................................................................................... 28</b></p>
+<p><b> </b></p>
+<p>5.1 Safety features .......................................................................................................... 28</p>
+<p> </p>
+<p>5.2 Configuration constraints ........................................................................................... 28</p>
+<p> </p>
+<p>5.3 Additional Verification measures ................................................................................ 28</p>
+<p> </p>
+<p>5.4 Dependencies to other components .......................................................................... 28</p>
+<p> </p>
+<p>5.4.1 Safety features required from other components ................................................ 28</p>
+<p> </p>
+<p>5.4.2 Coexistence with other components ................................................................... 28</p>
+<p> </p>
+<p>5.5 Dependencies to hardware ........................................................................................ 28</p>
+<p> </p>
+<p><b>6 Safety Manual EcuM ....................................................................................................... 29</b></p>
+<p><b> </b></p>
+<p>6.1 Safety features .......................................................................................................... 29</p>
+<p> </p>
+<p>6.2 Configuration constraints ........................................................................................... 30</p>
+<p> </p>
+<p>6.3 Additional verification measurse ................................................................................ 31</p>
+<p> </p>
+<p>6.4 Dependencies to other components .......................................................................... 31</p>
+<p> </p>
+<p>6.4.1 Safety features required from other components ................................................ 31</p>
+<p> </p>
+<p>6.4.2 Coexistence with other components ................................................................... 32</p>
+<p> </p>
+<p>6.5 Dependencies to hardware ........................................................................................ 32</p>
+<p> </p>
+<p><b>7 Safety Manual Fee ........................................................................................................... 33</b></p>
+<p><b> </b></p>
+<p>7.1 Safety features .......................................................................................................... 33</p>
+<p> </p>
+<p>7.2 Configuration constraints ........................................................................................... 33</p>
+<p> </p>
+<p>7.3 Additional verification measures ................................................................................ 33</p>
+<p> </p>
+<p>7.4 Safety features required from other components ....................................................... 34</p>
+<p> </p>
+<p>7.5 Dependencies to hardware ........................................................................................ 34</p>
+<p> </p>
+<p><b>8 Safety Manual MemIf ....................................................................................................... 35</b></p>
+<p><b> </b></p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>5 / 52 </p>
+<p>8.1 Safety features .......................................................................................................... 35</p>
+<p> </p>
+<p>8.2 Configuration constraints ........................................................................................... 35</p>
+<p> </p>
+<p>8.3 Additional verification measures ................................................................................ 35</p>
+<p> </p>
+<p>8.4 Dependencies to other components .......................................................................... 35</p>
+<p> </p>
+<p>8.4.1 Safety features required from other components ................................................ 35</p>
+<p> </p>
+<p>8.4.2 Coexistence with other components ................................................................... 35</p>
+<p> </p>
+<p>8.5 Dependencies to hardware ........................................................................................ 35</p>
+<p> </p>
+<p><b>9 Safety Manual NvM ......................................................................................................... 36</b></p>
+<p><b> </b></p>
+<p>9.1 Safety features .......................................................................................................... 36</p>
+<p> </p>
+<p>9.2 Configuration constraints ........................................................................................... 36</p>
+<p> </p>
+<p>9.3 Additional verification measures ................................................................................ 37</p>
+<p> </p>
+<p>9.4 Dependencies to other components .......................................................................... 37</p>
+<p> </p>
+<p>9.4.1 Safety features required from other components ................................................ 37</p>
+<p> </p>
+<p>9.4.2 Coexistence with other components ................................................................... 37</p>
+<p> </p>
+<p>9.5 Dependencies to hardware ........................................................................................ 38</p>
+<p> </p>
+<p><b>10 Safety Manual Rte ......................................................................................................... 39</b></p>
+<p><b> </b></p>
+<p>10.1 Safety features ........................................................................................................ 39</p>
+<p> </p>
+<p>10.2 Configuration constraints ......................................................................................... 40</p>
+<p> </p>
+<p>10.3 Additional verification measures .............................................................................. 40</p>
+<p> </p>
+<p>10.3.1 Guided integration testing ................................................................................ 41</p>
+<p> </p>
+<p>10.3.1.1 BSW configuration .................................................................................... 41</p>
+<p> </p>
+<p>10.3.1.2 Executable Entity Scheduling ................................................................... 42</p>
+<p> </p>
+<p>10.3.1.3 SWC Communication ............................................................................... 44</p>
+<p> </p>
+<p>10.3.1.4 Usage of RTE Headers ............................................................................. 45</p>
+<p> </p>
+<p>10.3.1.5 Usage of RTE APIs ................................................................................... 46</p>
+<p> </p>
+<p>10.3.1.6 Configuration of RTE APIs ........................................................................ 47</p>
+<p> </p>
+<p>10.4 Safety features required from other components ..................................................... 49</p>
+<p> </p>
+<p>10.5 Dependencies to hardware ...................................................................................... 49</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>6 / 52 </p>
+<p><b>11 Glossary and Abbreviations ......................................................................................... 50</b></p>
+<p><b> </b></p>
+<p>11.1 Glossary .................................................................................................................. 50</p>
+<p> </p>
+<p>11.2 Abbreviations ........................................................................................................... 50</p>
+<p> </p>
+<p><b>12 Contact .......................................................................................................................... 52</b></p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b>  </b></p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>7 / 52 </p>
+<p><b>Safety Manual</b></p>
+<p><b> </b></p>
+<p><b>Version</b></p>
+<p><b> </b></p>
+<p><b>Date</b></p>
+<p><b> </b></p>
+<p><b>Author</b></p>
+<p><b> </b></p>
+<p><b>Remarks</b></p>
+<p><b> </b></p>
+<p>1.00.00</p>
+<p> </p>
+<p>2015-11-13</p>
+<p> </p>
+<p>Jonas Wolf</p>
+<p> </p>
+<p>Initial creation</p>
+<p> </p>
+<p>1.01.00</p>
+<p> </p>
+<p>2015-12-18</p>
+<p> </p>
+<p>Jonas Wolf</p>
+<p> </p>
+<p>Information about ASIL added.</p>
+<p> </p>
+<p>1.02.00</p>
+<p> </p>
+<p>2016-01-29</p>
+<p> </p>
+<p>Jonas Wolf</p>
+<p> </p>
+<p>Improvements in formulation.</p>
+<p> </p>
+<p>1.03.00</p>
+<p> </p>
+<p>2016-02-25</p>
+<p> </p>
+<p>Jonas Wolf</p>
+<p> </p>
+<p>Improvements in formulation.</p>
+<p> </p>
+<p>1.03.01</p>
+<p> </p>
+<p>2016-03-30</p>
+<p> </p>
+<p>Jonas Wolf</p>
+<p> </p>
+<p>Review findings incorporated.</p>
+<p> </p>
+<p>1.03.02</p>
+<p> </p>
+<p>2016-05-13</p>
+<p> </p>
+<p>Jonas Wolf</p>
+<p> </p>
+<p>Added hint on hardware-software integration (SMI-4).</p>
+<p> </p>
+<p>1.03.03</p>
+<p> </p>
+<p>2016-07-20</p>
+<p> </p>
+<p>Hartmut Hoerner</p>
+<p> </p>
+<p>Added SMI related to interrupt handling.</p>
+<p> </p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>8 / 52 </p>
+<p><b>1 General Part</b></p>
+<p><b> </b></p>
+<p><b>1.1 Introduction</b></p>
+<p><b> </b></p>
+<p><b>1.1.1 Purpose</b></p>
+<p><b> </b></p>
+<p>This document describes the assumptions made by Vector during the development of </p>
+<p>MICROSAR Safe as Software Safety Element out of Context (SEooC). This document </p>
+<p>provides information on how to integrate MICROSAR Safe into your safety-related project. </p>
+<p>This document is intended for the user of MICROSAR Safe. It shall be read by project </p>
+<p>managers, safety managers, and engineers to allow proper integration of MICROSAR </p>
+<p>Safe. </p>
+<p><b>1.1.2 Scope</b></p>
+<p><b> </b></p>
+<p>This document adds additional information to the components that are marked with an </p>
+<p>ASIL in the delivery description provided by Vector. Neither QM Vector components, nor </p>
+<p>components by other vendors are in the scope of this document. </p>
+<p>Vector assumes that hardware and compiler manuals are correct and complete. </p>
+<p>Vector uses the hardware reference manuals and compiler manuals for the development </p>
+<p>of MICROSAR Safe. Vector has no means to verify correctness or completeness of the </p>
+<p>hardware and compiler manuals. </p>
+<p>Example information that may be critical from these manuals is the register assignment by </p>
+<p>compiler. This information is used to built up the context that is saved and restored by the </p>
+<p>operating system. </p>
+<p>The compiler manual from the compiler version specified for the project is considered. The </p>
+<p>considered hardware manuals are documented in the Technical Reference of the </p>
+<p>hardware-specific component. </p>
+<p>A general description of Vector's approach to ISO 26262 is described in [2]. This document </p>
+<p>is available on request. </p>
+<p><b>1.1.3 Definitions</b></p>
+<p><b> </b></p>
+<p>The words <i>shall</i>, <i>shall not</i>, <i>should</i>, <i>can </i>in this document are to be interpreted as described </p>
+<p>here: </p>
+<p> </p>
+<p><i>Shall </i>means that the definition is an absolute requirement of the specification. </p>
+<p> </p>
+<p><i>Shall not </i>means that the definition is an absolute prohibition of the specification. </p>
+<p> </p>
+<p><i>Should </i>means that there may exist valid reasons in particular circumstances to ignore </p>
+<p>a particular definition, but the full implications must be understood and carefully </p>
+<p>weighed before choosing a different course. </p>
+<p> </p>
+<p><i>Can </i>means that a definition is truly optional.  </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>9 / 52 </p>
+<p>The user of MICROSAR Safe can deviate from all constraints and requirements in this </p>
+<p>Safety Manual in the responsibility of the user of MICROSAR Safe, if equivalent measures </p>
+<p>are used. </p>
+<p>If a measure is equivalent can be decided in the responsibility of the user of MICROSAR </p>
+<p>Safe. </p>
+<p><b>1.1.4 References</b></p>
+<p><b> </b></p>
+<p><b>No.</b></p>
+<p><b> </b></p>
+<p><b>Source</b></p>
+<p><b> </b></p>
+<p><b>Title</b></p>
+<p><b> </b></p>
+<p><b>Version</b></p>
+<p><b> </b></p>
+<p>[1]</p>
+<p> </p>
+<p>ISO</p>
+<p> </p>
+<p>ISO 26262 Road vehicles — Functional safety (all parts)</p>
+<p> </p>
+<p>2011/2012</p>
+<p> </p>
+<p>[2]</p>
+<p> </p>
+<p>Vector</p>
+<p> </p>
+<p>ISO 26262 Compliance Document</p>
+<p> </p>
+<p>1.2.1</p>
+<p> </p>
+<p>[3]</p>
+<p> </p>
+<p>Vector</p>
+<p> </p>
+<p>MICROSAR Safe Product Information</p>
+<p> </p>
+<p>1.1</p>
+<p> </p>
+<p>[4]</p>
+<p> </p>
+<p>Vector</p>
+<p> </p>
+<p>MICROSAR Safe Silence Verifier Technical Reference</p>
+<p> </p>
+<p>1.4</p>
+<p> </p>
+<p> </p>
+<p><b>1.1.5 Overview</b></p>
+<p><b> </b></p>
+<p>This document is automatically generated. The content of this document depends on the </p>
+<p>components and microcontroller of your delivery. This document is thus valid only for the </p>
+<p>delivery from Vector that it is included in. </p>
+<p>The structure of this document comprises: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>a general section that covers all assumptions and constraints that are always </p>
+<p>applicable, and </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>a microcontroller specific section that covers all aspects of the selected microcontroller </p>
+<p>(only if microcontroller specific components are part of the delivery), and </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>a section for each component that covers its constraints and necessary verification </p>
+<p>steps. </p>
+<p>Vector's assumptions on the environment of the MICROSAR Safe components as well as </p>
+<p>the integration process are described. </p>
+<p>Vector developed MICROSAR Safe as Safety Element out of Context for projects </p>
+<p>demanding ASIL D software. All requirements in this document apply independently from </p>
+<p>the actual highest ASIL of the project.  </p>
+<p><b>1.2 Concept</b></p>
+<p><b> </b></p>
+<p>MICROSAR Safe comprises a set of components developed according to ISO 26262. </p>
+<p>These components can be combined - together with other measures - to build a safe </p>
+<p>system according to ISO 26262. </p>
+<p>Please read the Product Information MICROSAR Safe [3] first. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>10 / 52 </p>
+<p><b>1.2.1 Technical Safety Requirements</b></p>
+<p><b> </b></p>
+<p>These are the assumed technical safety requirements on the Safety Element out of </p>
+<p>Context MICROSAR Safe. These requirements are expected to match the requirements in </p>
+<p>the actual item development. </p>
+<p>All technical safety requirements are assigned an ASIL D to service as many projects as </p>
+<p>possible. </p>
+<p>No fault tolerant time intervals are given. Timing depends on the used hardware and its </p>
+<p>configuration. It is assumed that the user configures MICROSAR Safe adequately for the </p>
+<p>intended use. </p>
+<p>No safe state is defined since MICROSAR Safe allows the user to define the desired </p>
+<p>behavior in case of a detected fault. </p>
+<p><b>1.2.1.1 Initialization </b></p>
+<p><b>TSR-1 The system shall initialize the CPU, MPU, watchdog, and operating system.  </b></p>
+<p>Rationale: Initialization of the hardware, e.g. clocks, memory protection, scheduling etc. is </p>
+<p>necessary to enable the other safety requirements. </p>
+<p>MICROSAR Safe Feature: The ECU State Manager (EcuM) is responsible for performing </p>
+<p>the configured driver initialization. After initialization the EcuM starts the operating system. </p>
+<p>The EcuM distributes the post-built loadable configuration information within the ECU. </p>
+<p>The documentation of the operating system describes which parts of the CPU it initializes. </p>
+<p>The startup code and main function is in the responsibility of the user of MICROSAR Safe. </p>
+<p><b>1.2.1.2 Self-test </b></p>
+<p><b>TSR-2 The system shall perform self-tests based on the requirements of the system.  </b></p>
+<p>Rationale: It may be necessary to periodically test individual components of the system to </p>
+<p>detect latent faults. </p>
+<p>MICROSAR Safe Feature :The operating system provides a function to self-test the </p>
+<p>effectiveness of the MPU settings. </p>
+<p>The ECU State Manager services callouts to user code that can check RAM consistency </p>
+<p>after wakeup. </p>
+<p>Other hardware self-tests are usually performed by MCAL components not developed by </p>
+<p>Vector. </p>
+<p>End-to-end protection of communication provides its own fault detection mechanisms. </p>
+<p><b>1.2.1.3 Reset of ECU </b></p>
+<p><b>TSR-3 The system shall reset itself in case of a detected fault.  </b></p>
+<p>Rationale: Resetting the CPU of the ECU is in most cases an appropriate measure to </p>
+<p>achieve a safe state. </p>
+<p>It is assumed that the reset state of a microcontroller leads to the safe state of the ECU </p>
+<p>and system, since a reset may occur at any time due to e.g. EMC. </p>
+<p>MICROSAR Safe Feature: MICROSAR Safe does not reset the ECU on its own (there </p>
+<p>may be exceptions for the operating system). </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>11 / 52 </p>
+<p>Functionality from ECU State Manager (setting the shutdown target) can be used to reset </p>
+<p>the ECU instead, if this is the intended fault reaction. </p>
+<p><b>1.2.1.4 Non-volatile memory </b></p>
+<p>The system must be designed in a way that in case of the absence of nonâ€‘volatile data it </p>
+<p>is still safe (e.g. safe state or degradation). </p>
+<p>It cannot be assured that data is saved completely or at all because a reset or loss of </p>
+<p>energy might happen at any time, e.g. brown-out, black-out. </p>
+<p>This also implies that it is in general impossible to guarantee that the latest information is </p>
+<p>available in the non-volatile memory, e.g. the system is reset before memory stack is even </p>
+<p>notified to write data to non-volatile memory. </p>
+<p>Thus, safety-related functionality may not rely on the availability of data in non-volatile </p>
+<p>memory. </p>
+<p>Since the availability of data in non-volatile memory cannot be guaranteed in any case, the </p>
+<p>only sensible use-case is reading safety-related calibration data. </p>
+<p>Writing of data into non-volatile memory must be verified to assure that the information is </p>
+<p>available in non-volatile memory. Verification can only be done manually in a protected </p>
+<p>environment, e.g. at end of line, in a workshop, etc.  </p>
+<p>ECU software cannot verify if data was written, since at any time a reset could occur and </p>
+<p>the information that had to be written is lost immediately. </p>
+<p>Reading of data does not modify data stored in non-volatile memory. Thus, reading can be </p>
+<p>used by safety-related functionality. The memory stack has to assure that the read data is </p>
+<p>identical to the data stored in non-volatile memory. </p>
+<p>The absence of data still has to be handled by the application. </p>
+<p>The availability may be increased by e.g. redundant storage. </p>
+<p><b>1.2.1.4.1 Saving data</b></p>
+<p><b> </b></p>
+<p><b>TSR-4 The system shall save information in non-volatile memory.  </b></p>
+<p>Rationale: see text above. </p>
+<p>MICROSAR Safe Feature: The intended block is written with the information provided by </p>
+<p>the application. </p>
+<p><b>1.2.1.4.2 Loading data</b></p>
+<p><b> </b></p>
+<p><b>TSR-5 The system shall retrieve the last stored information from non-volatile </b></p>
+<p><b>memory.  </b></p>
+<p>Rationale: see text in above. </p>
+<p>MICROSAR Safe Feature: The intended block is read and the information is provided to </p>
+<p>the application. </p>
+<p>The last or any previous completely stored block in non-volatile memory is returned by </p>
+<p>memory stack. </p>
+<p>If CRC or ECC protections do not match block data an error is returned. </p>
+<p>If data is stored redundantly, the redundant information is returned. </p>
+<p>If no completely stored block is found, an error is returned. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>12 / 52 </p>
+<p><b>1.2.1.5 Scheduling </b></p>
+<p><b>1.2.1.5.1 Deterministic, hard real-time scheduling</b></p>
+<p><b> </b></p>
+<p><b>TSR-6 The system shall execute the specified functions within their respective hard </b></p>
+<p><b>timing limits.  </b></p>
+<p>Rationale: Hard real-time scheduling may be used for scheduling safety mechanisms </p>
+<p>implemented in software. </p>
+<p>This requirement is even more important for fail-operational systems, where one function </p>
+<p>may have to work, while another blocks the processor. </p>
+<p>MICROSAR Safe Feature: The immediate priority ceiling protocol specified by AUTOSAR </p>
+<p>is capable of performing this task. The schedule tables specified by AUTOSAR may also </p>
+<p>be used on top of the scheduling algorithm. </p>
+<p>The operating system of MICROSAR Safe implements the scheduling algorithm according </p>
+<p>to the methods for ASIL D required by ISO 26262. </p>
+<p><b>1.2.1.6 Partitioning </b></p>
+<p><b>1.2.1.6.1 Memory partitioning</b></p>
+<p><b> </b></p>
+<p><b>TSR-7 The system shall protect software applications from unspecified memory </b></p>
+<p><b>access.  </b></p>
+<p>Rationale: Partitioning in software is often introduced because of different quality levels of </p>
+<p>software and different responsibilities of software development on one ECU. </p>
+<p>Memory partitioning relies on the available MPU in hardware for the effectiveness of the </p>
+<p>mechanism. </p>
+<p>MICROSAR Safe Feature: Memory partitioning and context switching using AUTOSAR </p>
+<p>Operating Feature System SC3 mechanisms is implemented according to the methods for </p>
+<p>ASIL D required by ISO 26262. </p>
+<p>Adequate configuration of the memory partitions is in the responsibility of the user of </p>
+<p>MICROSAR Safe. </p>
+<p><b>1.2.1.6.2 Time partitioning</b></p>
+<p><b> </b></p>
+<p><b>1.2.1.6.2.1 Timing protection</b></p>
+<p><b> </b></p>
+<p><b>TSR-8 The system shall detect timing faults in the software.  </b></p>
+<p>Rationale: Relying on a watchdog for timing protection is sometimes not sufficiently robust </p>
+<p>or efficient. </p>
+<p>MICROSAR Safe Feature: The operating system of MICROSAR Safe implements the </p>
+<p>timing protection functionality of SC4 according to the methods for ASIL D required by ISO </p>
+<p>26262. </p>
+<p><b>1.2.1.6.2.2 Killing of applications</b></p>
+<p><b> </b></p>
+<p><b>TSR-9 The system shall terminate software applications.  </b></p>
+<p>Rationale: In combination with the timing protection this allows the software to continue </p>
+<p>operation in case of a software fault. </p>
+<p>MICROSAR Safe Feature: The operating system of MICROSAR Safe implements the </p>
+<p>termination of applications according to the methods for ASIL D required by ISO 26262. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>13 / 52 </p>
+<p><b>1.2.1.7 Communication protection </b></p>
+<p><b>1.2.1.7.1 Inter ECU communication</b></p>
+<p><b> </b></p>
+<p><b>1.2.1.7.1.1 End-to-end protection</b></p>
+<p><b> </b></p>
+<p><b>TSR-10 The system shall protect communication between its elements.  </b></p>
+<p>Rationale: Communication has to be protected against corruption, unintended replay and </p>
+<p>masquerading. The loss of a message must be detected. </p>
+<p>This can be achieved using the end-to-end (E2E) protection </p>
+<p>mechanism defined by AUTOSAR. </p>
+<p>MICROSAR Safe Feature: MICROSAR Safe implements the E2E functionality according </p>
+<p>to </p>
+<p>ISO 26262. This also includes the CRC library functionality. </p>
+<p><b>1.2.1.7.1.2 Protection by cryptographic algorithms</b></p>
+<p><b> </b></p>
+<p><b>TSR-11 The system shall protect communication between its elements using </b></p>
+<p><b>cryptographic hash algorithms to detect accidental corruption of the </b></p>
+<p><b>communication.  </b></p>
+<p>Rationale: Cyclic redundancy codes (CRC) provide a specified hamming distance given a </p>
+<p>polynomial and data block size. </p>
+<p>Cryptographic hash functions provide a probabilistic statement on data corruption </p>
+<p>detection depending on the hash function, data block size and hash value size. </p>
+<p>MICROSAR Safe Feature: The Cryptographic Service Manager of MICROSAR Safe is </p>
+<p>implemented according to the methods for ASIL D required by ISO 26262. </p>
+<p>The Cryptographic Service Manager services the main function and functions to calculate </p>
+<p>a cryptographic hash function according to AUTOSAR specification. </p>
+<p><b>1.2.1.7.2 Intra ECU communication</b></p>
+<p><b> </b></p>
+<p><b>1.2.1.7.2.1 Intra OS application communication</b></p>
+<p><b> </b></p>
+<p><b>TSR-16 The microcontroller software shall communicate within its applications.  </b></p>
+<p>Rationale: Software components need to communicate. </p>
+<p>Protection of the memory against random hardware faults is expected by the system (e.g. </p>
+<p>via ECC RAM and lock-step mode). </p>
+<p>MICROSAR Safe Feature: The RTE provides services to allow communication of software </p>
+<p>components within OS applications (intra-partition communication). </p>
+<p><b>1.2.1.7.2.2 Inter OS application communication</b></p>
+<p><b> </b></p>
+<p><b>TSR-12 The microcontroller software shall communicate between its applications.  </b></p>
+<p>Rationale: Multi-core systems may need to exchange safety-related information between </p>
+<p>applications. </p>
+<p>Protection of the memory against random hardware faults is expected by the system (e.g. </p>
+<p>via ECC RAM and lock-step mode). </p>
+<p>MICROSAR Safe Feature: The operating system of MICROSAR Safe implements the </p>
+<p>inter-OS application (IOS) functionality according to the methods for ASIL D required by </p>
+<p>ISO 26262. </p>
+<p>The RTE provides services to allow communication between OS applications (inter-</p>
+<p>partition communication). </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>14 / 52 </p>
+<p><b>1.2.1.8 Watchdog services </b></p>
+<p><b>1.2.1.8.1 Program flow monitoring</b></p>
+<p><b> </b></p>
+<p><b>TSR-13 The system shall provide a mechanism to detect faults in program flow.  </b></p>
+<p>Rationale. Program flow can be corrupted by random hardware faults or software faults. </p>
+<p>MICROSAR Safe Feature: MICROSAR Safe watchdog stack implements program flow </p>
+<p>monitoring functionality according to the methods for ASIL D required by ISO 26262. </p>
+<p><b>1.2.1.8.2 Alive monitoring</b></p>
+<p><b> </b></p>
+<p><b>TSR-14 The system shall provide a mechanism to detect stuck software.  </b></p>
+<p>Rationale: Alive monitoring is used to reset the software or controller in case it is </p>
+<p>unresponsive. </p>
+<p>MICROSAR Safe Feature: MICROSAR Safe watchdog stack implements alive monitoring </p>
+<p>functionality according to the methods for ASIL D required by ISO 26262. </p>
+<p><b>1.2.1.8.3 Deadline monitoring</b></p>
+<p><b> </b></p>
+<p><b>TSR-15 The system shall provide a mechanism to detect deadline violations.  </b></p>
+<p>Rationale: Deadline monitoring using the watchdog stack can be used to implement timing </p>
+<p>monitoring. </p>
+<p>MICROSAR Safe Feature: MICROSAR Safe watchdog stack implements deadline </p>
+<p>monitoring functionality according to the methods for ASIL D required by ISO 26262. </p>
+<p><b>1.2.1.9 Peripheral in- and output </b></p>
+<p><b>1.2.1.9.1 Peripheral input</b></p>
+<p><b> </b></p>
+<p><b>TSR-17 The system shall read input values from peripheral devices.  </b></p>
+<p>Rationale: In- and output is the most common use case for safety mechanisms. </p>
+<p>Some MCAL manufacturers call this feature safe acquisition. </p>
+<p>MICROSAR Safe Feature: MCAL components used for peripheral access are not </p>
+<p>developed by Vector. </p>
+<p><b>1.2.1.9.2 Peripheral output</b></p>
+<p><b> </b></p>
+<p><b>TSR-18 The system shall write output values to peripheral devices.  </b></p>
+<p>Rationale: In- and output is the most common use case for safety mechanisms. </p>
+<p>Some MCAL manufacturers call this feature safe actuation. </p>
+<p>MICROSAR Safe Feature: MCAL components used for peripheral access are not </p>
+<p>developed by Vector. </p>
+<p><b>1.2.2 Environment</b></p>
+<p><b> </b></p>
+<p><b>1.2.2.1 Safety Concept </b></p>
+<p>SMI-14 </p>
+<p><b>The user of MICROSAR Safe shall be responsible for the functional safety concept. </b></p>
+<p>The overall functional safety concept is in the responsibility of the user of MICROSAR </p>
+<p>Safe. MICROSAR Safe can only provide parts that can be used to implement the </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>15 / 52 </p>
+<p>functional safety concept of the item. </p>
+<p>It is also the responsibility of the user of MICROSAR Safe to configure MICROSAR Safe </p>
+<p>as intended by the user's safety concept.  </p>
+<p>The safety concept shall only rely on safety features explicitly described in this safety </p>
+<p>manual. If a component from MICROSAR Safe does not explicitly describe safety features </p>
+<p>in this safety manual, this component has been developed according to the methods for </p>
+<p>ASIL D to provide coexistence with other ASIL components.  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Example: NvM provides safety features for writing and reading of data, the lower </p>
+<p>layers, i.e. MemIf, Ea, Fee and drivers, only provide the ASIL for coexistence. </p>
+<p>The safety concept shall <b>not </b>rely on functionality that is <b>not </b>explicitly described as safety </p>
+<p>feature in this safety manual. This functionality may fail silently in case of a detected fault.  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Example: If a potential out-of-bounds memory access, e.g. due to invalid input or </p>
+<p>misconfiguration, is detected the requested function will not be performed. An error via </p>
+<p>DET is only reported if error reporting is enabled. </p>
+<p>SMI-1 </p>
+<p><b>The user of MICROSAR Safe shall adequately address hardware faults. </b></p>
+<p>The components of MICROSAR Safe can support in the detection and handling of some </p>
+<p>hardware faults (e.g. using watchdog). </p>
+<p>MICROSAR Safe does not provide redundant data storage. </p>
+<p>The user of MICROSAR Safe especially has to address faults in volatile random access </p>
+<p>memory, non-volatile memory, e.g. flash or EEPROM, and the CPU. </p>
+<p>MICROSAR Safe relies on the adequate detection of faults in memory and the CPU by </p>
+<p>other means, e.g. hardware. Thus, Vector recommends using lock-step CPUs together </p>
+<p>with ECC memory. </p>
+<p>See also SMI-14. </p>
+<p>SMI-10 </p>
+<p><b>The user of MICROSAR Safe shall ensure that the reset or powerless state is a safe </b></p>
+<p><b>state of the system. </b></p>
+<p>This assumption is added to this Safety Manual, because it is used in Vector's safety </p>
+<p>analyses and development process. </p>
+<p>SMI-20 </p>
+<p><b>The user of MICROSAR Safe shall implement a timing monitoring using e.g. a </b></p>
+<p><b>watchdog. </b></p>
+<p>The components of MICROSAR Safe do not provide mechanisms to monitor their own </p>
+<p>timing behavior. </p>
+<p>The watchdog stack that is part of MICROSAR Safe can be used to fulfill this assumption. </p>
+<p>If the functional safety concept also requires a logic monitoring, The watchdog stack that is </p>
+<p>part of MICROSAR Safe can be used to implement it. </p>
+<p>The watchdog is one way to perform timing monitoring. Today the watchdog is the most </p>
+<p>common approach. In future there may be different approaches e.g. by monitoring using a </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>16 / 52 </p>
+<p>different ECU. </p>
+<p>See also SMI-14. </p>
+<p>SMI-98 </p>
+<p><b>The user of MICROSAR Safe shall ensure an end-to-end protection for safety-</b></p>
+<p><b>relevant communication between ECUs. </b></p>
+<p>The communication components of MICROSAR Safe do not assume sending or receiving </p>
+<p>as a safety requirement, because considered faults can only be detected using additional </p>
+<p>information like a cycle counter. Vector always assumes that an end-to-end protection or </p>
+<p>equivalent mechanism is implemented on application level. </p>
+<p>Considered faults in communication are: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Failure of communication peer  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Message masquerading  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Message corruption </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Unintended message repetition  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Insertion of messages  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Re-sequencing  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Message loss  </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Message delay </p>
+<p>This requirement can be fulfilled by e.g. using the end-to-end protection wrapper for safety </p>
+<p>related communication. </p>
+<p>SMI-11 </p>
+<p><b>The user of MICROSAR Safe shall ensure data consistency for its application. </b></p>
+<p>Data consistency is not automatically provided when using MICROSAR Safe. MICROSAR </p>
+<p>Safe only provides services to support enforcement of data consistency. Their application </p>
+<p>is in the responsibility of the user of MICROSAR Safe. </p>
+<p>To ensure data consistency in an application, critical sections need to be identified and </p>
+<p>protected. </p>
+<p>To identify critical sections in the code, e.g. review or static code analysis can be used. </p>
+<p>To protect critical sections, e.g. the services to disable and enable interrupts provided by </p>
+<p>the MICROSAR Safe operating system can be used. </p>
+<p>To verify correctly implemented protection, e.g. stress testing or review can be used. </p>
+<p>Note the AUTOSAR specification with respect to nesting and sequence of calls to interrupt </p>
+<p>enabling and disabling functions. </p>
+<p><b>1.2.2.2 Use of MICROSAR Safe Components </b></p>
+<p>SMI-2 </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>17 / 52 </p>
+<p><b>The user of MICROSAR Safe shall adequately select the type definitions to reflect </b></p>
+<p><b>the hardware platform and compiler environment. </b></p>
+<p>The user of MICROSAR Safe is responsible for selecting the correct platform types </p>
+<p>(PlatformTypes.h) and compiler abstraction (Compiler.h). Especially the size of the </p>
+<p>predefined types must match the target environment. </p>
+<p>Example: A uint32 must be mapped to an unsigned integer type with a size of 32 bits. </p>
+<p>The user of MICROSAR Safe can use the platform types provided by Vector. Vector has </p>
+<p>created and verified the platform types mapping according to the information provided by </p>
+<p>the user of MICROSAR Safe. </p>
+<p>SMI-12 </p>
+<p><b>The user of MICROSAR Safe shall initialize all components of MICROSAR Safe prior </b></p>
+<p><b>to using them. </b></p>
+<p>This constraint is required by AUTOSAR anyway. It is added to this Safety Manual, </p>
+<p>because Vector assumes initialized components in its safety analyses and development </p>
+<p>process. </p>
+<p>Correct initialization can be verified, e.g. during integration testing. </p>
+<p>SMI-16 </p>
+<p><b>The user of MICROSAR Safe shall only pass valid pointers at all interfaces to </b></p>
+<p><b>MICROSAR Safe components. </b></p>
+<p>Plausibility checks on pointers are performed by MICROSAR Safe (see also SMI-18), but </p>
+<p>they are limited. MICROSAR Safe components potentially use provided pointers to write to </p>
+<p>the location in memory. </p>
+<p>Also the length and pointer of a buffer provided to a MICROSAR Safe component need to </p>
+<p>be consistent. </p>
+<p>This assumption also applies to QM as well as ASIL components. </p>
+<p>This can e.g. be verified using static code analysis tools, reviews and integration testing. </p>
+<p>SMI-18 </p>
+<p><b>The user of MICROSAR Safe shall enable plausibility checks for the MICROSAR </b></p>
+<p><b>Safe components. </b></p>
+<p>This setting is necessary to introduce defensive programming and increase robustness at </p>
+<p>the interfaces as required by ISO 26262. </p>
+<p>This setting can be found at /MICROSAR/EcuC/EcucGeneral/EcuCSafeBswChecks in the </p>
+<p>DaVinci Configurator. </p>
+<p>This setting is enforced by an MSSV plug-in. </p>
+<p>This setting does not enable error reporting to the DET component. </p>
+<p>SMI-1725 </p>
+<p><b>The user of MICROSAR Safe shall configure and use the interrupt system correctly. </b></p>
+<p>The user of MICROSAR Safe is responsible for a correct and consistent configuration and </p>
+<p>usage of the interrupt system. </p>
+<p>Especially the following topics shall be verified: </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>18 / 52 </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Consistent configuration of interrupt category, level and priority in OS and MCAL </p>
+<p>modules </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Correct assignment of logical channels/instances to interrupt vectors in case of MCAL </p>
+<p>modules with multiple channels/instances </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>The interrupt controller is configured in a mode which processes interrupts of the same </p>
+<p>level sequentially to avoid unbounded interrupt nesting </p>
+<p><b>1.2.2.3 Partitioning </b></p>
+<p>SMI-9 </p>
+<p><b>The user of MICROSAR Safe shall ensure that for one AUTOSAR functional cluster </b></p>
+<p><b>(e.g. System Services, Operating System, CAN, COM, etc.) only components from </b></p>
+<p><b>Vector are used. </b></p>
+<p>This assumption is required because of dependencies within the development process of </p>
+<p>Vector. </p>
+<p>This assumption does not apply to the MCAL or the EXT cluster. </p>
+<p>Vector may have requirements on MCAL or EXT components depending on the upper </p>
+<p>layers that are used and provided by Vector. For example, the watchdog driver is </p>
+<p>considered to have safety requirements allocated to its initialization and triggering </p>
+<p>services. Details are described in the component specific parts of this safety manual. </p>
+<p>This assumption does not apply to components that are not provided by Vector. </p>
+<p>In case the partitioning solution is used, this assumption only partially applies to the </p>
+<p>System Services cluster. Only the Watchdog Manager and Watchdog Interface need to be </p>
+<p>used from Vector then, because the Watchdog Manager and Watchdog Interface will be </p>
+<p>placed in separate memory partitions apart from the other System Services components. </p>
+<p>SMI-32 </p>
+<p><b>The user of MICROSAR Safe shall provide an argument for coexistence for software </b></p>
+<p><b>that resides in the same partition as components from MICROSAR Safe. </b></p>
+<p>Vector considers an ISO 26262-compliant development process for the software as an </p>
+<p>argument for coexistence (see [1] Part 9 Clause 6). Vector assumes that especially </p>
+<p>freedom from interference with respect to memory is provided by an ISO 26262-compliant </p>
+<p>development process. </p>
+<p>Redundant data storage as the only measure by the other software is not considered a </p>
+<p>sufficient measure. </p>
+<p>If ASIL components provided by Vector are used, this requirement is fulfilled. </p>
+<p>SMI-99 </p>
+<p><b>The user of MICROSAR Safe shall verify that the memory mapping is consistent </b></p>
+<p><b>with the partitioning concept.  </b></p>
+<p>The volatile data of every component shall be placed in the associated memory partition. </p>
+<p>This can be verified e.g. by review of the linker map file. </p>
+<p>The memory sections for each component placed in RAM can be identified </p>
+<p>&lt;MIP&gt;_START_SEC_VAR[_&lt;xxx&gt;], where &lt;MIP&gt; is the Module Implementation Prefix of </p>
+<p>the component. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>19 / 52 </p>
+<p><b>1.2.2.4 Resources </b></p>
+<p>SMI-33 </p>
+<p><b>The user of MICROSAR Safe shall provide sufficient resources in RAM, ROM, stack </b></p>
+<p><b>and CPU runtime for MICROSAR Safe. </b></p>
+<p>Selection of the microcontroller and memory capacities as well as dimensioning of the </p>
+<p>stacks is in the responsibility of the user of MICROSAR Safe. </p>
+<p>If MICROSAR Safe components have specific requirements, these are documented in the </p>
+<p>respective Technical Reference document. </p>
+<p><b>1.2.3 Process</b></p>
+<p><b> </b></p>
+<p>SMI-15 </p>
+<p><b>The user of MICROSAR Safe shall follow the instructions of the corresponding </b></p>
+<p><b>Technical Reference of the components. </b></p>
+<p>Especially deviations from AUTOSAR specifications are described in the Technical </p>
+<p>References. </p>
+<p>If there are constraints for the implementation of an exclusive area, these are described in </p>
+<p>the Technical References. </p>
+<p>SMI-5 </p>
+<p><b>The user of MICROSAR Safe shall verify all code that is modified during integration </b></p>
+<p><b>of MICROSAR Safe. </b></p>
+<p>Code that is typically modified by the user of MICROSAR Safe during integration </p>
+<p>comprises generated templates, hooks, callouts, or similar. </p>
+<p>This assumption also applies if interfaces between components are looped through user-</p>
+<p>defined functions. </p>
+<p>Vector assumes that this verification also covers ISO 26262:6-9. Vector assumes that </p>
+<p>modified code that belongs to a Vector component, e.g. EcuM callouts or OS trace hooks </p>
+<p>can at least coexist with this component, because no separation in memory or time is </p>
+<p>implemented. </p>
+<p>Example: Callouts of the EcuM are executed in the context of the EcuM. </p>
+<p>Non-trusted functions provided by the Vector operating system can be used to implement </p>
+<p>a separation in memory in code modified by the user of MICROSAR Safe. </p>
+<p>Support by Vector can be requested on a per-project basis. </p>
+<p>SMI-30 </p>
+<p><b>The user of MICROSAR Safe shall only modify source code of MICRSAR Safe that is </b></p>
+<p><b>explicitly allowed to be changed. </b></p>
+<p>Usually no source code of MICROSAR Safe is allowed to be changed by the user of </p>
+<p>MICROSAR Safe. </p>
+<p>The user of MICROSAR Safe can check if the source code was modified by e.g, </p>
+<p>comparing it to the original delivery.  </p>
+<p>SMI-8 </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>20 / 52 </p>
+<p><b>The user of MICROSAR Safe shall verify generated functions according to ISO </b></p>
+<p><b>26262:6-9. </b></p>
+<p>Generated functions can be identified when searching through the generated code. </p>
+<p>Support by Vector can be requested on a per-project basis. </p>
+<p>An example of generated functions is the configured rules of the Basic Software Manager </p>
+<p>(BSWM). Their correctness can only be verified by the user of MICROSAR Safe. Please </p>
+<p>note, however, that BSWM does not provide safety features. </p>
+<p>This requirement does not apply to MICROSAR SafeRTE. </p>
+<p>SMI-19 </p>
+<p><b>The user of MICROSAR Safe shall execute the MICROSAR Safe Silence Verifier </b></p>
+<p><b>(MSSV). </b></p>
+<p>Details on the required command line arguments and integration into the tool chain can be </p>
+<p>found in [4]. </p>
+<p>If the report shows “Overall Check Result: Fail&quot;, please contact the Safety Manager at </p>
+<p>Vector. See the Product Information MICROSAR Safe for contact details. </p>
+<p>SMI-4 </p>
+<p><b>The user of MICROSAR Safe shall perform the integration (ISO 26262:6-10) and </b></p>
+<p><b>verification (ISO 26262:6-11) processes as required by ISO 26262. </b></p>
+<p>Especially the safety mechanisms must be verified in the final target ECU. </p>
+<p>Vector assumes that by performing the integration and verification processes as required </p>
+<p>by ISO 26262 the generated configuration data, e.g. data tables, task priorities or PDU </p>
+<p>handles, are sufficiently checked. An additional review of the configuration data is then </p>
+<p>considered not necessary. </p>
+<p>Integration does not apply to a MICROSAR Safe component that consists of several </p>
+<p>subcomponents. This integration is already performed by Vector. The integration of </p>
+<p>subcomponents is validated during creation of the safety case by Vector based on the </p>
+<p>configuration handed in by the user of MICROSAR Safe. </p>
+<p>However, integration of all MICROSAR Safe components in the specific use-case of the </p>
+<p>user of MICROSAR Safe is the responsibility of the user of MICROSAR Safe. This also </p>
+<p>includes the hardware-software integration in the context of the target ECU. </p>
+<p>Support by Vector can be requested on a per-project basis. </p>
+<p>SMI-100 </p>
+<p><b>The user of MICROSAR Safe shall ensure that a consistent set of generated </b></p>
+<p><b>configuration is used for verification and production.  </b></p>
+<p>Make sure that the same generated files are used for testing and production code, i.e. be </p>
+<p>aware that configuration can be changed without generating the code again. </p>
+<p>Make sure that all generated files have the same configuration basis, i.e. always generate </p>
+<p>the MICROSAR Safe configuration for all components for a relevant release of the ECU </p>
+<p>software. </p>
+<p>SMI-176 </p>
+<p><b>The user of MICROSAR Safe shall verify the integrity of the delivery by Vector.  </b></p>
+<p>Run the SIPModificationChecker.exe and verify that the source code, BSWMD and safety </p>
+<p>manual files are unchanged. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>21 / 52 </p>
+<p>SMI-31 </p>
+<p><b>The user of MICROSAR Safe shall verify the consistency of the binary downloaded </b></p>
+<p><b>into the ECU's flash memory. </b></p>
+<p>This also includes re-programming of flash memory via a diagnostics service. The </p>
+<p>consistency of the downloaded binary can be checked by the bootloader or the application. </p>
+<p>MICROSAR Safe assumes a correct program image.  </p>
+<p>SMI-3 </p>
+<p><b>The user of MICROSAR Safe shall evaluate all tools (incl. compiler) that are used by </b></p>
+<p><b>the user of MICROSAR Safe according to ISO 26262:8-11. </b></p>
+<p>Evaluation especially has to be performed for the compiler, linker, debugging and test </p>
+<p>tools. </p>
+<p>Vector provides a guideline for the evaluation of the Tool Confidence Level (TCL) for the </p>
+<p>tools provided by Vector (e.g. DaVinci Configurator). </p>
+<p>Vector has evaluated the tools exclusively used by Vector during the development of </p>
+<p>MICROSAR Safe. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>22 / 52 </p>
+<p><b>2 Safety Manual BswM</b></p>
+<p><b> </b></p>
+<p><b>2.1 Safety features</b></p>
+<p><b> </b></p>
+<p>This component does not provide safety features. </p>
+<p><b>2.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>This component does not have configuration constraints. </p>
+<p><b>2.3 Additional Verification measures</b></p>
+<p><b> </b></p>
+<p>This component does not require additional verification measures. </p>
+<p><b>2.4 Dependencies to other components</b></p>
+<p><b> </b></p>
+<p><b>2.4.1 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>This component does not require safety features from other components. </p>
+<p><b>2.4.2 Coexistence with other components</b></p>
+<p><b> </b></p>
+<p>SMI-55 </p>
+<p>This component requires coexistence with CanNm, EthSM, Com, Det, Dem, Nm, RTE, </p>
+<p>NvM, PduR, FrSM, Dcm, LinIf, LinTp, LinSM, EcuM, CanSM, J1939Dcm, J1939Nm, </p>
+<p>J1939Rm, Sd, WdgM and ComM components if the interface for those components is </p>
+<p>configured. </p>
+<p><b>2.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>23 / 52 </p>
+<p><b>3 Safety Manual Crc</b></p>
+<p><b> </b></p>
+<p><b>3.1 Safety features</b></p>
+<p><b> </b></p>
+<p>SMI-344 </p>
+<p>Crc provides the following safety features: </p>
+<p>ID </p>
+<p> </p>
+<p>Safety feature </p>
+<p> </p>
+<p>CREQ-858 </p>
+<p> </p>
+<p>Crc shall provide a service to calculate 8-bit SAE-J1850 CRC.</p>
+<p> </p>
+<p>CREQ-859 </p>
+<p> </p>
+<p>Crc shall provide a service to calculate 8-bit 0x2F CRC.</p>
+<p> </p>
+<p>CREQ-860 </p>
+<p> </p>
+<p>Crc shall provide a service to calculate 16-bit CCITT CRC.</p>
+<p> </p>
+<p>CREQ-861 </p>
+<p> </p>
+<p>Crc shall provide a service to calculate 32-bit IEEE-802.3 CRC.</p>
+<p> </p>
+<p>CREQ-862 </p>
+<p> </p>
+<p>Crc shall provide a service to calculate 32-bit E2E Profile 4 CRC.</p>
+<p> </p>
+<p> </p>
+<p><b>3.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>This component has no configuration constraints. </p>
+<p><b>3.3 Additional verification measures</b></p>
+<p><b> </b></p>
+<p>SMI-49 </p>
+<p>The user of MICROSAR Safe shall verify that the CRC is calculated for the intended data. </p>
+<p>This includes the intended buffer and its size (see also SMI-16), start value and if it is the </p>
+<p>first call to the service. </p>
+<p>Verification can be performed by the &quot;magic check&quot; (see AUTOSAR SWS Crc). </p>
+<p>If Crc is used by a MICROSAR Safe component (e.g. E2E, NvM), this requirement is </p>
+<p>fulfilled for the MICROSAR Safe component. </p>
+<p><b>3.4 Dependencies to other components</b></p>
+<p><b> </b></p>
+<p><b>3.4.1 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>This component does not require safety features from other components. </p>
+<p><b>3.4.2 Coexistence with other components</b></p>
+<p><b> </b></p>
+<p>This component does not require coexistence with other components. </p>
+<p>It is assumed that the user of Crc has the adequate ASIL. </p>
+<p><b>3.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>24 / 52 </p>
+<p><b>4 Safety Manual Dem</b></p>
+<p><b> </b></p>
+<p>SMI-2056 </p>
+<p>Please note: This version is not fully developed according to ISO 26262 ASIL D. Vector </p>
+<p>provides an alternative argument for freedom from interference with respect to memory </p>
+<p>though. The Silent methodology developed by Vector has been completely implemented </p>
+<p>for this component.  </p>
+<p><b>4.1 Safety features</b></p>
+<p><b> </b></p>
+<p>This component does not provide safety features. </p>
+<p><b>4.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>SMI-2054 </p>
+<p>The user of MICROSAR Safe shall configure the following attributes: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Set <i>/MICROSAR/Dem/DemGeneral/DemOBDSupport </i>to </p>
+<p><i>DEM_OBD_NO_OBD_SUPPORT</i>. </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Set <i>/MICROSAR/Dem/DemGeneral/DemJ1939Support </i>to <i>FALSE</i>. </p>
+<p>These settings are enforced by an MSSV plugin. </p>
+<p><b>4.3 Additional verification measures</b></p>
+<p><b> </b></p>
+<p>SMI-2055 </p>
+<p>The user of MICROSAR Safe shall verify that tables <i>Dem_Cfg_</i></p>
+<p>&lt;CallbackType&gt;</p>
+<p> only </p>
+<p>contain function pointers matching the signature listed for </p>
+<p>&lt;CallbackType&gt;</p>
+<p> in the table </p>
+<p>below. </p>
+<p>If all events use the same callback, some of the tables might be optimized into a constant </p>
+<p>access macro <i>Dem_Cfg_Get</i></p>
+<p>&lt;CallbackType&gt;</p>
+<p>. In that case the respective table does not </p>
+<p>exist. Instead, the user of MICROSAR Safe shall verify the validity of the function pointer </p>
+<p>returned by the macro <i>Dem_Cfg_Get</i></p>
+<p>&lt;CallbackType&gt;</p>
+<p>. </p>
+<p>The value <i>NULL_PTR </i>is valid for all callback types listed in below table. </p>
+<p>The tables are generated into <i>Dem_Lcfg.c</i>. </p>
+<p>The macros are generated into <i>Dem_Lcfg.h</i>. </p>
+<p>&lt;CallbackType&gt;</p>
+<p> represents the entry in column <i>CallbackType </i>from below table. </p>
+<p><b>CallbackType</b></p>
+<p><b> </b></p>
+<p><b>Expected signature of the functions</b></p>
+<p><b> </b></p>
+<p>CallbackClearEventAllowed</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(boolean *IsAllowed)</p>
+<p> </p>
+<p>CallbackDtcStatusChanged</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(uint32 DTC, </p>
+<p>Dem_DTCStatusMaskType oldStatus, </p>
+<p>Dem_DTCStatusMaskType newStatus)</p>
+<p> </p>
+<p>CallbackGetFdc</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(sint8 *FDC)</p>
+<p> </p>
+<p>EventDataChanged</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(void)</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>25 / 52 </p>
+<p>EventStatusChanged</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(Dem_EventStatusExtendedType </p>
+<p>oldStatus, Dem_EventStatusExtendedType newStatus)</p>
+<p> </p>
+<p>InitMonitorForEvent</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(Dem_InitMonitorReasonType  </p>
+<p>initReason)</p>
+<p> </p>
+<p>InitMonitorsForFunc</p>
+<p> </p>
+<p>Std_ReturnType &lt;name&gt;(void)</p>
+<p> </p>
+<p> </p>
+<p>SMI-2207 </p>
+<p>The user of MICROSAR Safe shall verify that the macro definitions in below table are </p>
+<p>defined to function pointers matching the listed signature. </p>
+<p>The value <i>NULL_PTR </i>is valid for all callbacks listed in below table. </p>
+<p>The macros are generated into <i>Dem_Lcfg.h</i>. </p>
+<p><b>Configuration Macro</b></p>
+<p><b> </b></p>
+<p><b>Expected signature of the function</b></p>
+<p><b> </b></p>
+<p><i>DEM_CFG_GLOBALCBKDATA_FUNC</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(Dem_EventIdType </p>
+<p>EventId)</p>
+<p> </p>
+<p><i>DEM_CFG_GLOBALCBKSTATUS_FUNC</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(Dem_EventIdType </p>
+<p>EventId, </p>
+<p>Dem_EventStatusExtendedType </p>
+<p>oldStatus, </p>
+<p>Dem_EventStatusExtendedType </p>
+<p>newStatus)</p>
+<p> </p>
+<p><i>DEM_CFG_GLOBALCBKCONTROLDTCSETTING_FUNC</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(boolean Status)</p>
+<p> </p>
+<p> </p>
+<p>SMI-2194 </p>
+<p>The user of MICROSAR Safe shall verify for all function pointers stored in table </p>
+<p><i>Dem_Cfg_DataElementTable[] </i>that the function signature matches the <i>ElementKind </i>value </p>
+<p>according to the below table. </p>
+<p><i>Dem_Cfg_DataElementTable[] </i>is generated into <i>Dem_Lcfg.c</i>. </p>
+<p><b>ElementKind</b></p>
+<p><b> </b></p>
+<p><b>Expected signature of the </b></p>
+<p><b>function</b></p>
+<p><b> </b></p>
+<p><i>DEM_CFG_DATA_FROM_CBK_STORED</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(uint8 *data)</p>
+<p> </p>
+<p><i>DEM_CFG_DATA_FROM_CBK_CURRENT</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(uint8 *data)</p>
+<p> </p>
+<p><i>DEM_CFG_DATA_FROM_CBK_STORED_WITH_EVENTID</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(Dem_EventIdType </p>
+<p>EventId, </p>
+<p>uint8 *data)</p>
+<p> </p>
+<p><i>DEM_CFG_DATA_FROM_CBK_CURRENT_WITH_EVENTID</i></p>
+<p> </p>
+<p>Std_ReturnType </p>
+<p>&lt;name&gt;(Dem_EventIdType </p>
+<p>EventId, </p>
+<p>uint8 *data)</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>26 / 52 </p>
+<p>other values</p>
+<p> </p>
+<p>The function must be <i>NULL_PTR</i></p>
+<p> </p>
+<p> </p>
+<p>SMI-2195 </p>
+<p>The user of MICROSAR Safe shall verify that all function callbacks configured in table </p>
+<p><i>Dem_Cfg_DataElementTable[] </i>write at most <i>ElementSize </i>bytes. </p>
+<p>e.g. for a line { DEM_CFG_DATA_FROM_CBK_STORED, 4U, </p>
+<p>(Dem_ReadDataFPtrType)Rte_Call_CBReadData_DemDataElementClass_ReadData } </p>
+<p>verify that the application runnable triggered by the Rte when the Dem invokes operation </p>
+<p><i>ReadData </i>on PortPrototype <i>DemDataElementClass </i>will at most write 4 bytes. </p>
+<p>The table is generated into <i>Dem_Lcfg.c</i>.  </p>
+<p>SMI-2196 </p>
+<p>The user of MICROSAR Safe shall verify that all NV Block IDs listed in table </p>
+<p><i>Dem_Cfg_MemoryBlockId[] </i>are intended to be used exclusively by Dem. This is required </p>
+<p>for SMI-22. </p>
+<p>The table is generated into <i>Dem_Lcfg.c </i></p>
+<p>SMI-2197 </p>
+<p>The user of MICROSAR Safe shall verify that the configured NvM block size of the NV </p>
+<p>blocks referenced in table <i>Dem_Cfg_MemoryBlockId </i>is equal to the data size in table </p>
+<p><i>Dem_Cfg_MemoryDataSize </i>for the same index. </p>
+<p>The user of MICROSAR Safe shall verify that the NV block is also configured to use the </p>
+<p>RAM buffer referenced in <i>Dem_Cfg_MemoryDataPtr </i>for the same index. This is required </p>
+<p>for SMI-23. </p>
+<p>Example: Verify that the NvM block descriptor referenced in <i>Dem_Cfg_MemoryBlockId[1] </i></p>
+<p>is configured with data length <i>Dem_Cfg_MemoryDataSize[1] </i>and RAM buffer </p>
+<p><i>Dem_Cfg_MemoryDataPtr[1] </i></p>
+<p>The tables <i>Dem_Cfg_MemoryBlockId</i>, <i>Dem_Cfg_MemoryDataSize </i>and </p>
+<p><i>Dem_Cfg_MemoryDataPtr </i>are generated into <i>Dem_Lcfg.c</i>. </p>
+<p>Refer to the NvM for the location of the tables generated by the NvM to verify the correct </p>
+<p>configuration. </p>
+<p>SMI-2198 </p>
+<p>The user of MICROSAR Safe shall verify that when calling </p>
+<p><i>Dem_GetEventExtendedDataRecord </i>or <i>Dem_GetEventFreezeFrameData</i>, either directly </p>
+<p>or by RTE operation <i>GetExtendedDataRecord </i>or <i>GetFreezeFrameData </i>of port interfaces </p>
+<p><i>DiagnosticInfo</i>, <i>GeneralDiagnosticInfo </i>or <i>DiagnosticMonitor </i></p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>The <i>DestBuffer </i>parameter shall point to a writeable memory area which can receive at </p>
+<p>least <i>sizeof(Dem_MaxDataValueSize) </i>bytes. </p>
+<p>If an RTE is used, the type <i>Dem_MaxDataValueSize </i>is defined in <i>Rte_Type.h</i>. </p>
+<p>If no RTE is used, the value of <i>DEM_CFG_SIZEOF_MAX_DATA_VALUE_TYPE </i>can be </p>
+<p>used to find the expected buffer size. This macro is generated into <i>Dem_Lcfg.h</i>. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>27 / 52 </p>
+<p>SMI-2199 </p>
+<p>The user of MICROSAR Safe shall verify that table <i>Dem_Cfg_MemoryDataPtr[] </i>contains a </p>
+<p>pointer of type <i>Dem_Cfg_PrimaryEntryType </i>for the indices </p>
+<p><i>DEM_CFG_MEMORY_PRIMARY_INDEX </i>(inclusive) through </p>
+<p><i>DEM_CFG_MEMORY_PRIMARY_INDEX </i>+ <i>DEM_CFG_GLOBAL_PRIMARY_SIZE </i>+ </p>
+<p><i>DEM_CFG_GLOBAL_SECONDARY_SIZE </i>(exclusive). </p>
+<p>The macros <i>DEM_CFG_MEMORY_PRIMARY_INDEX</i>, </p>
+<p><i>DEM_CFG_GLOBAL_PRIMARY_SIZE </i>and <i>DEM_CFG_GLOBAL_SECONDARY_SIZE </i></p>
+<p>are generated into in <i>Dem_Lcfg.h</i>. </p>
+<p>The type <i>Dem_Cfg_PrimaryEntryType </i>is generated into in <i>Dem_Lcfg.h</i>. </p>
+<p>The table <i>Dem_Cfg_MemoryDataPtr[] </i>is generated into <i>Dem_Lcfg.c</i>. </p>
+<p>SMI-2200 </p>
+<p>Only for OEM TMC, if time series snapshots are configured. Time series snapshots are </p>
+<p>enabled by creating configuration container <i>DemGeneral/DemTimeSeriesSnapshot</i>. </p>
+<p>The user of MICROSAR Safe shall verify that table <i>Dem_Cfg_MemoryDataPtr[] </i>contains a </p>
+<p>pointer of type <i>Dem_Cfg_TimeSeriesEntryType </i>for the indices </p>
+<p><i>DEM_CFG_MEMORY_TIME_SERIES_INDEX </i>(inclusive) through </p>
+<p><i>DEM_CFG_MEMORY_TIME_SERIES_INDEX </i>+ </p>
+<p><i>DEM_CFG_GLOBAL_TIMESERIES_SNAPSHOTS_SIZE </i>(exclusive). </p>
+<p>The macros <i>DEM_CFG_MEMORY_TIME_SERIES_INDEX </i>and </p>
+<p><i>DEM_CFG_GLOBAL_TIMESERIES_SNAPSHOTS_SIZE </i>are generated into <i>Dem_Lcfg.h</i>. </p>
+<p>The type <i>Dem_Cfg_TimeSeriesEntryType </i>is generated into <i>Dem_Lcfg.h</i>. </p>
+<p>The table <i>Dem_Cfg_MemoryDataPtr[] </i>is generated into <i>Dem_Lcfg.c</i>. </p>
+<p>SMI-2201 </p>
+<p>The user of MICROSAR Safe shall verify that <i>sizeof(Dem_Cfg_CommitBuffer) </i>is as large </p>
+<p>or larger than the entries in table <i>Dem_Cfg_MemoryDataSize[]</i>. </p>
+<p><i>Dem_Cfg_CommitBuffer </i>and <i>Dem_Cfg_MemoryDataSize[] </i>are generated into </p>
+<p><i>Dem_Lcfg.c</i>. </p>
+<p><b>4.4 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>This component does not require safety features from other components. </p>
+<p><b>4.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>28 / 52 </p>
+<p><b>5 Safety Manual Det</b></p>
+<p><b> </b></p>
+<p><b>5.1 Safety features</b></p>
+<p><b> </b></p>
+<p>This component does not provide safety features. </p>
+<p><b>5.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>This component does not have configuration constraints. </p>
+<p>SMI-60 </p>
+<p>The Det should not be used in series production. If it is used in series production the </p>
+<p>extended debug features shall be switched off, because they are only relevant if a </p>
+<p>debugger is attached.  </p>
+<p>The user of MICROSAR Safe shall configure and verify the following attribute: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>/MICROSAR/Det/DetGeneral/DetExtDebugSupport = False </p>
+<p><b>5.3 Additional Verification measures</b></p>
+<p><b> </b></p>
+<p>This component does not require additional verification measures. </p>
+<p><b>5.4 Dependencies to other components</b></p>
+<p><b> </b></p>
+<p><b>5.4.1 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>This component does not require safety features from other components. </p>
+<p><b>5.4.2 Coexistence with other components</b></p>
+<p><b> </b></p>
+<p>SMI-54 </p>
+<p>This component requires coexistence with Dlt component if the interface for this </p>
+<p>component is configured. Callouts used during series production must also provide an </p>
+<p>argument for coexistence.  </p>
+<p><b>5.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>29 / 52 </p>
+<p><b>6 Safety Manual EcuM</b></p>
+<p><b> </b></p>
+<p><b>6.1 Safety features</b></p>
+<p><b> </b></p>
+<p>SMI-34 </p>
+<p>EcuM Flex provides the following safety features: </p>
+<p>ID </p>
+<p> </p>
+<p>Safety feature </p>
+<p> </p>
+<p>CREQ-470 </p>
+<p> </p>
+<p>EcuM shall provide a service to initialize the ECU management.</p>
+<p> </p>
+<p>CREQ-454 </p>
+<p> </p>
+<p>EcuM shall provide ECU initialization on multiple cores.</p>
+<p> </p>
+<p>CREQ-543 </p>
+<p> </p>
+<p>EcuM shall perform validation of all postbuild configurable BSW module configuration </p>
+<p>parameters.</p>
+<p> </p>
+<p>CREQ-375 </p>
+<p> </p>
+<p>EcuM shall provide a callout to set programmable interrupts during the startup phase.</p>
+<p> </p>
+<p>CREQ-525 </p>
+<p> </p>
+<p>EcuM shall provide a callout to initialize driver prior the start of the OS.</p>
+<p> </p>
+<p>CREQ-488 </p>
+<p> </p>
+<p>EcuM shall provide a callout to determine the Postbuild configuration data.</p>
+<p> </p>
+<p>CREQ-505 </p>
+<p> </p>
+<p>EcuM shall provide a callout to initialize drivers prior Postbuild data is available.</p>
+<p> </p>
+<p>CREQ-391 </p>
+<p> </p>
+<p>EcuM shall provide a callout to reset the ECU.</p>
+<p> </p>
+<p>CREQ-381 </p>
+<p> </p>
+<p>EcuM shall provide a callout to generate a RAM Hash.</p>
+<p> </p>
+<p>CREQ-440 </p>
+<p> </p>
+<p>EcuM shall provide a callout to check the RAM Hash.</p>
+<p> </p>
+<p>CREQ-509 </p>
+<p> </p>
+<p>EcuM shall provide a callout to re-initialize drivers during a restart.</p>
+<p> </p>
+<p>CREQ-445 </p>
+<p> </p>
+<p>EcuM shall provide a service to set the current shutdown target of the ECU.</p>
+<p> </p>
+<p>CREQ-372 </p>
+<p> </p>
+<p>EcuM shall provide a service to initiate the ECU shutdown depending on the </p>
+<p>shutdown target.</p>
+<p> </p>
+<p>CREQ-431 </p>
+<p> </p>
+<p>EcuM shall provide a callout to notify Errors from the ECU management.</p>
+<p> </p>
+<p>CREQ-421 </p>
+<p> </p>
+<p>EcuM shall provide a service to complete the ECU shutdown process.</p>
+<p> </p>
+<p>CREQ-699 </p>
+<p> </p>
+<p>EcuM shall indicate mode changes to the RTE.</p>
+<p> </p>
+<p>CREQ- </p>
+<p>691</p>
+<p> </p>
+<p>EcuM shall provide a service to request the run state.</p>
+<p> </p>
+<p>CREQ-692 </p>
+<p> </p>
+<p>EcuM shall provide a service to release the run state.</p>
+<p> </p>
+<p>CREQ-693 </p>
+<p> </p>
+<p>EcuM shall provide a service to release the post run state.</p>
+<p> </p>
+<p>CREQ-690 </p>
+<p> </p>
+<p>EcuM shall provide a service to request the post run state.</p>
+<p> </p>
+<p>Note: RAM Hash generation and checking callouts are only available when sleep modes </p>
+<p>are configured. </p>
+<p>SMI-286 </p>
+<p>EcuM Fix provides the following safety features: </p>
+<p>ID </p>
+<p> </p>
+<p>Safety feature </p>
+<p> </p>
+<p>CREQ-470 </p>
+<p> </p>
+<p>EcuM shall provide a service to initialize the ECU management.</p>
+<p> </p>
+<p>CREQ-454 </p>
+<p> </p>
+<p>EcuM shall provide ECU initialization on multiple cores.</p>
+<p> </p>
+<p>CREQ-543 </p>
+<p> </p>
+<p>EcuM shall perform validation of all postbuild configurable BSW module configuration </p>
+<p>parameters.</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>30 / 52 </p>
+<p>CREQ-375 </p>
+<p> </p>
+<p>EcuM shall provide a callout to set programmable interrupts during the startup phase.</p>
+<p> </p>
+<p>CREQ-525 </p>
+<p> </p>
+<p>EcuM shall provide a callout to initialize driver prior the start of the OS.</p>
+<p> </p>
+<p>CREQ-488 </p>
+<p> </p>
+<p>EcuM shall provide a callout to determine the Postbuild configuration data.</p>
+<p> </p>
+<p>CREQ-505 </p>
+<p> </p>
+<p>EcuM shall provide a callout to initialize drivers prior Postbuild data is available.</p>
+<p> </p>
+<p>CREQ-391 </p>
+<p> </p>
+<p>EcuM shall provide a callout to reset the ECU.</p>
+<p> </p>
+<p>CREQ-381 </p>
+<p> </p>
+<p>EcuM shall provide a callout to generate a RAM Hash.</p>
+<p> </p>
+<p>CREQ-440 </p>
+<p> </p>
+<p>EcuM shall provide a callout to check the RAM Hash.</p>
+<p> </p>
+<p>CREQ-509 </p>
+<p> </p>
+<p>EcuM shall provide a callout to re-initialize drivers during a restart.</p>
+<p> </p>
+<p>CREQ-445 </p>
+<p> </p>
+<p>EcuM shall provide a service to set the current shutdown target of the ECU.</p>
+<p> </p>
+<p>CREQ-372 </p>
+<p> </p>
+<p>EcuM shall provide a service to initiate the ECU shutdown depending on the </p>
+<p>shutdown target.</p>
+<p> </p>
+<p>CREQ-431 </p>
+<p> </p>
+<p>EcuM shall provide a callout to notify Errors from the ECU management.</p>
+<p> </p>
+<p>CREQ-421 </p>
+<p> </p>
+<p>EcuM shall provide a service to complete the ECU shutdown process.</p>
+<p> </p>
+<p>CREQ-699 </p>
+<p> </p>
+<p>EcuM shall indicate mode changes to the RTE.</p>
+<p> </p>
+<p>CREQ-703 </p>
+<p> </p>
+<p>EcuM shall provide the ECU state machine.</p>
+<p> </p>
+<p>CREQ-707 </p>
+<p> </p>
+<p>EcuM shall trigger the NvM write job in shutdown path.</p>
+<p> </p>
+<p>CREQ-668 </p>
+<p> </p>
+<p>EcuM shall provide a callback which is called by the NvM to notify the end of the write </p>
+<p>all job.</p>
+<p> </p>
+<p>CREQ- </p>
+<p>691</p>
+<p> </p>
+<p>EcuM shall provide a service to request the run state.</p>
+<p> </p>
+<p>CREQ-692 </p>
+<p> </p>
+<p>EcuM shall provide a service to release the run state.</p>
+<p> </p>
+<p>CREQ-693 </p>
+<p> </p>
+<p>EcuM shall provide a service to release the post run state.</p>
+<p> </p>
+<p>CREQ-690 </p>
+<p> </p>
+<p>EcuM shall provide a service to request the post run state.</p>
+<p> </p>
+<p>CREQ-694 </p>
+<p> </p>
+<p>EcuM shall provide a service to kill all post run requests.</p>
+<p> </p>
+<p>CREQ-695 </p>
+<p> </p>
+<p>EcuM shall provide a service to kill all run requests.</p>
+<p> </p>
+<p>CREQ-707 </p>
+<p> </p>
+<p>EcuM shall trigger the NvM write job in shutdown path.</p>
+<p> </p>
+<p>CREQ-668 </p>
+<p> </p>
+<p>EcuM shall provide a callback which is called by the NvM to notify the end of the write </p>
+<p>all job.</p>
+<p> </p>
+<p>Note: RAM Hash generation and checking callouts are only available when sleep modes </p>
+<p>are configured. </p>
+<p>SMI-38 </p>
+<p>If EcuM service to complete the shutdown process is called prior to initiate the shutdown </p>
+<p>process, no shutdown will be performed. </p>
+<p><b>6.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>SMI-36 </p>
+<p>The user of MICROSAR Safe shall configure the following attribute: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Set /MICROSAR/EcuM/EcuMFlexGeneral/EcuMEnableDefBehaviour to FALSE. </p>
+<p>This setting is enforced by a MSSV plugin. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>31 / 52 </p>
+<p><b>6.3 Additional verification measurse</b></p>
+<p><b> </b></p>
+<p>SMI-39 </p>
+<p><b>The user of MICROSAR Safe shall verify the intended initialization procedure during </b></p>
+<p><b>integration testing. </b></p>
+<p>The user of MICROSAR Safe can verify the intended initialization procedure by performing </p>
+<p>the following tests: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Start the ECU and verify that the intended initalization routines are called. This needs </p>
+<p>to be verified for each Postbuild-selectable configuration. </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Corrupt the Postbuild data (but not corresponding CRC) in non-volatile memory and </p>
+<p>start the ECU. Then verify that the corruption is detected by EcuM. </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Start the ECU and verify that the intended Postbuild-selectable configuration is used </p>
+<p>by the EcuM. This needs to be verified for each Postbuild-selectable configuration. </p>
+<p>A start of the ECU includes a &quot;cold-start&quot;, reset as well as wake-up from sleep if </p>
+<p>applicable. </p>
+<p>This requirement only applies if TSR-1 is considered a safety requirement. </p>
+<p>SMI-35 </p>
+<p><b>The user of MICROSAR Safe shall verify the intended shutdown procedure during </b></p>
+<p><b>integration testing. </b></p>
+<p>The user of MICROSAR Safe can verify the intended shutdown procedure by shutting </p>
+<p>down the ECU with all configured shutdown paths. A shutdown path is a call to the service </p>
+<p>that sets the current shutdown target with a relevant (e.g. combination used to achieve </p>
+<p>safe state) combination of its parameters. For each shutdown path the intended final state </p>
+<p>of the ECU (e.g. sleep, shutdown, reset) and the method of reset (e.g. using MCU or </p>
+<p>Watchdog) is used. </p>
+<p>The user of MICROSAR Safe shall also consider the service to initiate the ECU shutdown </p>
+<p>depending on the shutdown target as a possible shutdown path. </p>
+<p>The user of MICROSAR Safe shall also verify the default shutdown target. </p>
+<p>This requirement only applies if TSR-3 is considered as a safety requirement. </p>
+<p>SMI-40 </p>
+<p><b>The user of MICROSAR Safe shall verify that the memory region used for RAM hash </b></p>
+<p><b>generation and verification is as intended. </b></p>
+<p>Verification can be e.g. performed by review. </p>
+<p><b>6.4 Dependencies to other components</b></p>
+<p><b> </b></p>
+<p><b>6.4.1 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>SMI-42 </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>32 / 52 </p>
+<p>The used operating system shall provide the service to get the core ID as safety feature. </p>
+<p>If the operating system from MICROSAR Safe is used, this dependency is fulfilled. </p>
+<p>This requirement only applies if TSR-1 is considered a safety requirement. </p>
+<p><b>6.4.2 Coexistence with other components</b></p>
+<p><b> </b></p>
+<p>SMI-41 </p>
+<p>This component requires coexistence with RTE, BswM, ComM, Dem, Gpt, MCU and Det </p>
+<p>components if the interface for those components is configured. </p>
+<p><b>6.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>33 / 52 </p>
+<p><b>7 Safety Manual Fee</b></p>
+<p><b> </b></p>
+<p><b>7.1 Safety features</b></p>
+<p><b> </b></p>
+<p>This component does not provide safety features. </p>
+<p><b>7.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>SMI-2553 </p>
+<p>The user of MICROSAR Safe shall verify Fee's internal buffer size. </p>
+<p>The size is generated to macro <i>FEE_INTERNAL_BUFFER_SIZE</i>. </p>
+<p>The buffer size shall be at least the maximum of all configured partition's </p>
+<p><i>AddressAlignment </i>values. Each partition is generated into the array </p>
+<p><i>Fee_PartitionConfig_at</i>. Note that the alignments store the exponents, i.e. the power to </p>
+<p>which the value 2 shall be raised. </p>
+<p>Verification can be performed e.g. by review. </p>
+<p>SMI-2595 </p>
+<p>The user of MICROSAR Safe shall disable data conversion. </p>
+<p>Set <i>/MICROSAR/Fee/FeeSpecificFeatures/FeeDataConversionApi </i>to <i>FALSE</i>. </p>
+<p>This setting is enforced by an MSSV plugin. </p>
+<p><b>7.3 Additional verification measures</b></p>
+<p><b> </b></p>
+<p>SMI-2594 </p>
+<p>The user of MICROSAR Safe shall pass a valid pointer to a data buffer to Fee's read </p>
+<p>functions. </p>
+<p>The size of the data buffer must match the length provided in the read request, which is </p>
+<p>passed either explicitly (<i>Fee_Read</i>), or implicitly (i.e. one element of given data type) in </p>
+<p><i>Fee_GetEraseCycle </i>and <i>Fee_GetWriteCycle</i>. </p>
+<p>If the NvM by Vector and in case <i>Fee_Read </i>is used, it is sufficient to verify that it is only </p>
+<p>called by the NvM (indirectly via <i>MemIf_Read</i>). </p>
+<p>Verification can be performed e.g. by review. </p>
+<p>SMI-2554 </p>
+<p>The user of MICROSAR Safe shall pass a valid Fee configuration pointer to <i>Fee_InitEx</i>. </p>
+<p>If <i>Fee_InitEx </i>is used instead of <i>Fee_Init </i>to initialize the component, the user has to make </p>
+<p>sure, the pointer points to a valid structure of correct type. </p>
+<p>Verification can be performed e.g. by review. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>34 / 52 </p>
+<p><b>7.4 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>This component does not require safety features from other components. </p>
+<p><b>7.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>35 / 52 </p>
+<p><b>8 Safety Manual MemIf</b></p>
+<p><b> </b></p>
+<p><b>8.1 Safety features</b></p>
+<p><b> </b></p>
+<p>This component does not provide safety features. </p>
+<p><b>8.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>This component does not have configuration constraints. </p>
+<p><b>8.3 Additional verification measures</b></p>
+<p><b> </b></p>
+<p>This component does not require additional verification measures. </p>
+<p><b>8.4 Dependencies to other components</b></p>
+<p><b> </b></p>
+<p><b>8.4.1 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>This component does not require safety features from other components. </p>
+<p><b>8.4.2 Coexistence with other components</b></p>
+<p><b> </b></p>
+<p>SMI-311 </p>
+<p>This component requires coexistence with NvM, Det, Fee, and Ea components if the </p>
+<p>interface for those components is configured. </p>
+<p><b>8.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>36 / 52 </p>
+<p><b>9 Safety Manual NvM</b></p>
+<p><b> </b></p>
+<p><b>9.1 Safety features</b></p>
+<p><b> </b></p>
+<p>SMI-21 </p>
+<p>This component provides the following safety features: </p>
+<p>ID </p>
+<p> </p>
+<p>Safety feature </p>
+<p> </p>
+<p>CREQ-724 </p>
+<p> </p>
+<p>NvM shall provide a service to read a single NvM block from NVRAM.</p>
+<p> </p>
+<p>CREQ-725 </p>
+<p> </p>
+<p>NvM shall provide a service to write a single NvM block to NVRAM.</p>
+<p> </p>
+<p>CREQ-730 </p>
+<p> </p>
+<p>NvM shall provide a service to read all possbile NvM blocks from NVRAM.</p>
+<p> </p>
+<p>CREQ-731 </p>
+<p> </p>
+<p>NvM shall provide a service to write all possible NvM blocks to NVRAM.</p>
+<p> </p>
+<p>CREQ-746 </p>
+<p> </p>
+<p>NvM shall provide configurable callbacks to synchronize block data.</p>
+<p> </p>
+<p>NvM can detect missing, corruption and masquerading (lower layers provide the wrong </p>
+<p>block) of NvM blocks. </p>
+<p>SMI-29 </p>
+<p>The user of MICROSAR Safe must design the system in a way that in case of the absence </p>
+<p>of nonâ€‘volatile data it is still safe (e.g. safe state or degradation). It cannot be assured by </p>
+<p>the memory stack that data is saved completely or at all because a reset or loss of energy </p>
+<p>might happen at any time, e.g. brown-out, black-out. </p>
+<p>This also implies that it is in general impossible to guarantee that the latest information is </p>
+<p>available in the non-volatile memory, e.g. the system is reset before memory stack is even </p>
+<p>notified to write data to non-volatile memory. </p>
+<p>Thus, safety-related functionality may not rely on the availability of data in non-volatile </p>
+<p>memory. </p>
+<p>Since the availability of data in non-volatile memory cannot be guaranteed in any case, the </p>
+<p>only sensible use-case is reading safety-related calibration data. </p>
+<p>Writing of data into non-volatile memory must be verified to assure that the information is </p>
+<p>available in non-volatile memory. Verification can only be done manually in a protected </p>
+<p>environment, e.g. at end of line, in a workshop, etc. </p>
+<p>ECU software cannot verify if data was written, since at any time a reset could occur and </p>
+<p>the information that had to be written is lost immediately. </p>
+<p>Reading of data does not modify data stored in non-volatile memory. Thus, reading can be </p>
+<p>used by safety-related functionality. The memory stack assures that the read data is </p>
+<p>identical to the data stored in non-volatile memory. </p>
+<p>The availability may be increased by e.g. redundant storage. </p>
+<p><b>9.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>SMI-25 </p>
+<p>The user of MICROSAR Safe shall configure and verify the following attributes for <b>each </b></p>
+<p><b>NvM block that contains safety-related data</b>: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Set /MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseCrc to TRUE. </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Set /MICROSAR/NvM/NvMBlockDescriptor/NvMBlockCrcType to NVM_CRC32. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>37 / 52 </p>
+<p>SMI-26 </p>
+<p>The user of MICROSAR Safe shall configure and verify the following attribute: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Set /MICROSAR/NvM/NvMCommon/NvMUseBlockIdCheck to TRUE. </p>
+<p><b>9.3 Additional verification measures</b></p>
+<p><b> </b></p>
+<p>SMI-22 </p>
+<p>The user of MICROSAR Safe shall pass the intended block ID for reading and writing of a </p>
+<p>single NvM block. NvM cannot detect if an unintended block that is configured is provided </p>
+<p>by the user.  </p>
+<p>Verification can be performed during integration testing. </p>
+<p>SMI-23 </p>
+<p>The user of MICROSAR Safe shall verify that the buffer passed for reading and writing of a </p>
+<p>single NvM block is valid and sufficiently large for the passed block ID. </p>
+<p>Verification can be performed by a review of the generated configuration and the code </p>
+<p>passing the pointer and block ID to the NvM. </p>
+<p>SMI-48 </p>
+<p>The user of MICROSAR Safe shall verify the size of the internal NvM buffer. </p>
+<p>The buffer has the symbol name NvM_InternalBuffer_au8. </p>
+<p>The buffer is generated when at least one of the following features is used: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>at least one block with explicit synchronization is configured </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>repair of redundant blocks is enabled </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>NvM internal CRC buffer is enabled </p>
+<p>The buffer size shall be at least the size of the largest NVM block plus the size of the </p>
+<p>configured CRC value. </p>
+<p>Verification can be performed e.g. by review. </p>
+<p><b>9.4 Dependencies to other components</b></p>
+<p><b> </b></p>
+<p><b>9.4.1 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>SMI-28 </p>
+<p>The used Crc library shall provide the CRC calculation routines as safety feature. </p>
+<p>If the Crc library from MICROSAR Safe is used, this dependency is fulfilled. </p>
+<p><b>9.4.2 Coexistence with other components</b></p>
+<p><b> </b></p>
+<p>SMI-27 </p>
+<p>This component requires coexistence with Dem, MemIf, RTE, BswM, and Det components </p>
+<p>if the interface for those components is configured. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>38 / 52 </p>
+<p><b>9.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>39 / 52 </p>
+<p><b>10 Safety Manual Rte</b></p>
+<p><b> </b></p>
+<p><b>10.1 Safety features</b></p>
+<p><b> </b></p>
+<p>SMI-323 </p>
+<p>This component provides the following safety features: </p>
+<p><b>ID </b></p>
+<p><b> </b></p>
+<p><b>Safety feature </b></p>
+<p><b> </b></p>
+<p>CREQ-</p>
+<p>1024 </p>
+<p> </p>
+<p>Rte shall provide a service to initiate the transmission of data elements with last-is-</p>
+<p>best semantic for explicit S/R communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1021 </p>
+<p> </p>
+<p>Rte shall provide a service to copy the received data element to a buffer with last-is-</p>
+<p>best semantic for explicit S/R communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1022 </p>
+<p> </p>
+<p>Rte shall provide a service to get the value of the received data element with last-is-</p>
+<p>best semantic for explicit S/R communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1023 </p>
+<p> </p>
+<p>Rte shall provide a service to initiate the transmission of data element with queued </p>
+<p>semantic for explicit S/R communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1025 </p>
+<p> </p>
+<p>Rte shall provide a service to initiate the reception of data element queued semantic </p>
+<p>for explicit S/R communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1031 </p>
+<p> </p>
+<p>Rte shall provide a service to read a data element for implicit S/R communication </p>
+<p>mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1029 </p>
+<p> </p>
+<p>Rte shall provide a service to write a data element for implicit S/R communication </p>
+<p>mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1041 </p>
+<p> </p>
+<p>Rte shall provide a service to get the reference of a data element to be written for </p>
+<p>implicit S/R communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1037 </p>
+<p> </p>
+<p>Rte shall provide a service to get the status of a data element for implicit S/R </p>
+<p>communication mode. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1042 </p>
+<p> </p>
+<p>Rte shall provide a service to initiate a client-server communication. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1043 </p>
+<p> </p>
+<p>Rte shall provide a service to get the result of an asynchronous client-server call. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1046 </p>
+<p> </p>
+<p>Rte shall provide a service to read Inter-Runnable Variables with explicit behavior. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1048 </p>
+<p> </p>
+<p>Rte shall provide a service to write Inter-Runnable Variables with explicit behavior. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1047 </p>
+<p> </p>
+<p>Rte shall provide a service to read Inter-Runnable Variables with implicit behavior. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1044 </p>
+<p> </p>
+<p>Rte shall provide a service to write Inter-Runnable Variables with implicit behavior. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1045 </p>
+<p> </p>
+<p>Rte shall provide a service to access per-instance memory. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1146 </p>
+<p> </p>
+<p>Rte shall provide a service to access a single ports. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1143 </p>
+<p> </p>
+<p>Rte shall provide a service to access an array of ports. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>Rte shall provide a service to get the number of ports. </p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>40 / 52 </p>
+<p>1145 </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1150 </p>
+<p> </p>
+<p>Rte shall provide a callback to copy data from a NVM buffer to RTE. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1148 </p>
+<p> </p>
+<p>Rte shall provide a callback to copy data from RTE to a NVM buffer. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1144 </p>
+<p> </p>
+<p>Rte shall provide a callback to get notified about a finished NVM job. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1147 </p>
+<p> </p>
+<p>Rte shall provide a callback to get notified about a requested mirror initialization. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1299 </p>
+<p> </p>
+<p>Rte shall provide Nv data communication. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1038 </p>
+<p> </p>
+<p>Rte shall provide N:1 (&quot;Fan-In&quot;) S/R communication. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1102 </p>
+<p> </p>
+<p>Rte shall provide 1:M (&quot;Fan-Out&quot;) S/R communication. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1104 </p>
+<p> </p>
+<p>Rte shall provide N:1 C/S communication. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1156 </p>
+<p> </p>
+<p>Rte shall support data exchange between different OS applications. </p>
+<p> </p>
+<p>CREQ-</p>
+<p>1151 </p>
+<p> </p>
+<p>Rte shall provide the optional usage of one or several data transformers. </p>
+<p> </p>
+<p> </p>
+<p><b>10.2 Configuration constraints</b></p>
+<p><b> </b></p>
+<p>SMI-2066 </p>
+<p>The user of MICROSAR Safe shall disable online calibration and measurement during </p>
+<p>series production. </p>
+<p>The RTE can be generated with online calibration and measurement enabled for series </p>
+<p>production, but they shall be made inoperable for normal operation. Vector's XCP can e.g. </p>
+<p>be disabled safely during runtime by ASIL software. </p>
+<p><b>10.3 Additional verification measures</b></p>
+<p><b> </b></p>
+<p>SMI-322 </p>
+<p>The user of MICROSAR Safe shall execute the RTE Analyzer. </p>
+<p>The RTE Analyzer performs checks to identify faults in the generated RTE. Especially out-</p>
+<p>of-bounds accesses within the RTE are detected. Moreover it provides the user of </p>
+<p>MICROSAR Safe with feedback what was generated. This feedback can be used during </p>
+<p>integration testing. </p>
+<p>Please see the Technical Reference of the RTE Analyzer how to execute it. </p>
+<p>The RTE Analyzer lists RTE APIs that read or write end-to-end protected data (see SMI-</p>
+<p>98). </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>41 / 52 </p>
+<p><b>10.3.1 Guided integration testing</b></p>
+<p><b> </b></p>
+<p>Some faults in the RTE Generator can only be found during integration testing. Vector </p>
+<p>assumes that the user of MICROSAR Safe performs an integration testing and verification </p>
+<p>of software safety requirements according to ISO 26262 Part 6 Clauses 10 and 11 (see </p>
+<p>also SMI-4). To support this integration testing the RTE Analyzer produces a configuration </p>
+<p>feedback report.  </p>
+<p>Please refer to the Technical Reference of the RTE Analyzer for a description of the </p>
+<p>configuration feedback report. </p>
+<p>This section describes the requirements that must be fulfilled during integration testing and </p>
+<p>verification of software safety requirements. </p>
+<p><b>10.3.1.1 BSW configuration </b></p>
+<p>SMI-2124 </p>
+<p>The user of MICROSAR Safe shall ensure that the RTE and the operating system assume </p>
+<p>the same scheduling properties. </p>
+<p>The scheduling properties of the RTE tasks depend on the configuration of the operating </p>
+<p>system. The scheduling properties are e.g. preemptability, core assignment or task priority. </p>
+<p>The RTE Analyzer lists the scheduling properties in the configuration feedback report to </p>
+<p>assist in this integration step. </p>
+<p>SMI-2129 </p>
+<p>The user of MICROSAR Safe shall ensure that the assumptions of the operating system </p>
+<p>and the RTE are the same with regards to the locking behavior of the spinlocks.  </p>
+<p>The RTE generator uses spinlocks from the operating system to protect inter-core </p>
+<p>communication. Spinlocks must not be called concurrently on the same core. The </p>
+<p>operating system optionally provides spinlocks that can prevent these concurrent </p>
+<p>accesses on the same core. If this protection by the operating system is not used, the RTE </p>
+<p>generator has to prevent concurrent calls to the spinlock APIs on the same core.  </p>
+<p>Verification can e.g. be performed by review of the configuration feedback report. </p>
+<p>The RTE Analyzer lists spinlocks that are not protected by the RTE to assist in this </p>
+<p>integration step. </p>
+<p>SMI-684 </p>
+<p>The user of MICROSAR Safe shall ensure that the configuration of COM and RTE are </p>
+<p>consistent. </p>
+<p>The interfaces to the COM that are used for signal reception use <i>void </i>pointers as </p>
+<p>parameter. Inconsistencies between the configuration of the COM and the RTE might lead </p>
+<p>to memory corruption by the COM. During integration the size assumptions between the </p>
+<p>COM and the RTE shall be compared.  </p>
+<p>Verification can be performed by review of the generated configuration and/or static code </p>
+<p>analysis. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>42 / 52 </p>
+<p>The RTE Analyzer lists relevant calls to assist in this integration step. </p>
+<p>SMI-685 </p>
+<p>The user of MICROSAR Safe shall ensure that the configuration of NVM and RTE are </p>
+<p>consistent. </p>
+<p>The interfaces to the NVM that are used to handle NV Block SWCs use <i>void </i>pointers as </p>
+<p>parameters. Inconsistencies between the configuration of the NVM and the RTE might </p>
+<p>lead to memory corruption by the RTE. During integration the size assumptions between </p>
+<p>the NVM and the RTE shall be compared.  </p>
+<p>Verification can be performed by review of the generated configuration and/or static code </p>
+<p>analysis. </p>
+<p>The RTE Analyzer lists relevant calls to assist in this integration step. </p>
+<p><b>10.3.1.2 Executable Entity Scheduling </b></p>
+<p>SMI-2063 </p>
+<p>The user of MICROSAR Safe shall ensure that all safety-related executable entities are </p>
+<p>triggered with their correct conditions. </p>
+<p>These conditions are: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>cylic triggers with cycle time and offset </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>init triggers </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>background triggers </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>triggers fired by RTE APIs </p>
+<p>If triggers have dependency on modes this has to be done for all modes as <i>Rte_Switch </i></p>
+<p>APIs modify the scheduling. </p>
+<p>Triggers can be decoupled by the minimum start interval functionality and the data </p>
+<p>reception filter functionality. </p>
+<p>The scheduling of the executable entities also depends on the configuration of the </p>
+<p>operating system, the used controller, other running tasks and interrupt service routines </p>
+<p>and the resource usage of the entities that are implemented by the user. </p>
+<p>Vector recommends not using the minimum start interval and the data reception filter </p>
+<p>functionality for safety-related runnables. </p>
+<p>Vector recommends not using background triggers for safety-related functionality. </p>
+<p>Vector recommends using cyclic scheduling without mode dependencies and using of a </p>
+<p>watchdog as safety mechanism for safety-related entities where possible. </p>
+<p>Cyclic triggers are e.g. scheduled deterministically. Thus, an integration test verifying that </p>
+<p>safety-related functionality is scheduled at the expected times may be sufficient. </p>
+<p>The RTE Analyzer lists the executable entities of SWCs and the tasks in which they are </p>
+<p>executed to assist in this integration step.  </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>43 / 52 </p>
+<p>SMI-2128 </p>
+<p>The user of MICROSAR Safe shall ensure that reentrant runnables are reentrant. </p>
+<p>Runnables can be called reentrantly from multiple tasks. Their implementation needs to </p>
+<p>support this use case.  </p>
+<p>Verification can e.g. be performed by review, static code analysis and/or integration </p>
+<p>testing. </p>
+<p>The RTE Analyzer lists all runnables of SWCs that are called from concurrent tasks to </p>
+<p>assist in this integration step. </p>
+<p>SMI-2064 </p>
+<p>The user of MICROSAR Safe shall ensure that the timeouts configured for blocking APIs </p>
+<p>that are used in safety-related executable entities are adequately addressed. If a timeout </p>
+<p>for a blocking API is used as a safety mechanism (i.e. e.g. no checkpoint with deadline </p>
+<p>monitoring in the task), the user of MICROSAR Safe shall also ensure that the timeout </p>
+<p>value is adequate. </p>
+<p>Relevant timeouts are: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>timeouts of <i>Rte_Call </i>APIs </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>timeouts of <i>Rte_Result </i>APIs </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>timeouts of <i>Rte_Receive </i>APIs </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>timeouts of <i>Rte_Feedback </i>APIs </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>timeouts of <i>Rte_SwitchAck </i>APIs </p>
+<p>The timeouts also depend on the configuration of the operating system, the used </p>
+<p>controller, other running tasks and interrupt service routines and the resource usage of </p>
+<p>entities that are implemented by the user. </p>
+<p>Vector recommends not using blocking APIs in safety-related entities except for cross </p>
+<p>partition client-/server communication. </p>
+<p>Vector strongly recommends not using blocking APIs without timeout. </p>
+<p>A review may be sufficient to verify that timeout handling is implemented properly by the </p>
+<p>SWC. </p>
+<p>If no other safety mechanism is in place, a test that the timeout is notified at the expected </p>
+<p>time by the RTE can be used as means of verification. </p>
+<p>The RTE Analyzer lists the blocking APIs of SWCs to assist in this integration step. </p>
+<p>SMI-2122 </p>
+<p>The user of MICROSAR Safe shall ensure that the correct implementation method has </p>
+<p>been chosen for every exclusive area. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>44 / 52 </p>
+<p>Exclusive areas can be used to ensure data consistency (see SMI-11). </p>
+<p>The implementation depends on the requirements of the application and on other factors </p>
+<p>like the expected duration of the exclusive area. Interrupt locks are typically faster than </p>
+<p>resources but can only be used for short sequences due to the blocking of interrupts. </p>
+<p>Operating system interrupts only block the interrupts of the operating system whereas <b>all </b></p>
+<p>interrupts blocks all interrupts. </p>
+<p>Verification can e.g. be performed by review, static code analysis and/or integration </p>
+<p>testing. </p>
+<p>The RTE Analyzer lists the exclusive areas and their implementation method to assist in </p>
+<p>this integration step. </p>
+<p><b>10.3.1.3 SWC Communication </b></p>
+<p>SMI-324 </p>
+<p>The user of MICROSAR Safe shall ensure that the connections between SWCs are as </p>
+<p>intended. </p>
+<p>Many types of faults can lead to a mix of connections between SWCs. These are unlikely </p>
+<p>and usually already addressed by straight forward integration testing. </p>
+<p>The list of senders needs to be correct for every receiver and the subset of the received </p>
+<p>data needs to be correct. </p>
+<p>Vector recommends the following RTE subset for safety-related SWCs: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>use only 1:1 connections. </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>use the same datatype on both sides of a connection </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>avoid data conversion </p>
+<p>Information that is used from non-safety-related SWCs has to be checked for plausability. </p>
+<p>If such a data path is found during integration this is an indicator that your safety analysis </p>
+<p>has to be reconsidered. </p>
+<p>Verification can be performed by review and/or an integration test testing the normal </p>
+<p>operation. </p>
+<p>The RTE Analyzer list the connections between SWCs to assist in this integration step. </p>
+<p>SMI-2065 </p>
+<p>The user of MICROSAR Safe shall ensure that inter-ECU sender-/receiver and inter-ECU </p>
+<p>client-/server communication work as expected. </p>
+<p>This requires verification of: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>data needs to be routed to the correct ECU by the underlying communication stack. </p>
+<p>This includes 1:1, 1:N, N:1 and reception of partial signal data. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>45 / 52 </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>both ECUs need to use the same data representation (datatypes, endianess, </p>
+<p>serialization) </p>
+<p>Vector requires using E2E protection for safety-related signals. </p>
+<p>Vector recommends using 1:1 connections. </p>
+<p>Vector recommends always sending and receiving complete data elements. </p>
+<p>Integration testing on vehicle network level using fault-injection can be used. Vector </p>
+<p>assumes that this is normally done to verify the effectiveness of the E2E protection. </p>
+<p>The RTE Analyzer lists the APIs of SWCs with inter-ECU communication to assist in this </p>
+<p>integration step. </p>
+<p>SMI-2123 </p>
+<p>The user of MICROSAR Safe shall ensure that all connected SWCs expect the same </p>
+<p>converted data. </p>
+<p>The RTE offers conversions that can be applied to specific connections. </p>
+<p>Vector recommends not using data conversion for safety-related connections. </p>
+<p>Verification can e.g. be performed by review or integration testing of all data conversions. </p>
+<p>The RTE Analyzer lists all APIs of SWCs that perform data conversion to assist in this </p>
+<p>integration step. </p>
+<p><b>10.3.1.4 Usage of RTE Headers </b></p>
+<p>SMI-2067 </p>
+<p>The user of MICROSAR Safe shall ensure that the <i>defines </i>and <i>typedefs </i>that are </p>
+<p>generated by the RTE match the expectations of the SWCs that use them. </p>
+<p>Inconsistencies may lead to e.g, memory corruption when a runnable uses an RTE array </p>
+<p>datatype within its implementation and writes beyond the bounds of this array. </p>
+<p>Moreover, different SWCs may have different assumptions with regards to the meaning of </p>
+<p>communicated values, e.g. if one SWC uses the symbolic name, another SWC the integral </p>
+<p>value of an enumerated type. </p>
+<p>The following code is provided: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured Application Error Defines for Client-/Server Communication </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured AUTOSAR Datatypes </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured Upper and Lower Limit Defines for Primitive Application Data Types </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured Init Value Defines for Sender-/Receiver Communication </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured InvalidValue Defines for Sender-/Receiver Communication </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured Enumeration Defines for CompuMethods </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>46 / 52 </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured Mask Defines for CompuMethods </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured Mode Defines for Mode Communication </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Configured ActivationReasons </p>
+<p>The defines and typedefs are part of the <i>Rte_Type</i>.<i>h</i>, <i>Rte_</i>&lt;SWC&gt;.<i>h </i>and </p>
+<p><i>Rte_</i>&lt;SWC&gt;_Type.<i>h </i>headers. </p>
+<p>Vector recommends using the headers generated by the RTE when a static code analysis </p>
+<p>is performed on the application code. </p>
+<p>Vector recommends only using the <i>defines </i>instead of the defined values in the code. </p>
+<p>Vector recommends using the <i>defines </i>only when needed (Mode, Application Error </p>
+<p>Defines). </p>
+<p>Vector recommends reviewing the used <i>defines </i>for safety-related SWCs. </p>
+<p>Verification for correct usage of datatypes may be performed by review and/or static code </p>
+<p>analysis. Consistent usage of <i>defines </i>can be verified by review and/or integration testing </p>
+<p>with all used values. </p>
+<p>The RTE Analyzer verifies that all accesses within the RTE do not lead to memory </p>
+<p>corruption. </p>
+<p>SMI-2071 </p>
+<p>The user of MICROSAR Safe shall ensure that the indirect API is used consistently.  </p>
+<p>Indirect API functionality consists of the APIs: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p><i>Rte_Port </i></p>
+<p><b></b></p>
+<p><b> </b></p>
+<p><i>Rte_Ports </i></p>
+<p><b></b></p>
+<p><b> </b></p>
+<p><i>Rte_NPorts </i></p>
+<p>The indirect API makes it possible to call different APIs through an array access. The </p>
+<p>indirect API functionality can be enabled individually per port. </p>
+<p>A wrong configuration switch can easily lead to a call outside of the array returned by the </p>
+<p>Rte_Ports API. </p>
+<p>Vector recommends not using the indirect API. </p>
+<p>Verification can e.g. be performed by review that the intended APIs are returned. </p>
+<p>The RTE Analyzer does not assist in this integration step. </p>
+<p><b>10.3.1.5 Usage of RTE APIs </b></p>
+<p>SMI-2072 </p>
+<p>The user of MICROSAR Safe shall ensure that the RTE and all of its users have the same </p>
+<p>assumptions with regards to the sizes of the datatypes. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>47 / 52 </p>
+<p>The RTE supports the configuration of custom datatypes for its APIs. The RTE </p>
+<p>specification mandates that arrays are passed as pointer to the array base type. </p>
+<p>The RTE does not enforce that both sides of a connection use arrays of the same size. </p>
+<p>No NULL pointers or invalid pointers shall be passed to RTE APIs. </p>
+<p>The object to which the pointer points needs to have at least the size of the pointer base </p>
+<p>type. </p>
+<p>Vector recommends using the headers generated by the RTE when static code analysis is </p>
+<p>performed on the application code. </p>
+<p>Vector recommends using the same datatypes on both sides of a connection. </p>
+<p>Arrays and void pointers on interfaces where the called function writes to them are </p>
+<p>considered especially problematic. </p>
+<p>Verification can e.g. be performed by review and/or static code analysis. </p>
+<p>The RTE Analyzer lists APIs and runnables that use such parameters to assist in this </p>
+<p>integration step. </p>
+<p>SMI-2073 </p>
+<p>The user of MICROSAR Safe shall ensure that RTE APIs are only called from their </p>
+<p>configured contexts. </p>
+<p>Fast response times are crucial in embedded systems. Therefore, the RTE generator </p>
+<p>analyzes the call contexts of all APIs in order to optimize away unneeded interrupt locks. </p>
+<p>When the application calls the APIs from a different context than the RTE assumes, data </p>
+<p>consistency problems may arise. </p>
+<p>In systems with ASIL partitions, the RTE generator uses a conservative locking strategy. </p>
+<p>Locks are only optimized away if all accesses are done within the same task. </p>
+<p>Verification can e.g. be performed by review and/or static code analysis. </p>
+<p>The RTE Analyzer lists the optimized APIs of SWCs to assist in this integration step. </p>
+<p><b>10.3.1.6 Configuration of RTE APIs </b></p>
+<p>SMI-2074 </p>
+<p>The user of MICROSAR Safe shall ensure that the receivers can handle the initial value </p>
+<p>provided by the RTE if no write or calibration occurred. For implicit accesses it has to be </p>
+<p>assured that the correct initial value is sent when <i>Rte_IWrite </i>or <i>Rte_IWriteRef </i>were not </p>
+<p>called in the runnable. </p>
+<p>Initial values can be configured for: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>non-queued sender-/receiver communication </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>inter-runnable variables </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>mode ports  </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>48 / 52 </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>calibration parameters  </p>
+<p>The initial value is returned when no sending API was called before the first read or no </p>
+<p>calibration was performed before the first read. The initial values depend on the connected </p>
+<p>components. </p>
+<p>Vector recommends using the same initial value on all port data elements that are </p>
+<p>connected with each other. </p>
+<p>The RTE Analyzer lists all APIs of SWCs that may provide an initial value to assist in this </p>
+<p>integration step. If possible, the RTE Analyzer reports the initial value generated by the </p>
+<p>RTE into the configuration feedback report. </p>
+<p>SMI-2075 </p>
+<p>The user of MICROSAR Safe shall ensure that the alive timeout by the COM is not used </p>
+<p>for safety-related inter-ECU sender/receiver communication. </p>
+<p>safety-related communication must be protected by E2E protection. The decision if new </p>
+<p>data is available (alive) can only be made by the E2E mechanism. Data is not interpreted </p>
+<p>by the COM. For example the sending ECU might repeat old data. This is only detected by </p>
+<p>the cycle counter that is part of the E2E protection. </p>
+<p>The RTE Analyzer lists the reading APIs that provide the alive timeout status to assist in </p>
+<p>this integration step. </p>
+<p>SMI-2126 </p>
+<p>The user of MICROSAR Safe shall ensure that SWCs handle the <i>RTE_E_INVALID </i>return </p>
+<p>code properly. </p>
+<p>The RTE offers a functionality to invalidate signals. </p>
+<p>Vector requires using end-to-end protection for safety-related signals. Relying on the </p>
+<p>invalidation mechanism for safety-related signals is not an option. </p>
+<p>Vector recommends not using the invalidation for safety-related intra-ECU connections.  </p>
+<p>Verification can e.g. be performed by review and/or integration testing. </p>
+<p>The RTE Analyzer lists RTE APIs that return the <i>RTE_E_INVALID </i>return code to assist in </p>
+<p>this integration step. </p>
+<p>SMI-2127 </p>
+<p>The user of MICROSAR Safe shall ensure that SWCs handle the </p>
+<p><i>RTE_E_NEVER_RECEIVED </i>return code properly. </p>
+<p>The RTE offers a functionality to report if a signals was received after the ECU was </p>
+<p>started. </p>
+<p>Vector requires using end-to-end protection for safety-related signals. Relying on the never </p>
+<p>received mechanism for safety-related signals is not an option. Especially, when using the </p>
+<p>E2E transformer, its return value shall be evaluated. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>49 / 52 </p>
+<p>Verification can e.g. be performed by review or integration testing. </p>
+<p>The RTE Analyzer lists RTE APIs that return the <i>RTE_E_NEVER_RECEIVED </i>return code </p>
+<p>to assist in this integration step. </p>
+<p>SMI-2125 </p>
+<p>The user of MICROSAR Safe shall ensure that the queue sizes that were chosen during </p>
+<p>the configuration are sufficient for the integrated system. </p>
+<p>The RTE uses queues for mode communication, sender-/receiver communication and </p>
+<p>mapped client-/server communication. The queue sizes depend on the scheduling of </p>
+<p>entities and the call sequences of the APIs. </p>
+<p>Vector recommends not using APIs with queues for safety-related functionality. </p>
+<p>Verification can e.g. be performed by stress testing. </p>
+<p>The RTE Analyzer lists the queue sizes to assist in this integration step. </p>
+<p><b>10.4 Safety features required from other components</b></p>
+<p><b> </b></p>
+<p>SMI-2121 </p>
+<p>RTE requires the following functionality as safety feature from the operating system: </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Interrupt enabling/disabling </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Inter OS Application Communicator (IOC) sending and receiving functionality </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Spin-lock functionality </p>
+<p>This requirement is fulfilled if an ASIL operating system by Vector is used. </p>
+<p><b>10.5 Dependencies to hardware</b></p>
+<p><b> </b></p>
+<p>This component does not use a direct hardware interface. </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>50 / 52 </p>
+<p><b>11 Glossary and Abbreviations</b></p>
+<p><b> </b></p>
+<p><b>11.1 Glossary</b></p>
+<p><b> </b></p>
+<p><b>Term</b></p>
+<p><b> </b></p>
+<p><b>Definition</b></p>
+<p><b> </b></p>
+<p>User of </p>
+<p>MICROSAR </p>
+<p>Safe</p>
+<p> </p>
+<p>Integrator and user of components from MICROSAR Safe provided by Vector.</p>
+<p> </p>
+<p>MICROSAR </p>
+<p>Safe</p>
+<p> </p>
+<p>MICROSAR Safe comprises MICROSAR SafeBSW and MICROSAR SafeRTE </p>
+<p>as Safety Element out of Context. MICROSAR SafeBSW is a set of components, </p>
+<p>that are developed according to ISO 26262 [1], and are provided by Vector in the </p>
+<p>context of this delivery. The list of MICROSAR Safe components in this delivery </p>
+<p>can be taken from the documentation of the delivery.</p>
+<p> </p>
+<p>Critical section</p>
+<p> </p>
+<p>A section of code that needs to be protected from concurrent access. A critical </p>
+<p>section may be protected by using the AUTOSAR exclusive area concept.</p>
+<p> </p>
+<p>Configuration </p>
+<p>data</p>
+<p> </p>
+<p>Data that is used to adapt the MICROSAR Safe component to the specific use-</p>
+<p>case of the user of MICROSAR Safe. Configuration data typically comprises </p>
+<p>among others: feature selection, routing tables, channel tables, task priorities, </p>
+<p>memory block descriptions.</p>
+<p> </p>
+<p>Generated </p>
+<p>code</p>
+<p> </p>
+<p>Source code that is generated as a result of the configuration in DaVinci </p>
+<p>Configurator Pro</p>
+<p> </p>
+<p>Partition</p>
+<p> </p>
+<p>A set of memory regions that is accessible by tasks and ISRs. Synonym to </p>
+<p>OSApplication. </p>
+<p> </p>
+<p> </p>
+<p><b>11.2 Abbreviations</b></p>
+<p><b> </b></p>
+<p><b>Abbreviation</b></p>
+<p><b> </b></p>
+<p><b>Description</b></p>
+<p><b> </b></p>
+<p>ASIL</p>
+<p> </p>
+<p>Automotive Safety Integrity Level</p>
+<p> </p>
+<p>BSWMD</p>
+<p> </p>
+<p>Basic Software Module Description</p>
+<p> </p>
+<p>CPU</p>
+<p> </p>
+<p>Central Processing Unit</p>
+<p> </p>
+<p>CREQ</p>
+<p> </p>
+<p>Component Requirement</p>
+<p> </p>
+<p>EEPROM</p>
+<p> </p>
+<p>Eletronically Ereasable and Programmable Read-only Memory</p>
+<p> </p>
+<p>ECC</p>
+<p> </p>
+<p>Error Correcting Code</p>
+<p> </p>
+<p>ECU</p>
+<p> </p>
+<p>Electronic Control Unit</p>
+<p> </p>
+<p>EXT</p>
+<p> </p>
+<p>Driver for an external hardware unit</p>
+<p> </p>
+<p>ISO</p>
+<p> </p>
+<p>International Standardization Organization</p>
+<p> </p>
+<p>MCAL</p>
+<p> </p>
+<p>Microcontroller Abstraction</p>
+<p> </p>
+<p>MIP</p>
+<p> </p>
+<p>Module Implementation Prefix</p>
+<p> </p>
+<p>MSSV</p>
+<p> </p>
+<p>MICROSAR Safe Silence Verifier</p>
+<p> </p>
+<p>OS</p>
+<p> </p>
+<p>Operating System</p>
+<p> </p>
+<p>PDU</p>
+<p> </p>
+<p>Protocol Data Unit</p>
+<p> </p>
+<p>QM</p>
+<p> </p>
+<p>Quality Management</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>51 / 52 </p>
+<p>RAM</p>
+<p> </p>
+<p>Random Access Memory</p>
+<p> </p>
+<p>SMI</p>
+<p> </p>
+<p>Safety Manual Item</p>
+<p> </p>
+<p>TCL</p>
+<p> </p>
+<p>Tool Confidence Level</p>
+<p> </p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p>Safety Manual CBD1400351 D04</p>
+<p> </p>
+<p></p>
+<p>2016 Vector Informatik GmbH </p>
+<p>1.0 </p>
+<p>52 / 52 </p>
+<p><b>12 Contact</b></p>
+<p><b> </b></p>
+<p>Visit our website for more information on </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>News </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Products </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Demo software </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Support </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Training data </p>
+<p><b></b></p>
+<p><b> </b></p>
+<p>Addresses </p>
+<p>www.vector.com  </p>
+</body>
+</html>
+{% endraw %}

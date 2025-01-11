@@ -1,0 +1,2711 @@
+---
+layout: default
+title: IssueReport_CBD1400351
+nav_order: 278
+parent: Implementation
+---
+{% raw %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title></title>
+  <meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
+  <meta name="created" content="00:00:00"/>
+  <meta name="changed" content="00:00:00"/>
+</head>
+<body>
+<h1></h1>
+<p><b>Issue Report</b></p>
+<p>1</p>
+<p><b>License Number</b></p>
+<p><b>Customer</b></p>
+<p>CBD1400351</p>
+<p>Nexteer Automotive Corporation</p>
+<p>Package: GM Global A / Flexray - ECU Product </p>
+<p>&quot;Steering Systems&quot;</p>
+<p><b>Maintenance Expiry Date</b></p>
+<p>2015-09-01</p>
+<p><b>SIP Delivery Date</b></p>
+<p><b>SIP Version</b></p>
+<p>2016-09-16</p>
+<p>16.00.00</p>
+<p><b>SLP</b></p>
+<p><b>Delivery Number</b></p>
+<p>GM Global A / Flexray</p>
+<p>D04</p>
+<p><b>Report Creation Date</b></p>
+<p>2016-09-16</p>
+<p><b>Contact</b></p>
+<p>In case of questions or the need for an update of the basic software delivery, please contact </p>
+<p>Ralf.Fritz@vector.com or your Vector contact person.</p>
+<p><b>Table of Contents</b></p>
+<p><b>1.</b></p>
+<p><b>Introduction</b></p>
+<p><b>1.1 Resolving Issues</b></p>
+<p><b>1.2 Issue Classification</b></p>
+<p><b>2.</b></p>
+<p><b>New Issues</b></p>
+<p><b>2.1 Runtime Issues without Workaround:</b> <b>3</b></p>
+<p><b>2.2 Runtime Issues with Workaround:</b> <b>9</b></p>
+<p><b>2.3 Apparent Issues:</b> <b>40</b></p>
+<p><b>2.4 Not Released Functionality:</b> <b>4</b></p>
+<p><b>2.5 Compiler Warnings:</b> <b>8</b></p>
+<p><b>3.</b></p>
+<p><b>New Issues for Information:</b></p>
+<p> </p>
+<p><b>0</b></p>
+<p><b>4.</b></p>
+<p><b>Report Legend</b></p>
+<p><b>5.</b></p>
+<p><b>Quality Management Contact</b></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>2</p>
+<p><b>1. Introduction</b></p>
+<p><b>1.1 Resolving Issues</b></p>
+<p>Reported issues are not necessarily fixed automatically by the next update delivery. If some of the </p>
+<p>reported issues shall be fixed, please contact Vector to establish an agreement about issues that </p>
+<p>shall be fixed in upcoming deliveries. Please note that Vector may fix additional issues without </p>
+<p>explicit request.</p>
+<p><b>1.2 Issue Classification</b></p>
+<p>This Issue Report provides issues that have been detected since the last report. The issues have </p>
+<p>been classified to facilitate the assessment of their impact:</p>
+<p>The chapter 'New Issues' lists issues that have been detected since the last report and which could </p>
+<p>not be excluded based on the use-case defined in the questionnaire. The issues are classified as </p>
+<p>follows:</p>
+<p>•</p>
+<p><b>Runtime Issues without Workaround: </b>Runtime issues without a workaround require an </p>
+<p>update of the basic software delivery in case the issue affects the ECU overall functionality. </p>
+<p>The effect of an issue to the ECU functionality has to be analyzed by the customer as the basic </p>
+<p>software usage and its configuration is not known by Vector. The risk of change has also to be </p>
+<p>taken into account.</p>
+<p>•</p>
+<p><b>Runtime Issues with Workaround: </b>It is not recommended to update a delivery due to a </p>
+<p>runtime issue with a documented workaround. The effect of an issue to the ECU functionality </p>
+<p>has to be analyzed by the customer as the basic software usage and its configuration is not </p>
+<p>known by Vector. The risk of change has also to be taken into account.</p>
+<p>•</p>
+<p><b>Apparent Issues: </b>Apparent issues are detected immediately when using the basic software. </p>
+<p>If an issue does not show up while working with the basic software the ECU project is not </p>
+<p>affected by the issue. Apparent issues may or may not have workarounds.</p>
+<p>•</p>
+<p><b>Not Released Functionality: </b>Not released functionalities are modules and features that have </p>
+<p>not yet passed a complete development cycle (they are e.g. not or only partly tested). For </p>
+<p>serial production projects the integrator has to ensure that all BETA features are disabled as </p>
+<p>indicated. If a ESCAN affects a complete BSW module, the module must not be used for serial </p>
+<p>production.</p>
+<p>•</p>
+<p><b>Compiler Warnings: </b>As a service we report the known compiler warnings. The occurrence of </p>
+<p>a compiler warning may depend on the used configuration and compiler settings.</p>
+<p>The chapter 'New Issues for Information' lists issues that are not relevant for the use case that </p>
+<p>has been documented in the questionnaire provided to Vector. The issues may, however, be </p>
+<p>relevant for other use cases. Additionally, issues that have been accepted or are tolerated by the </p>
+<p>OEM (as defined in the questionnaire) are reported here.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>3</p>
+<p><b>2. New Issues</b></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>4</p>
+<p><b>2.1 Runtime Issues without Workaround</b></p>
+<p>The lists contain issues that have been detected since the last report and which could not be </p>
+<p>excluded based on the use-cases defined in the questionnaire (see chapter ‘New Issues for </p>
+<p>Information’).</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>5</p>
+<p><b>ESCAN00087476</b></p>
+<p><b>Possible data loss due to aborted Flash write access</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfFee@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.00.82</p>
+<p> </p>
+<p><i><b>Problem Description:</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>6</p>
+<p><b>ESCAN00087476</b></p>
+<p><b>Possible data loss due to aborted Flash write access</b></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Data cannot be read; Fee_Read does not deliver any data.</p>
+<p>In case of &quot;critical data&quot; (e.g. FBL information, ECU coding parameters) an ECU might be unable </p>
+<p>to start.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens at power-up, either if FBL is using FEE to determine whether to start FBL or </p>
+<p>Application, or during Application start-up, typically during/after NvM_ReadAll.</p>
+<p>The root cause occurred earlier: Generally, if a FLASH programming operation was aborted, e.g. </p>
+<p>due to an unintended reset (watchdog, power-loss, SW induced reset) or due to a cancellation </p>
+<p>request (Fls_Cancel), the cells of a FLASH page might not be fully programmed.</p>
+<p>Subsequent reads on this page may deliver the written data correctly, however after some time </p>
+<p>passed (presumable environmental changes also have an effect) the same FLASH page may be </p>
+<p>read out as empty. This behaviour is caused by an insufficient charging level of the FLASH cells. </p>
+<p>This may cause the FEE to detect most recent data as &quot;completely written&quot; initially, but later read </p>
+<p>attempts result in &quot;incompletely written&quot;.</p>
+<p>E.g. during next read FEE may detect a data block as being valid - it can be retrieved; a following </p>
+<p>read attempt may result in &quot;not found&quot; (reverting to previous instance, if available).</p>
+<p>If the aborted write was part of a sector switch, i.e. copying data, FEE might detect a data block </p>
+<p>as already copied.</p>
+<p>Finally, after all blocks have been processed, the older sector is deleted; one single block </p>
+<p>instance, which might be in an unstable state, remains in FLASH.</p>
+<p>During next startup this instance might have become unreadable (as described above).</p>
+<p>It is typically not an issue for frequently written data, as they are rewritten during run-time (at </p>
+<p>latest during shut-down). Therefore they have additional instances.</p>
+<p>Finally, not every abort causes data loss: There are only few FLASH write accesses considered </p>
+<p>critical regarding this issue (In general, there are two critical FLASH pages per configured user </p>
+<p>block, resulting in a very limited time-frame that must be hit to force this issue).</p>
+<p>Cancellation:</p>
+<p>Cancellation happens in general if Fls_Cancel is called. Usually it is called by FEE </p>
+<p>(Fee_MainFunction), if Fee_Cancel was called, which, in turn is usually called by NvM.</p>
+<p>Calling NvM_WriteBlock, NvM_EraseNvBlock or NvM_InvalidateNvBlock may cause NvM to issue a </p>
+<p>cancel request to lower layers.</p>
+<p>Furthermore, if MICROSAR NvM is used, the shut-down process may be cancelled using a special </p>
+<p>service, NvM_KillWriteAll.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens in any configuration, however its probability highly depends on write frequency and </p>
+<p>initial flash usage (defined by block configuration), thus on frequency of sector switch operations </p>
+<p>(per partition).</p>
+<p>Additionally it depends on separation of data, using partitions</p>
+<p>Cancellation via NvM write(-like) requests occurs if it was configured to use &quot;Job prioritization&quot; </p>
+<p>and there were blocks configured with priority 0. </p>
+<p>NvM_KillWriteAll requires parameter &quot;/MICROSAR/NvM/NvMCommonVendorParams/</p>
+<p>NvMKillWriteAllApi&quot; to be TRUE.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>7</p>
+<p><b>ESCAN00087476</b></p>
+<p><b>Possible data loss due to aborted Flash write access</b></p>
+<p>This issue is known to occur on Renesas' RV40F flash devices (e.g. RH850F1x). </p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Since the issue generally affects infrequently written data; and because usually such data blocks </p>
+<p>are most crucial to an ECU, it is highly recommended to use partitions in order to minimize risks.</p>
+<p>Gathering (very) infrequently written data in a separate partition minimizes the need to copy </p>
+<p>them around. Therefore there are much less critical situations.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>8</p>
+<p><b>ESCAN00091216</b></p>
+<p><b>Fee_ForceSectorSwitch may do more work than </b></p>
+<p><b>expected</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfFee@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>8.01.01</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p> </p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Fee_ForceSectorSwitch executes sector formatting three times (erases), resulting in increased </p>
+<p>run-time.</p>
+<p>One Sector is being formatted twice. Additionally FEE checks all configured blocks whether they </p>
+<p>need to be copied. This results in pre-allocation of internal data structures in flash (link-tables for </p>
+<p>blocks configured as Datasets).</p>
+<p>This is not directly observable outside FEE; as it does not affect its clients.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens (per partition), if both sectors are INVALID (both headers erased or defective) or if </p>
+<p>&quot;older&quot; sector is empty (VALID sector header but no other content), which might be the result of </p>
+<p>another (aborted) sector switch.</p>
+<p>Expected behavior in this case: Just erase both sectors. </p>
+<p>This behavior has not other effects than increased processing time (which, in practice is still </p>
+<p>shorter than a sector switch with existing data to be copied) and the cost of one unnecessary </p>
+<p>sector format.</p>
+<p>The described scenario - two INVALID sectors - is also very exceptional; it happens only initially </p>
+<p>with a brand-new (erased) Flash, or if the Flash is defective again.</p>
+<p>This issue documents unintended/unwanted internal behavior.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens, if Fee_ForceSectorSwitch API (FeeSpecificFeatures/FeeForceSectorSwitchApi), or </p>
+<p>special Feature &quot;Data Conversion&quot; (FeeSpecificFeatures/FeeDataConversionApi) was enabled.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround necessary.</p>
+<p> </p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>9</p>
+<p><b>ESCAN00091357</b></p>
+<p><b>EcuM detects the wrong Wakeup Source during </b></p>
+<p><b>startup as the reset reason</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p> </p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>As a consequence of the wrong detected Wakeup Source as reset reason the wrong channel might </p>
+<p>be woken up. Depending on the configuration it is also possible that no channel is woken up.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>At startup of the Ecu.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Only in configurations with at least one wakeup source with configured parameter ResetReasonRef </p>
+<p>[EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource/EcuMResetReasonRef]</p>
+<p>AND</p>
+<p>The Mcu data type Mcu_ResetType is bigger than uint8 (0xFF), e.g. uint16 or uint32.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>10</p>
+<p><b>2.2 Runtime Issues with Workaround</b></p>
+<p>It is not recommended to update a delivery due to a runtime issue with a documented </p>
+<p>workaround. The effect of an issue to the ECU functionality has to be analyzed by the customer as </p>
+<p>the basic software usage and its configuration is not known by Vector. Thereby the risk of change </p>
+<p>has also to be taken into account. </p>
+<p><b>Index</b></p>
+<p>ESCAN00061207</p>
+<p>DaVinci Configurator 5: Issue Reporting Procedure</p>
+<p>GenTool_ConfiguratorCfg5@Application</p>
+<p>ESCAN00088171</p>
+<p>FEINT exception during ShutdownOS leads to memory violation</p>
+<p>Os_PlatformRh850Gen6@Implementation</p>
+<p>ESCAN00089164</p>
+<p>The EcuM stays in RUN state even if EcuM_KillAllRunRequests has been called</p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p>ESCAN00090356</p>
+<p>Generator does not generate all Wakeup Sources defines to </p>
+<p>EcuM_Generated_Types.h</p>
+<p>SysService_Asr4EcuM@GenTool_GeneratorMsr</p>
+<p>ESCAN00091112</p>
+<p>Variant Driver Init Lists are called for every Core, even for Slave Cores</p>
+<p>SysService_Asr4EcuM@GenTool_GeneratorMsr</p>
+<p>ESCAN00091305</p>
+<p>EcuM with fixed state machine causes a Det error in Dem_Init because this </p>
+<p>module has been initialized two times</p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p>ESCAN00091611</p>
+<p>Wrong negative response code for ControlDTCSetting</p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p>ESCAN00091755</p>
+<p>PID $01: OBD relevant montioring functions are always completed</p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p>ESCAN00091756</p>
+<p>Random modification of memory</p>
+<p>Diag_Asr4Dem@GenTool_GeneratorMsr</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>11</p>
+<p><b>ESCAN00061207</b></p>
+<p><b>DaVinci Configurator 5: Issue Reporting Procedure</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>GenTool_ConfiguratorCfg5@Application</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.00.01</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>This ticket describes the reporting of DaVinci Configurator 5 issues. This ticket is a general </p>
+<p>information and not an issue.</p>
+<p>-----------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>Issues of the DaVinci Configurator 5 tool are not part of the active issue reporting (i.e. this report).</p>
+<p>The DaVinci Configurator 5 issue list can be downloaded from our home page:</p>
+<p>DaVinci Developer OpenIssue Lists: https://portal.vector.com/web/davinci/shared-folder?</p>
+<p>t=c2b431ff-5dae-4a72-83ec-b9c8ca17561c</p>
+<p>DaVinci Configurator OpenIssue Lists: https://portal.vector.com/web/davinci/shared-folder?</p>
+<p>t=15d156f3-65d3-4b6e-8107-ec44051aebff</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This is not an issue but only a reference to the tool specific issue reporting.</p>
+<p>No changes to the delivery required.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>12</p>
+<p><b>ESCAN00088171</b></p>
+<p><b>FEINT exception during ShutdownOS leads to </b></p>
+<p><b>memory violation</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_PlatformRh850Gen6@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>If ShutdownOS is interrupted by FEINT exception then a memory violation is reported by the OS.</p>
+<p>ProtectionHook and ShutdownHook are called with error code = E_OS_PROTECTION_MEMORY = </p>
+<p>0x0E</p>
+<p>and global variable osCtrlVars0.ossLastError = osdErrEXMemoryViolation = 0xA501</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During runtime when application calls ShutdownOS</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>SC3 and SC4</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Disable FE level interrupts before calling ShutdownOS.</p>
+<p>If ShutdownOS returns to caller then enable FE level interrupts.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>13</p>
+<p><b>ESCAN00089164</b></p>
+<p><b>The EcuM stays in RUN state even if </b></p>
+<p><b>EcuM_KillAllRunRequests has been called</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The ECU stays in RUN state, even if anyone has called the API EcuM_KillAllRunRequests.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always after EcuM_KillAllRunRequests() has been called and at least one channel is in a state </p>
+<p>unequal COMM_NO_COM_NO_PENDING_REQUEST.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Only in configurations with ECUM_FIXED_BEHAVIOR is active (EcuM/EcuMGeneral/</p>
+<p>EcuMEnableFixBehavior).</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>14</p>
+<p><b>ESCAN00089164</b></p>
+<p><b>The EcuM stays in RUN state even if </b></p>
+<p><b>EcuM_KillAllRunRequests has been called</b></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The following shows a possible workaround to ignore all ComM channel states in case of an active </p>
+<p>KillAllRUNRequests.</p>
+<p>Hint: EcuM_SetWakeupEvent considers wakeup events even if EcuM_KillAllRUNRequests() was </p>
+<p>called. This might cause that the EcuM transits from PostRun to Run again, because of a new </p>
+<p>occurred wakeup event. </p>
+<p>The call of the API ComM_GetState() has to be mapped to an application function in case that it is </p>
+<p>called in context of EcuM.c. This can be done by configure the following header file as a User </p>
+<p>Configuration file in the EcuM configuration (EcuM/EcuMGeneral/EcuMUserConfigurationFile):</p>
+<p>- Example Appl_ComM_EcuM.h:</p>
+<p>#if defined (ECUM_SOURCE)</p>
+<p>extern Std_ReturnType Appl_ComM_GetState(const NetworkHandleType Channel, </p>
+<p>ComM_StateType* State);</p>
+<p># define ComM_GetState Appl_ComM_GetState</p>
+<p>#endif</p>
+<p>- Example Appl_ComM_EcuM.c:</p>
+<p>#include &quot;Std_Types.h&quot;</p>
+<p>#include &quot;ComM.h&quot;</p>
+<p>#define ECUM_PRIVATE_CFG_INCLUDE</p>
+<p>#include &quot;EcuM_PrivateCfg.h&quot;</p>
+<p>#undef ECUM_PRIVATE_CFG_INCLUDE</p>
+<p>Std_ReturnType Appl_ComM_GetState(const NetworkHandleType Channel, ComM_StateType* </p>
+<p>State)</p>
+<p>{</p>
+<p> Std_ReturnType retVal = E_OK;</p>
+<p> /* Verify that EcuM_KillAllRUNRequests() was not called */</p>
+<p> if ((EcuM_GetKillAllInProgress() &amp; (0x01u)) == 0u)</p>
+<p> {</p>
+<p> retVal = ComM_GetState(Channel, State);</p>
+<p> }</p>
+<p> else</p>
+<p> {</p>
+<p> /* In case of an active KillAllRunRequest, set the virtual ComM State to no communication and no </p>
+<p>request. */</p>
+<p> *State = COMM_NO_COM_NO_PENDING_REQUEST;</p>
+<p> }</p>
+<p> return retVal;</p>
+<p>}</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>15</p>
+<p><b>ESCAN00090356</b></p>
+<p><b>Generator does not generate all Wakeup Sources </b></p>
+<p><b>defines to EcuM_Generated_Types.h</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Some defines to access a wakeup source bitmask are not generated to EcuM_Generated_Types.h.</p>
+<p>This might cause that during runtime a wakeup event is not handled as expected.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In configurations with a wakeup source which has the prefix 'ECUM_WKSOURCE_' and a post fix </p>
+<p>which also exists as a wakeup source without this prefix.</p>
+<p>Example:</p>
+<p>Wakeup Source Name 1: 'ECUM_WKSOURCE_CHANNEL1'</p>
+<p>Wakeup Source Name 2: 'CHANNEL1'</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If a Wakeup Source is configured with prefix ECUM_WKSOURCE_&lt;NAME&gt; and another Wakeup </p>
+<p>Source has only &lt;NAME&gt;</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Prevent Wakeup Sources Names which only difference is the prefix 'ECUM_WKSOURCE_'.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>16</p>
+<p><b>ESCAN00091112</b></p>
+<p><b>Variant Driver Init Lists are called for every Core, </b></p>
+<p><b>even for Slave Cores</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Initialization Code which shall only be called on the Master (BSW) Core is executed on every Code.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always during initialization.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In all variant Multicore Configurations.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The generated driver init functions has to be surrounded by the following if condition:</p>
+<p> if(GetCoreID() == ECUM_CORE_ID_BSW)</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>17</p>
+<p><b>ESCAN00091305</b></p>
+<p><b>EcuM with fixed state machine causes a Det error in </b></p>
+<p><b>Dem_Init because this module has been initialized </b></p>
+<p><b>two times</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p> In some situations the EcuM with fixed state machine calls Dem_Init() two times, this lead to a </p>
+<p>Det error thrown by the Dem with the message DEM_E_WRONG_CONDITION,</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During runtime of the EcuM API EcuM_StartupTwo().</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>All of the following conditions have to be fulfilled to be affected by this issue:</p>
+<p>- The Ecum with fixed state machine has to be active (EcuM/EcuMGeneral/</p>
+<p>EcuMEnableFixBehavior).</p>
+<p>- The include Dem has to be active (EcuM/EcuMFixedGeneral/EcuMIncludeDem).</p>
+<p>- At least one wakeup source has to be configured for wakeup validation (EcuM/</p>
+<p>EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource/EcuMValidationTimeout).</p>
+<p>- At startup the standard wakeup source (ECUM_WKSOURCE_RESET) has to be cleared via the </p>
+<p>API EcuM_ClearWakeupEvent() to force a wakeup validation after startup and to prevent a </p>
+<p>transition to RUN state until this wakeup source is validated.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In case that the valid wakeup event during initialization (ECUM_WKSOURCE_RESET) is cleared in </p>
+<p>context of driver init list two or three and a wakeup event for validation is set the Dem_Init call </p>
+<p>has to be avoided.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>18</p>
+<p><b>ESCAN00091611</b></p>
+<p><b>Wrong negative response code for </b></p>
+<p><b>ControlDTCSetting</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.00.08, 11.01.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Dcm sends NRC 22 (Conditions not Correct) instead of NRC 31 (RequestOutOfRange)</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When requesting $85 for a different DTC group than 0xFFFFFF (ALL DTCs)</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>/Dcm/DcmConfigSet/DcmDsp/DcmDspControlDTCSetting/</p>
+<p>DcmSupportDTCSettingControlOptionRecord == TRUE</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>There is no real use-case for return code DEM_CONTROL_DTC_SETTING_N_OK, so it can be </p>
+<p>replaced by DEM_CONTROL_DTC_WRONG_DTCGROUP to get the correct NRC response from Dcm:</p>
+<p>Since version 5.00.00: Create a user config file for Dem with following content:</p>
+<p>#if defined DEM_SOURCE</p>
+<p># undef DEM_CONTROL_DTC_SETTING_N_OK</p>
+<p># define DEM_CONTROL_DTC_SETTING_N_OK DEM_CONTROL_DTC_WRONG_DTCGROUP</p>
+<p>#endif</p>
+<p>Set the user configuration file for LATE inclusion (configuration parameter DemUserConfigFilePost)</p>
+<p>Before version 5.00.00, introduce the code above into the include path of Dem.c, e.g. by adding it </p>
+<p>a user config file to the NvM or Dcm</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>19</p>
+<p><b>ESCAN00091755</b></p>
+<p><b>PID $01: OBD relevant montioring functions are </b></p>
+<p><b>always completed</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>12.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>No matter whether an emission related montioring function is completed or not, it</p>
+<p>will be always reported as completed. </p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always when PID $01 is reuqested.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Dem is licensed for OBD 2</p>
+<p>AND</p>
+<p>Major Monitors is supported (in Dem_Cfg.h: DEM_CFG_SUPPORT_MAJOR_MONITORS == </p>
+<p>STD_ON)</p>
+<p>AND </p>
+<p>Event Availability is not supported (in Dem_Cfg.h DEM_CFG_SUPPORT_EVENTAVAILABLE == </p>
+<p>STD_OFF)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Enable Event Availability support in DaVinci Configurator Pro. (/MICROSAR/Dem/DemGeneral/</p>
+<p>DemAvailabilitySupport)</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>20</p>
+<p><b>ESCAN00091756</b></p>
+<p><b>Random modification of memory</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Asr4Dem@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>10.00.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Memory corruption due to function argument mismatch.</p>
+<p>The RTE port interface operation is defined incorrectly:</p>
+<p>wrong: Std_ReturnType &lt;&gt;(uint8* data, Dem_EventIdType EventId)</p>
+<p>expected: Std_ReturnType &lt;&gt;(Dem_EventIdType EventId, uint8* data)</p>
+<p>Due to the switched argument position, the event ID is passed in place of the destination pointer, </p>
+<p>leading to random memory modification.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Depending on configuration of Dem/DemGeneral/DemDataElement/</p>
+<p>DemExternalCSDataElementClass/DemDataElementStoreNonVolatile</p>
+<p>the issue will trigger when an event is stored in the event memory, or when a diagnostic service </p>
+<p>requests event data using service 19 04 or 19 06</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Dem/DemGeneral/DemUseRte == TRUE</p>
+<p>AND</p>
+<p>Dem/DemGeneral/DemDataElement/DemExternalCSDataElementClass/DemDataElementUsePort </p>
+<p>== TRUE</p>
+<p>AND</p>
+<p>Dem/DemGeneral/DemDataElement/DemExternalCSDataElementClass/</p>
+<p>DemUseEventIdArgumentForCallback == TRUE</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Set Dem/DemGeneral/DemDataElement/DemExternalCSDataElementClass/</p>
+<p>DemDataElementUsePort == FALSE and provide a wrapper function in Dem/DemGeneral/</p>
+<p>DemDataElement/DemExternalCSDataElementClass/DemDataElementReadFnc</p>
+<p>The wrapper function can call the application port interface with the correct order of arguments.</p>
+<p>e.g.</p>
+<p>Std_ReturnType ApplWrapper(Dem_EventIdType EventId, uint8* Data)</p>
+<p>{</p>
+<p> return Rte_Call_&lt;ApplicationPortInterfaceName&gt;(Data, EventId);</p>
+<p>}</p>
+<p>Please note, the issue correction will change the port interface description as defined in the </p>
+<p>technical reference. The application SWC interface needs to be adapted accordingly.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>21</p>
+<p><b>2.3 Apparent Issues</b></p>
+<p>Apparent issues are detected immediately when using the basic software. If an issue does not </p>
+<p>show up while working with the basic software the ECU project is not affected by the issue. </p>
+<p>Apparent issues may or may not have workarounds. </p>
+<p><b>Index</b></p>
+<p>ESCAN00070350</p>
+<p>Fee does not report FEE_CRITICAL_LEVEL to user-defined Error Callback</p>
+<p>If_AsrIfFee@Implementation</p>
+<p>ESCAN00070637</p>
+<p>Defines for DEM events not generated. This leads to multiple linker errors.</p>
+<p>MemService_AsrNvM@GenTool_GeneratorMsr</p>
+<p>ESCAN00072881</p>
+<p>'Port Access' references the wrong destination</p>
+<p>EcuAb_AsrIoHwAb@Description</p>
+<p>ESCAN00075523</p>
+<p>NVM's requests to FEE are rejected</p>
+<p>MemService_AsrNvM@Implementation</p>
+<p>ESCAN00075933</p>
+<p>Generator crashes when parsing an OIL file with an include directive with </p>
+<p>nonexistent absolute path</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00076481</p>
+<p>Debugger refuses to read ORTI file</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00079399</p>
+<p>Linker error: '&lt;Cdd&gt;_Transmit' : undeclared identifier</p>
+<p>Cdd_AsrCddCfg5@Description</p>
+<p>ESCAN00079977</p>
+<p>TechnicalReference does not help to solve installation problem</p>
+<p>Os_CoreGen6@Doc_TechRef</p>
+<p>ESCAN00080172</p>
+<p>Compiler error: missing API SyncScheduleTable, StartScheduleTableSynchron </p>
+<p>and/or SetScheduleTableAsync</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00080731</p>
+<p>Fee_ForceSectorSwitch might do nothing</p>
+<p>If_AsrIfFee@Implementation</p>
+<p>ESCAN00080742</p>
+<p>OSTICKDURATION not defined</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00082482</p>
+<p>Compiler error: Double definition of osTaskStack...</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00084633</p>
+<p>Error message &quot;FEE90500&quot; during generation of FEE</p>
+<p>If_AsrIfFee@GenTool_GeneratorMsr</p>
+<p>ESCAN00084863</p>
+<p>API names of 3rd-party Wdg drivers may not be recognized correctly</p>
+<p>If_AsrIfWdTttechSub@Generator</p>
+<p>ESCAN00085447</p>
+<p>generator exits unsuccessfully with no error message (on empty peripheral </p>
+<p>region identifier)</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00085663</p>
+<p>Unexpected Windows Error Message in case of wrongly configured Linked </p>
+<p>Resource</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00085897</p>
+<p>Generator warning: Calculation of time macro is inaccurate.</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00086270</p>
+<p>Generator does not allow usage of multiple hardware timer types</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00086809</p>
+<p>Generator Output differs on different PCs</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00087912</p>
+<p>Compiler error: Double definition of CC</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00087932</p>
+<p>ConsistencyRT00002 reports IllegalStateException: Optional.get() cannot be </p>
+<p>called on an absent value</p>
+<p>Cdd_AsrCddCfg5@GenTool_GeneratorMsr</p>
+<p>ESCAN00088524</p>
+<p>Compiler error: Undeclared identifier in the initialization structure</p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>22</p>
+<p><b>Index</b></p>
+<p>ESCAN00088979</p>
+<p>Activation of an auto started task is not performed</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00089176</p>
+<p>mssv does not resolve all symbols for checking</p>
+<p>Elisa__core@Application</p>
+<p>ESCAN00089766</p>
+<p>CDD90025: Error at validator runtime</p>
+<p>Cdd_AsrCddCfg5@GenTool_GeneratorMsr</p>
+<p>ESCAN00089834</p>
+<p>Generator expects a configuration which is not AUTOSAR conform</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00089910</p>
+<p>Windows states that the OS generator does not work anymore</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00090715</p>
+<p>Compiler error: BswM_Lcfg.c: '&lt;Symbol&gt;' undefined in case of individual </p>
+<p>PostBuild process</p>
+<p>SysService_Asr4BswMCfg5@GenTool_GeneratorMsr</p>
+<p>ESCAN00090724</p>
+<p>Global Configuration Data is created as Array but should be a structure</p>
+<p>SysService_Asr4EcuM@GenTool_GeneratorMsr</p>
+<p>ESCAN00090803</p>
+<p>Windows states that the OS generator does not work anymore</p>
+<p>Os_CoreGen6@Generator</p>
+<p>ESCAN00090998</p>
+<p>Configuration tool reports Rte90005 exception because of </p>
+<p>java.lang.IllegalArgumentException</p>
+<p>Rte_Asr4@GenTool_GeneratorMsr</p>
+<p>ESCAN00091041</p>
+<p>Compiler error: syntax error : identifier </p>
+<p>'Dem_Cfg_StorageConditionStateIterType'</p>
+<p>Diag_Asr4Dem@GenTool_GeneratorMsr</p>
+<p>ESCAN00091118</p>
+<p>EcuM causes a Rte Det error (RTE_E_DET_UNINIT) in the shutdown sequence </p>
+<p>while the Nvm write all is performed</p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p>ESCAN00091136</p>
+<p>Compiler error: 'Fls_Cancel' undefined; assuming extern returning int</p>
+<p>If_AsrIfFee@GenTool_GeneratorMsr</p>
+<p>ESCAN00091277</p>
+<p>Compiler error: multiple variable declarations for data conversion in task</p>
+<p>Rte_Core@Implementation</p>
+<p>ESCAN00091373</p>
+<p>RTE01064 error in case a BSW module provides core service SWCs with </p>
+<p>mapped server runnables</p>
+<p>Rte_Asr4@GenTool_GeneratorMsr</p>
+<p>ESCAN00091455</p>
+<p>A RuntimeException &quot;unknown DataTapeRep enumeration&quot; for sint64 is thrown</p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p>ESCAN00091629</p>
+<p>Use of uninitialized value in case no core with id 0 exists</p>
+<p>Rte_Core@Implementation</p>
+<p>ESCAN00091780</p>
+<p>Compiler error: Pim variable name conflicts with parameter name of server </p>
+<p>runnable in RteAnalyzer stub</p>
+<p>Rte_Core@Implementation</p>
+<p>ESCAN00091872</p>
+<p>RTE950005 when the configuration contains AR3 modules</p>
+<p>Rte_Asr4@GenTool_GeneratorMsr</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>23</p>
+<p><b>ESCAN00070350</b></p>
+<p><b>Fee does not report FEE_CRITICAL_LEVEL to user-</b></p>
+<p><b>defined Error Callback</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfFee@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>8.00.06</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>FEE never invokes user-defined callback with error code FEE_CRITICAL_LEVEL, to warn about </p>
+<p>reached FSS threshold.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It should happen, when FEE detects that Foreground Sector Switch Threshold was reached.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It should happen, if a user-defined error callback was configured. (Otherwise, nobody would care.)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>24</p>
+<p><b>ESCAN00070637</b></p>
+<p><b>Defines for DEM events not generated. This leads to </b></p>
+<p><b>multiple linker errors.</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>MemService_AsrNvM@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.01.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The linker throws errors like the following:</p>
+<p> NvM_DemErrWriteProtected from NvM.o</p>
+<p> NvM_DemErrReqFailed from NvM_Act.o</p>
+<p> NvM_DemErrIntegrityFailed from NvM_Act.o</p>
+<p> NvM_DemErrLossOfRedundancy from NvM_Act.o</p>
+<p> NvM_DemErrQueueOverflow from NvM_Queue.o</p>
+<p>==&gt; The configuration container &quot;NvmDemEventParameterRefs&quot; is mandatory, if DEM events are </p>
+<p>used.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Linking of the project.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If DEM events are used</p>
+<p>and</p>
+<p>the container &quot;NvmDemEventParameterRefs&quot; is not added manually (per default, this container is </p>
+<p>missing)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Configure DEM and NVM for NVM's errors.</p>
+<p>Initially, when setting up a new project, add a container instance &quot;NvmDemEventParameterRefs&quot; </p>
+<p>to NVM (in DaVinci CFG5 use the &quot;Basic Editor&quot;.</p>
+<p>Then, &quot;create&quot; all container's child parameters, except E_VERIFY_FAILED and </p>
+<p>E_WRONG_BLOCK_ID (NVM does not support the related features, at all)</p>
+<p>(As long as they are existing, CFG5 is able to assist users in a basic way).</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>25</p>
+<p><b>ESCAN00072881</b></p>
+<p><b>'Port Access' references the wrong destination</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>EcuAb_AsrIoHwAb@Description</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The connection between runnables and assigned port prototypes erroneously references the whole </p>
+<p>port interface, whereas it should point to a data element inside the very port interface. As a result </p>
+<p>of this, too many unnecessary consistency checks will be applied </p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens always and immediately.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens in all configurations.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Transfer of all data elements within one runnable call.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>26</p>
+<p><b>ESCAN00075523</b></p>
+<p><b>NVM's requests to FEE are rejected</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>MemService_AsrNvM@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>NVM's requests fail (NvM_GetErrorStatus delivers NVM_REQ_NOT_OK) because requests to FEE or </p>
+<p>EA (via MemIf) are rejected.</p>
+<p>Additionally FEE/EA reports a development error to FEE - FEE_EA_BUSY_</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens during run-time. Basically it only depends on:</p>
+<p>- Concrete implementation of FEE/EA (AUTOSAR _allows_ to reject requests if component is in </p>
+<p>state MEMIF_BUSY_INTERNAL, but it was left open to the implementation</p>
+<p>- Whether and when the component enters the state &quot;MEMIF_BUSY_INTERNAL&quot;. For an EA it </p>
+<p>could be unnecessary to use it at all; a FEE should use it when it is performing a &quot;sector switch&quot;, </p>
+<p>decoupled from serving client's (NVM's) requests. Therefore write requests are necessary in order </p>
+<p>to fill the NV memory, making &quot;internal operations&quot; necessary at all.</p>
+<p>Some implementation might enter state MEMIF_BUSY_INTERNAL immediately during execution if </p>
+<p>Fee_Init/Ea_Init. In such cases, this issue would be always observable. </p>
+<p> </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It may happen with a 3rd party FEE, depending on its implementation of MEMIF_BUSY_INTERNAL </p>
+<p>handling.</p>
+<p>In this case it happens in every configuration.</p>
+<p>Issue won't be fixed:</p>
+<p>This issue resulted from an Issue in AUTOSAR: Behavior in case of MEMIF_BUSY_INTERNAL was </p>
+<p>left open to implementation of FEE - there is no standardized way for NVM to get knowledge about </p>
+<p>the way implemented in FEE.</p>
+<p>See RfC #64962 </p>
+<p>There was a decision to keep only one variant: FEE shall _accept_ requests when it is </p>
+<p>BUSY_INTERNAL (it is responsible for cancellation / abort / suspend of pending internal </p>
+<p>operations).</p>
+<p>That's the behavior NVM expects.</p>
+<p>However, unfortunately they left exceptions - RfC #70170 was created.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>27</p>
+<p><b>ESCAN00075933</b></p>
+<p><b>Generator crashes when parsing an OIL file with an </b></p>
+<p><b>include directive with nonexistent absolute path</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The generate crashes with an exception.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>during parsing the file.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>ALL</p>
+<p>(identical to ESOS00004007)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If this happens (rare case), please open the OIL file with an editor and correct the path to the </p>
+<p>correct include path. The include file should typically be found in the generator path.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>28</p>
+<p><b>ESCAN00076481</b></p>
+<p><b>Debugger refuses to read ORTI file</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.06.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The debugger is unable to provide information about the currently active task, its priority, the </p>
+<p>currently running Cat2 ISR, the currently performed OS API service and the last occurred errors </p>
+<p>(we currently do not know whether the issue is detected at parsing the ORTI file or later).</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens always and immediately at debug time when the customer tries to trace the </p>
+<p>currently active task or ISR.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens only in configurations with ORTI enabled and depends on no further configuration </p>
+<p>details. This may happen only with a debugger from a certain vendor.</p>
+<p>(this issue is identical to ESOS00004101)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>On single core systems perform the following substitution manually in the ORTI file:</p>
+<p>Replace:</p>
+<p> &quot;osConfigBlock.CcbAddress-&gt;&quot;</p>
+<p>By:</p>
+<p> &quot;osCtrlVarsCore0.&quot;</p>
+<p>On multicore systems, there is currently no workaround.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described behavior is to be corrected by modification of the code.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>29</p>
+<p><b>ESCAN00079399</b></p>
+<p><b>Linker error: '&lt;Cdd&gt;_Transmit' : undeclared </b></p>
+<p><b>identifier</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Cdd_AsrCddCfg5@Description</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Linker error in PduR_Lcfg.c: '&lt;Cdd&gt;_Transmit' : undeclared identifier</p>
+<p>The Cdd_AsrCddCfg5 is not derived according to the ASR 4.0.3 rules and allows a LOWER-</p>
+<p>MULTIPLICITY of 0 for the CddPduRLowerLayerRxPdu and CddPduRLowerLayerTxPdu instead of </p>
+<p>the LOWER-MULTIPLICITY of 1.</p>
+<p>The generic ASR PduR according to the ASR 4.0.3 Specification has no information to deactivate a </p>
+<p>communication direction (e.g. a Parameter in the PduRBswModules).</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the linker after compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Rx only Cdd with a CddPduRLowerLayerContribution (just receive pathways exits)</p>
+<p>The &lt;CddName&gt;.h file contains the following define: </p>
+<p>&lt;CddName&gt;_LOWERLAYERCOMIF_TX is defined to STD_OFF</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Implement the not required '&lt;Cdd&gt;_Transmit' API on your own in a c and h file of your choice </p>
+<p>and add the header file with a user config file to the PduR configuration that the compiler does not </p>
+<p>throw a warning.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>30</p>
+<p><b>ESCAN00079977</b></p>
+<p><b>TechnicalReference does not help to solve </b></p>
+<p><b>installation problem</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Doc_TechRef</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.16.01</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The OS Generator refuses to generate files with the following message:</p>
+<p>[Fatal Error: 0021] XML write error: Failed to CreateInstance on an XML DOM</p>
+<p>Neither the message itself, nor the TechnicalReference help to solve the issue.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens during OS generation.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This issue is configuration independent.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Install MSXML 4.0 Service Pack 3.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>31</p>
+<p><b>ESCAN00080172</b></p>
+<p><b>Compiler error: missing API SyncScheduleTable, </b></p>
+<p><b>StartScheduleTableSynchron and/or </b></p>
+<p><b>SetScheduleTableAsync</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>8.00.01</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler/linker issues an error that one or more of the following functions are implicitly </p>
+<p>defined, do not have a prototype, or cannot be linked:</p>
+<p>SyncScheduleTable</p>
+<p>StartScheduleTableSynchron</p>
+<p>SetScheduleTableAsync</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens if in an OS SC1 or SC3 at least one schedule table is configured with </p>
+<p>OsScheduleTableSyncStrategy other than NONE.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround necessary. The issue occurs only in cases where a non-supported or non-licensed </p>
+<p>feature is enabled in the configuration.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>32</p>
+<p><b>ESCAN00080731</b></p>
+<p><b>Fee_ForceSectorSwitch might do nothing</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfFee@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>8.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.00.82</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Fee_ForceSectorSwitch processing might do nothing, though it should.</p>
+<p>Actually there are situations Fee_ForceSectorSwitcht actually does nothing, especially when the </p>
+<p>desired situation was already achieved: All most recent data instances are located within one </p>
+<p>logical sector; the other one is empty.</p>
+<p>However, under circumstances described below, FeeForceSectorSwitch unintentionally does </p>
+<p>nothing.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens during run-time, in ECU; but it only happens, if the newer sector (of a partition) </p>
+<p>already contains data, which did not have been accessed, so far.</p>
+<p>I.e. those data belong to Blocks which did not have been read during start-up (e.h. NvM_ReadAll).</p>
+<p>In this case, though both logical sectors are in use, FEE does not do anything.</p>
+<p>This might result in performance penalties, especially after SW (configuration) updates, because </p>
+<p>FEE remains unable do &quot;fix&quot; some issues (defective chunk-links, or too small link-tables).</p>
+<p>Since very most data stored in NV memory are intended to be accessed, i.e. to be read, it is </p>
+<p>unlikely that this issue will actually be noticed at customer side.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It happens if Fee_ForceSectorSwitch API was enabled.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>33</p>
+<p><b>ESCAN00080742</b></p>
+<p><b>OSTICKDURATION not defined</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>8.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compilation error is reported as there has no OSTICKDURATION been defined but used,</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code if the code uses </p>
+<p>OSTICKDURATION.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens independent from the configuration.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Two alternatives: </p>
+<p>1. Use the new macros OSSECONDSPERTICK_&lt;CounterName&gt; instead. These define the time of </p>
+<p>a counter tick as a floating point value in seconds while OSTCKDURATION defined it as an integer </p>
+<p>value in nanoseconds.</p>
+<p>2. Create define macro OSTICKDURATION manually as an integer value which is equal to the </p>
+<p>return value of OS_TICKS2NS_&lt;CounterName&gt;(1). Mind that this value depends on the </p>
+<p>configuration parameter OsCounter/OsSecondsPerTick and needs adaptation after each change of </p>
+<p>that parameter. The macro OS_TICKS2NS_&lt;CounterName&gt; may be found in the generated file </p>
+<p>tcbpost.h. Direct usage of OS_TICKS2NS_&lt;CounterName&gt; for the definition of OSTICKDURATION </p>
+<p>could cause compilation problems of the RTE if the RTE uses OSTICKDURATION in a preprocessor </p>
+<p>condition where floating point operations are not allowed.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>34</p>
+<p><b>ESCAN00082482</b></p>
+<p><b>Compiler error: Double definition of osTaskStack...</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The generator produces to arrays with identical name. The array names both start on </p>
+<p>osTaskStack. The compiler states an error message as a result of this.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the operating system.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This may happen only if two applications exist with one of them having the same name as the </p>
+<p>other one but extended by a number.</p>
+<p>The reason is that task stack names are generated according to the following pattern:</p>
+<p>osTaskStack&lt;ApplicationName&gt;&lt;Counter starting with 0&gt;</p>
+<p>Now assume one application was named &quot;Appl&quot; and another one &quot;Appl1&quot;. </p>
+<p>The first task stack of the application &quot;Appl1&quot; would get the name &quot;osTaskStackAppl10&quot;. </p>
+<p>The stacks of the application &quot;Appl&quot; would be called: &quot;osTaskStackAppl0&quot;, &quot;osTaskStackAppl1&quot;, </p>
+<p>&quot;osTaskStackAppl2&quot;, ... , &quot;osTaskStackAppl9&quot;, &quot;osTaskStackAppl10&quot;! </p>
+<p>So the eleventh stack of the application &quot;Appl&quot; would have identical name as the first stack of the </p>
+<p>application &quot;Appl1&quot;, which leads to the described issue.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Prevent application names which end on a number. </p>
+<p>Mind that this workaround is stricter than necessary. Further suitable workarounds may be found </p>
+<p>by analysis of the configurations in which this issue occurs.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>35</p>
+<p><b>ESCAN00084633</b></p>
+<p><b>Error message &quot;FEE90500&quot; during generation of FEE</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfFee@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.01.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The following errors occurs during generation:</p>
+<p>FEE90500 The value 9223372036854775807 with comment (physical sector start address) is not </p>
+<p>in the range of the specified datatype UINT_32.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During generation of BSW.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If the related DrvFls does not have a FlsSectorList, which can only happen, if the underlying Fls </p>
+<p>defined FlsSectorList or its child, FlsSector, to be optional (which does not comply to AUTOSAR).</p>
+<p>Currently it may happen only in conjunction with DrvFls_VttCanoe01Asr.</p>
+<p>This issue will not be fixed in FEE, because it is caused by a deviation from AUTOSAR in FLS </p>
+<p>implementation.</p>
+<p>Additionally it can (even: should be fixed) by a suitable Pre-/Recommended configuration of Fls </p>
+<p>driver.</p>
+<p>The error message issued during generation also causes a compile time error (an #error directive </p>
+<p>it is generated into Fee_Lcfg.c).</p>
+<p>This is considered sufficient for rare cases, an Fls implementation deviated from AUTOSAR.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>FEE requires FlsSectorList and descendant FlsSector entries.</p>
+<p>Manually create a FlsSectorList, and at least one FlsSector entry, to describe the properties of the </p>
+<p>Flash area to be used by FEE.</p>
+<p>Note:</p>
+<p>It depends on Fls's implementation, which entries are necessary, and which may be omitted.</p>
+<p>Some implementations allow to omit unused sectors (especially Program Flash area(s)), but some </p>
+<p>require configuring ALL sectors.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>36</p>
+<p><b>ESCAN00084863</b></p>
+<p><b>API names of 3rd-party Wdg drivers may not be </b></p>
+<p><b>recognized correctly</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfWdTttechSub@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.03.09</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>WdgIf generator issues the following warning during generation from DaVinci Configurator:</p>
+<p>WDGIF01151 Could not determine platform for watchdog `Wdg_Impl` after searching all BSWMD </p>
+<p>files in `&lt;SIP&gt;\BSWMD` and all its subdirectories.</p>
+<p> /ActiveEcuC/WdgIf</p>
+<p>The WdgIf_Lcfg.c file contains default function names in the static constant structure, instead of </p>
+<p>the actual Wdg__SetMode and Wdg__SetTriggerCondition functions of the driver:</p>
+<p>static const WdgIf_InterfaceFunctionsType generic_driver_functions =</p>
+<p> { Wdg_SetMode /* Wdg_SetMode */</p>
+<p> , Wdg_SetTriggerCondition /* Wdg_SetTriggerWindow */</p>
+<p> };</p>
+<p>As a consequence, the code cannot be compiled correctly.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens if the naming schema of the 3rd-party Wdg public functions does not follow the </p>
+<p>schema Wdg_&lt;vendorId&gt;_&lt;HW_Name&gt;_&lt;serviceName&gt;</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>37</p>
+<p><b>ESCAN00084863</b></p>
+<p><b>API names of 3rd-party Wdg drivers may not be </b></p>
+<p><b>recognized correctly</b></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Insert a #define inside of Compiler_Cfg.h to provide renamings of the actual Wdg functions, or </p>
+<p>manually adapt WdgIf_Lcfg.h after each generation.</p>
+<p>Alternative workaround using a wrapper (trigger function in the driver is Wdg_Trigger() in the </p>
+<p>example):</p>
+<p>Insert in the Makefile the following line:</p>
+<p>CFLAGS_WDGIF_LCFG = --include _Wdg_Wrapper.h</p>
+<p>and include and compile the following files:</p>
+<p>-------------------------------------------------------------------</p>
+<p>/* _Wdg_Wrapper.h */</p>
+<p>#include &quot;Std_Types.h&quot;</p>
+<p>extern void Wdg_SetTriggerCondition(uint16);</p>
+<p>-------------------------------------------------------------------</p>
+<p>/* _Wdg_Wrapper.c */</p>
+<p>#include &quot;_Wdg_Wrapper.h&quot;</p>
+<p>#include &quot;Wdg.h&quot;</p>
+<p>void Wdg_SetTriggerCondition(uint16 x)</p>
+<p>{</p>
+<p> Wdg_Trigger(); </p>
+<p>}</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>38</p>
+<p><b>ESCAN00085447</b></p>
+<p><b>generator exits unsuccessfully with no error </b></p>
+<p><b>message (on empty peripheral region identifier)</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The generator exits unsuccessfully with no error message. So Windows complains about the </p>
+<p>generator to not work anymore.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens when start- and/or end-address of a peripheral region have been configured but no </p>
+<p>identifier yet. This may even happen when the user has not yet finished the configuration as the </p>
+<p>generator is internally used by the configurator to check the configuration cyclically. The problem </p>
+<p>disappears, once the identifier of the peripheral region has been set.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens only in configurations with peripheral regions.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Configure the identifier of the peripheral region</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>39</p>
+<p><b>ESCAN00085663</b></p>
+<p><b>Unexpected Windows Error Message in case of </b></p>
+<p><b>wrongly configured Linked Resource</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Windows states that the MICROSAR OS generator (gen&lt;PlatformName&gt;.exe) does not work </p>
+<p>anymore.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens always and immediately at generation time when the configuration is erroneous as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The configuration contains a linked resource which has no link to another resource. This is an </p>
+<p>invalid configuration for linked resources.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Add a link to a valid resource to all resources with type 'LINKED'</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>40</p>
+<p><b>ESCAN00085897</b></p>
+<p><b>Generator warning: Calculation of time macro is </b></p>
+<p><b>inaccurate.</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>9.01.06</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>9.01.08</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The generator states that one or more timing macros have been computed inaccurately. The </p>
+<p>stated deviation is slightly higher than 1ppm. </p>
+<p>Such a stated deviation is typically no issue of the generator. However, there are some cases </p>
+<p>where the approximation of timing macros stops with a deviation slightly above 1ppm and a </p>
+<p>better approximation is possible. the timing macro approximation typically stops when the </p>
+<p>deviation is below 1ppm. In this case the generator does not generate a warning.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens always and immediately at generation time. However, this happens only in rare </p>
+<p>configurations.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens only if the parameter SECONDSPERTICK is set to a rarely ever used value.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround necessary, the small deviation should be acceptable in any case.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>41</p>
+<p><b>ESCAN00086270</b></p>
+<p><b>Generator does not allow usage of multiple </b></p>
+<p><b>hardware timer types</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>9.01.06</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Generator reports multiple definitions of the internally added COUNTER attributes.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When more than one hardware timer type is used in the platform generator.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Independent from the configuration.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p><b>ESCAN00086809</b></p>
+<p><b>Generator Output differs on different PCs</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Even with same input data (OIL) generated data differs in its content if it is generated on different </p>
+<p>PC (maybe also on the same?)</p>
+<p>In the specific case event masks and arrays oskResCeilingPrio oskResCeilingPrioMask are affected.</p>
+<p>The full system needs to be compiled again, although the configuration has not changed.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During generation</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Potentially all where multiplicity of a OS configuration element is greater 1.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround necessary as the described behaviour causes no malfunction of the embedded </p>
+<p>code (only just potential confusion of customer). </p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>42</p>
+<p><b>ESCAN00087912</b></p>
+<p><b>Compiler error: Double definition of CC</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler states an error message as CC has already been defined.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens in configurations where the application code has also defined a macro named CC.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Remove definition of CC from the application.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Rename the conformance class define from 'CC' to 'osdCC'.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>43</p>
+<p><b>ESCAN00087932</b></p>
+<p><b>ConsistencyRT00002 reports IllegalStateException: </b></p>
+<p><b>Optional.get() cannot be called on an absent value</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Cdd_AsrCddCfg5@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>5.00.01</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The validation result with ID ConsistencyRT00002 is reported in the DaVinci Configurator.</p>
+<p>In the validation details contains the following info:</p>
+<p> Exception: java.lang.IllegalStateException: Optional.get() cannot be called on an absent value</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During live-validation of the EcuC model in the DaVinci Configurator</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This issue happens if no related /MICROSAR/PduR/PduRBswModules container(s), referencing the </p>
+<p>Cdd module(s) is existing</p>
+<p>AND</p>
+<p>In the Cdd module Rx/Tx Pdus routed via the PduR are configured</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Add the missing /MICROSAR/PduR/PduRBswModules referencing the exsting Cdd module(s)</p>
+<p>and restart DaVinci Configurator.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>44</p>
+<p><b>ESCAN00088524</b></p>
+<p><b>Compiler error: Undeclared identifier in the </b></p>
+<p><b>initialization structure</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>7.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.01.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler throws an error for an undeclared identifier used in the root initialization structure.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The configuration contains multiple predefined variants (selectable)</p>
+<p>AND</p>
+<p>array or struct symbols are generated to the configuration class precompile</p>
+<p>AND</p>
+<p>isReduceConstantData2Define() returns true</p>
+<p>AND</p>
+<p>isInterfacesForDeactivatedData() returns true</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>if isInterfacesForDeactivatedData() is user configurable a workaround is available else not.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>45</p>
+<p><b>ESCAN00088979</b></p>
+<p><b>Activation of an auto started task is not performed</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The OS does not perform the activation of a task which has a configured auto start.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens always and immediately at OS start.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens only on configurations where an auto start is configured for a task and the </p>
+<p>application mode is not configured, this task shall be activated in. This is an erroneous </p>
+<p>configuration which is not detected by the generator.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround needed. </p>
+<p>The configuration has to be corrected.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>46</p>
+<p><b>ESCAN00089176</b></p>
+<p><b>mssv does not resolve all symbols for checking</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Elisa__core@Application</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.05.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The function FindConstSymbol provided to checker plugins does not resolve all symbols</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always, if an mssv plugin reads in several *.c files</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Do not pass several *.c files to mssv plugins if the checks rely on the functions </p>
+<p>FindConstSymbol() und FindVariablesSymbol() </p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>47</p>
+<p><b>ESCAN00089766</b></p>
+<p><b>CDD90025: Error at validator runtime</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Cdd_AsrCddCfg5@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.01.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>An exception is thrown, if multiple CDDs with J1939RmContribution are configured.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During validation.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In configurations with multiple J1939RmContribution CDDs.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>48</p>
+<p><b>ESCAN00089834</b></p>
+<p><b>Generator expects a configuration which is not </b></p>
+<p><b>AUTOSAR conform</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>6.20.07</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Generator refuses to generate with messages:</p>
+<p>Missing value assignment for attribute CC with NO_DEFAULT.</p>
+<p>Missing value assignment for attribute SCHEDULE with NO_DEFAULT.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The configuration tool other than Vector Configurator is used to create an AUTOSAR ECUC file.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The configuration contains AUTO value for CC and/or SCHEDULE.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>As a workaround, the correct settings of the parameters may be used (instead of empty setting </p>
+<p>which is allowed by the standard)</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>49</p>
+<p><b>ESCAN00089910</b></p>
+<p><b>Windows states that the OS generator does not </b></p>
+<p><b>work anymore</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The OS generator erroneously stops working with an error but only the error message of Windows </p>
+<p>that the generator does not work anymore.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens always and immediately if the configuration is as described below. It happens even </p>
+<p>at configuration time as part of a cyclic validation.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens only if an expiry point of a schedule table is configured to be cyclic and the cycle </p>
+<p>time is configured to be zero: </p>
+<p>/.../Os/OsScheduleTable/OsScheduleTableExpiryPoint/OsScheduleTableEventSetting/</p>
+<p>OsScheduleTableCyclic/TRUE/OsScheduleTableCycleTime = 0</p>
+<p>(This is an undetected wrong configuration)</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Simply correct the configuration to use a cycle time bigger than zero.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>50</p>
+<p><b>ESCAN00090715</b></p>
+<p><b>Compiler error: BswM_Lcfg.c: '&lt;Symbol&gt;' </b></p>
+<p><b>undefined in case of individual PostBuild process</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4BswMCfg5@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>2.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler throws the following error:</p>
+<p>BswM_Lcfg.c: '&lt;Symbol&gt;' undefined, assuming extern returning int</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>In configurations with modules which uses an individual PostBuild process (configured via EcuC/</p>
+<p>EcucGeneral/PostbuildLoadable/IndividualPostBuildLoadableModule)</p>
+<p>AND</p>
+<p>Module is initialized by the BswM via Auto Configuration: Module Initialization.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Adapt the corresponding init action (e.g. INIT_Action_Can_Init) and remove / adapt the access to </p>
+<p>the global configuration pointer in the parameter BswMUserCalloutFunction, so that a valid pointer </p>
+<p>is passed to the modules init function.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>51</p>
+<p><b>ESCAN00090724</b></p>
+<p><b>Global Configuration Data is created as Array but </b></p>
+<p><b>should be a structure</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The EcuM_GlobalConfigRoot is generated as an array EcuM_GlobalPcConfig[n] but should be a </p>
+<p>structure with n elements which can be accessed per variant.</p>
+<p>This lead to an compiler error like the following:</p>
+<p>EcuM_Init_Cfg.c:65:46: error: conflicting type qualifiers for 'EcuM_GlobalConfigRoot'</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always during generation</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Only in PB-S configurations with individual PB modules.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Adaption of the files EcuM_Init_Cfg.h and EcuM_Init_Cfg.c. The adaption of these files is okay </p>
+<p>because these are template files.</p>
+<p>Adapt the EcuM_Init_Cfg.h as follows:</p>
+<p>...</p>
+<p>extern CONST(EcuM_GlobalConfigRootType, ECUM_CONST) EcuM_GlobalConfigRoot; </p>
+<p>...</p>
+<p>Adapt the EcuM_Init_Cfg.c as follows:</p>
+<p>....</p>
+<p>CONST(EcuM_GlobalConfigRootType, ECUM_CONST) EcuM_GlobalConfigRoot =</p>
+<p>{</p>
+<p>&lt;CONTENT&gt;</p>
+<p>};</p>
+<p>....</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>52</p>
+<p><b>ESCAN00090803</b></p>
+<p><b>Windows states that the OS generator does not </b></p>
+<p><b>work anymore</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Generator</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.16.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Windows states that the OS generator does not work anymore</p>
+<p>- no output is generated</p>
+<p>- no error message will be displayed</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When working with Autosar XML configurations</p>
+<p>This issue cannot occur when working with OIL files</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If the short name of the choice container &quot;OsIsrUseSpecialFunctionName&quot; is changed (and not </p>
+<p>longer &quot;OsIsrUseSpecialFunctionName&quot;).</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The choice container must be named &quot;OsIsrUseSpecialFunctionName&quot;</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>53</p>
+<p><b>ESCAN00090998</b></p>
+<p><b>Configuration tool reports Rte90005 exception </b></p>
+<p><b>because of java.lang.IllegalArgumentException</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Asr4@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.08.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The configuration tool reports Rte90005 - Generator (MICROSAR RTE Generator) failure, because </p>
+<p>of an exception </p>
+<p>- Exception in Rte generator during Generation encountered: java.lang.IllegalArgumentException</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happen during generation phase.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This can happen sometimes in configurations that contain RTE errors found in calculation or </p>
+<p>validation phase.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Solving the reported RTE errors messages.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>54</p>
+<p><b>ESCAN00091041</b></p>
+<p><b>Compiler error: syntax error : identifier </b></p>
+<p><b>'Dem_Cfg_StorageConditionStateIterType'</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Asr4Dem@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>9.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>If no DemStorageConditionGroup are used;</p>
+<p>Compiler errors in Dem_Lcfg.h due to missing / undefined type:</p>
+<p>syntax error : identifier 'Dem_Cfg_StorageConditionStateIterType'</p>
+<p>syntax error : ';' </p>
+<p>If Storage condition groups are configured, but none are used:</p>
+<p>Compiler errors in Dem.c:</p>
+<p>error C2065: 'DEM_CFG_NO_STORAGECONDITIONGROUPTABLEIDXOFEVENTTABLE' : undeclared </p>
+<p>identifier</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>DemStorageConditionSupport == True</p>
+<p>AND</p>
+<p>Some DemStorageCondition containers are configured</p>
+<p>AND</p>
+<p>No DemEventParameter/DemEventClass/DemStorageConditionGroupRef are used, so eventually </p>
+<p>the storage condition support is unused.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Set DemStorageConditionSupport == False</p>
+<p>OR</p>
+<p>Create at least one DemStorageConditionGroup</p>
+<p>AND Reference at least one DemStorageCondition in that DemStorageConditionGroup</p>
+<p>AND Reference at least one DemStorageConditionGroup in a DemEventParameter/DemEventClass/</p>
+<p>DemStorageConditionGroupRef</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>55</p>
+<p><b>ESCAN00091118</b></p>
+<p><b>EcuM causes a Rte Det error (RTE_E_DET_UNINIT) </b></p>
+<p><b>in the shutdown sequence while the Nvm write all </b></p>
+<p><b>is performed</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4EcuM@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>The Rte throws a Det error with the ID RTE_E_DET_UNINIT during the shutdown sequence.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always during the NvM_WriteAll() is performed.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Only in configurations with all the following parameters are set to true:</p>
+<p>/ActiveEcuC/EcuM/EcuMGeneral/EcuMEnableFixBehavior</p>
+<p>/ActiveEcuC/EcuM/EcuMFixedGeneral/EcuMModeSwitchRteAck</p>
+<p>/ActiveEcuC/EcuM/EcuMFixedGeneral/EcuMIncludeNvramMgr</p>
+<p>/ActiveEcuC/Rte/RteGeneration/RteDevErrorDetect</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The only workaround is to filter this DET message.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>56</p>
+<p><b>ESCAN00091136</b></p>
+<p><b>Compiler error: 'Fls_Cancel' undefined; assuming </b></p>
+<p><b>extern returning int</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>If_AsrIfFee@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler issues the following error:</p>
+<p>1&gt; Fee_Processing.c</p>
+<p>1&gt;..\..\..\..\external\BSW\Fee\Fee_Processing.c(1818): error C4013: 'Fls_Cancel' undefined; </p>
+<p>assuming extern returning int</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens in all configurations where Fee is used with FLS Driver and 'Fls_Cancel' API is </p>
+<p>disabled in FLS.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Enable 'Fls_Cancel' API in FLS Driver.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>57</p>
+<p><b>ESCAN00091277</b></p>
+<p><b>Compiler error: multiple variable declarations for </b></p>
+<p><b>data conversion in task</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Core@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.12.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>1.13.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>There are multiple data declarations of type </p>
+<p>&lt;dataType&gt; dataSig&lt;dataType&gt;; </p>
+<p>at the beginning of a task.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Implicit read or write accesses are configured for data elements mapped to the system signal with </p>
+<p>data conversion and the same base type. In addition, the data accesses have to be used by </p>
+<p>multiple runnables within the same task.</p>
+<p> </p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available. Try to modify one of the conditions leading to the error.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>58</p>
+<p><b>ESCAN00091373</b></p>
+<p><b>RTE01064 error in case a BSW module provides </b></p>
+<p><b>core service SWCs with mapped server runnables</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Asr4@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.09.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>RTE generation is incorrectly aborted with an RTE01064 error message.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During generation.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens when the configuration contains multiple service SWCs for the same BSW module.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Do not map the server runnable.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<p><b>ESCAN00091455</b></p>
+<p><b>A RuntimeException &quot;unknown DataTapeRep </b></p>
+<p><b>enumeration&quot; for sint64 is thrown</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>6.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.03.01</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>A RuntimeException &quot;unknown DataTapeRep enumeration&quot; for sint64 is thrown at generation time.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always and immediately under specific circumstances. See in which configuration does this </p>
+<p>happen.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Any configuration using the EComStackDataTypeRep sint64.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>59</p>
+<p><b>ESCAN00091629</b></p>
+<p><b>Use of uninitialized value in case no core with id 0 </b></p>
+<p><b>exists</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Core@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>RTE generator aborts with use of uninitialized value.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During generation.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens when the configuration contains no OsApplication that is assigned to core 0.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Create an OsApplication an assign it to core 0.</p>
+<p>Add a task to the OsApplication.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>60</p>
+<p><b>ESCAN00091780</b></p>
+<p><b>Compiler error: Pim variable name conflicts with </b></p>
+<p><b>parameter name of server runnable in RteAnalyzer </b></p>
+<p><b>stub</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Core@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.09.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>RteAnalyzer reports a compilation error.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The error is issued by the compiler during compilation of the code in case the configuration is as </p>
+<p>described below.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>This happens when the configuration contains a per instance memory with the same name as an </p>
+<p>argument for a client-/server operation.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Rename the per instance memory.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>61</p>
+<p><b>ESCAN00091872</b></p>
+<p><b>RTE950005 when the configuration contains AR3 </b></p>
+<p><b>modules</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Asr4@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>4.13.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>RTE generation aborts with a class cast exception.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>During generation.</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When the configuration contains BSWMD modules with AR3 schema.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Delete the MODULE-DESCRIPTION-REF for all AR3 modules in the BSWMD.</p>
+<p>Ignore the Cfg00028 A module configuration does not reference a bsw implementation messages</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<p><b>2.4 Not Released Functionality</b></p>
+<p>Not released functionalities are modules and features that have not yet passed a complete </p>
+<p>development cycle (they are e.g. not or only partly tested). For serial production projects the </p>
+<p>integrator has to ensure that all BETA features are disabled as indicated. If a ESCAN affects a </p>
+<p>complete BSW module, the module must not be used for serial production.</p>
+<p><b>Index</b></p>
+<p>ESCAN00084471</p>
+<p>BETA version - the BSW module has a feature with BETA state (FEAT-1093)</p>
+<p>Rte_Core@Implementation</p>
+<p>ESCAN00087538</p>
+<p>BETA version - the module is in BETA state</p>
+<p>Rte_Analyzer@Application</p>
+<p>ESCAN00090630</p>
+<p>BETA version - the BSW module has a feature with BETA state (FEAT-1810)</p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p>ESCAN00091210</p>
+<p>BETA version - the BSW module has a feature with BETA state (FEAT-1726)</p>
+<p>Rte_Core@Implementation</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>62</p>
+<p><b>ESCAN00084471</b></p>
+<p><b>BETA version - the BSW module has a feature with </b></p>
+<p><b>BETA state (FEAT-1093)</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Core@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.08.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What is the impact of BETA software:</p>
+<p>-------------------------------------------------------------------</p>
+<p>BETA software </p>
+<p>- must not be used in productive projects as they may result in unpredictable ECU behavior</p>
+<p>- may not provide all features intended for the productive project</p>
+<p>- is not or only partly tested and not all quality measures have taken place</p>
+<p> </p>
+<p>Which functionality is BETA:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The following feature/function is in BETA state. </p>
+<p>- FEAT-1093: Support of different strategies for writing NV data in Nv Block SWCs</p>
+<p>To ensure that only productive code is used verify that:</p>
+<p>- no cyclic or on data reception triggered runnables in a Nv Block SWC are used</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p><b>ESCAN00087538</b></p>
+<p><b>BETA version - the module is in BETA state</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Analyzer@Application</p>
+<p><i><b>First affected version:</b></i></p>
+<p>0.05.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What is the impact of BETA software:</p>
+<p>-------------------------------------------------------------------</p>
+<p>BETA software </p>
+<p>- must not be used in productive projects as they may result in unpredictable ECU behavior</p>
+<p>- may not provide all features intended for the productive project</p>
+<p>- is not or only partly tested and not all quality measures have taken place</p>
+<p> </p>
+<p>Which functionality is BETA:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The complete module is in BETA state</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>63</p>
+<p><b>ESCAN00090630</b></p>
+<p><b>BETA version - the BSW module has a feature with </b></p>
+<p><b>BETA state (FEAT-1810)</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>12.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What is the impact of BETA software:</p>
+<p>-------------------------------------------------------------------</p>
+<p>BETA software </p>
+<p>- must not be used in productive projects as they may result in unpredictable ECU behavior</p>
+<p>- may not provide all features intended for the productive project</p>
+<p>- is not or only partly tested and not all quality measures have taken place</p>
+<p> </p>
+<p>Which functionality is BETA:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The following feature/function is in BETA state. </p>
+<p>- Adapt DCM and DEM to FCA Requirements</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products. </p>
+<p><b>ESCAN00091210</b></p>
+<p><b>BETA version - the BSW module has a feature with </b></p>
+<p><b>BETA state (FEAT-1726)</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Core@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.12.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What is the impact of BETA software:</p>
+<p>-------------------------------------------------------------------</p>
+<p>BETA software </p>
+<p>- must not be used in productive projects as they may result in unpredictable ECU behavior</p>
+<p>- may not provide all features intended for the productive project</p>
+<p>- is not or only partly tested and not all quality measures have taken place</p>
+<p> </p>
+<p>Which functionality is BETA:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The following feature/function is in BETA state. </p>
+<p>- This feature allows connection between Nv ports and S/R ports </p>
+<p>To ensure that only productive code is used verify that:</p>
+<p>- no Nv port is connected with a S/R port</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>64</p>
+<p><b>2.5 Compiler Warnings </b></p>
+<p>As a service we also provide the known compiler warnings. The occurrence of a compiler warning </p>
+<p>may depend on the used basic software configuration and compiler settings.</p>
+<p><b>Index</b></p>
+<p>ESCAN00067159</p>
+<p>Compiler warning: cast truncates constant value</p>
+<p>MemService_AsrNvM@Implementation</p>
+<p>ESCAN00074793</p>
+<p>Compiler warning: Condition is always constant</p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p>ESCAN00081825</p>
+<p>Compiler warning: non-portable OS code compiled with --asm_warnings</p>
+<p>Os_PlatformRh850Gen6@Implementation</p>
+<p>ESCAN00087501</p>
+<p>Compiler warning: &quot;signed/unsigned mismatch&quot; due to missing cast in 0:N or </p>
+<p>1:N indirections</p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p>ESCAN00088061</p>
+<p>BswM_Lcfg.c: warning: 'function' : conversion from 'const </p>
+<p>BswM_ImmediateUserStartIdxOfModeReqeustMappingType' to </p>
+<p>'BswM_SizeOfImmediateUserType', possible loss of data</p>
+<p>SysService_Asr4BswMCfg5@GenTool_GeneratorMsr</p>
+<p>ESCAN00088362</p>
+<p>Compiler warning: &quot;cast truncates constant value&quot; with signed data</p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p>ESCAN00089832</p>
+<p>Compiler warning: GHS internal MISRA checker finds violations</p>
+<p>Os_CoreGen6@Implementation</p>
+<p>ESCAN00091367</p>
+<p>Compiler warning: unreferenced local variable for data conversion in task</p>
+<p>Rte_Core@Implementation</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>65</p>
+<p><b>ESCAN00067159</b></p>
+<p><b>Compiler warning: cast truncates constant value</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>MemService_AsrNvM@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>3.08.01</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>&gt;..\..\bsw\nvm\nvm_crc.c(229) : warning C4310: cast truncates constant value</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>CANoeEmu + VS2008</p>
+<p>It depends on definition of uint16_least: Warning occures only if uint16_least is not of type int.</p>
+<p> </p>
+<p>Hint:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler warning is known and has been analyzed thoroughly for its impact on the code. </p>
+<p>Nevertheless it will not be fixed, because the cast confirms and enforces this behavior (i.e. the </p>
+<p>value SHALL be truncated, if necessary).</p>
+<p>Additionally: Why uint16_least is not (unsigned) int? -&gt; this data type fulfills all requirements on </p>
+<p>a 16 bit unsigned value...</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround necessary.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>66</p>
+<p><b>ESCAN00074793</b></p>
+<p><b>Compiler warning: Condition is always constant</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Diag_Asr4Dem@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>4.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler warning 'Condition is always constant'</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Configurations without DTCs</p>
+<p>AND</p>
+<p>Precompile configuration</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning can be ignored</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>67</p>
+<p><b>ESCAN00081825</b></p>
+<p><b>Compiler warning: non-portable OS code compiled </b></p>
+<p><b>with --asm_warnings</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_PlatformRh850Gen6@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>When compiling the OS files, the compiler issues several warnings when compiling with the option </p>
+<p>--asm_warnings.</p>
+<p>The warning is: &quot;warning #1546-D: asm constructs are non-portable&quot;</p>
+<p>Those warnings can safely be ignored. The OS has non portable code inside and in case of inline </p>
+<p>assembly the compiler issues warnings if used with --asm_warnings</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>the warnings will be issued when compiling the OS with the compiler option --asm_warnings.</p>
+<p> </p>
+<p>Hint:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The compiler warning is known and has been analyzed thoroughly for its impact on the code. </p>
+<p>Nevertheless it will not be fixed as the OS is non-portable.</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>It is possible to compile the OS without this option and to compile all other sources / modules </p>
+<p>with this option.</p>
+<p>If OS is compiled with this option, then it is safe to ignore the issued warnings.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>68</p>
+<p><b>ESCAN00087501</b></p>
+<p><b>Compiler warning: &quot;signed/unsigned mismatch&quot; </b></p>
+<p><b>due to missing cast in 0:N or 1:N indirections</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.01.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>&quot;Signed/unsigned mismatch&quot; compiler warning due to missing cast for the subtracted indirection </p>
+<p>length. </p>
+<p>The length macro of a 0:N or 1:N indirection calculates the length through endIndex - startIndex.</p>
+<p>This subtraction can be interpreted by the compiler as a signed value without a explicit unsigned </p>
+<p>cast.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>any configuration using 0:N or 1:N Indirections with the length member</p>
+<p>AND</p>
+<p>the indirection configuration class is PRE-COMPILE</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Perform a cast in your embedded code.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>69</p>
+<p><b>ESCAN00088061</b></p>
+<p><b>BswM_Lcfg.c: warning: 'function' : conversion from </b></p>
+<p><b>'const </b></p>
+<p><b>BswM_ImmediateUserStartIdxOfModeReqeustMappingType' </b></p>
+<p><b>to 'BswM_SizeOfImmediateUserType', possible loss </b></p>
+<p><b>of data</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>SysService_Asr4BswMCfg5@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>7.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>BswM_Lcfg.c: warning: 'function' : conversion from 'const </p>
+<p>BswM_ImmediateUserStartIdxOfModeReqeustMappingType' to 'BswM_SizeOfImmediateUserType', </p>
+<p>possible loss of data</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>All</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>70</p>
+<p><b>ESCAN00088362</b></p>
+<p><b>Compiler warning: &quot;cast truncates constant value&quot; </b></p>
+<p><b>with signed data</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>CommonAsr_ComStackLib@GenTool_GeneratorMsr</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.00.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>8.01.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>Compiler warns for &quot;cast truncates constant value&quot; due to cast of subtracted signed data.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>your component generator generates signed data in the configuration class precompile</p>
+<p>AND</p>
+<p>your component generator implementation returns in isReduceConstantData2Define() true</p>
+<p>AND</p>
+<p>your component generator implementation returns in getDataDeduplicationStrategy() != </p>
+<p>EDataDeduplicationStrategy.NONE</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>If the values for isReduceConstantData2Define() and getDataDeduplicationStrategy() are user </p>
+<p>configurable, you have a workaround else not.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>71</p>
+<p><b>ESCAN00089832</b></p>
+<p><b>Compiler warning: GHS internal MISRA checker </b></p>
+<p><b>finds violations</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Os_CoreGen6@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>5.28.80</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>6.20.07</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>MISRA 2004 Rule 10.5: bitwise ~ or &lt;&lt; expression must be immediately cast back to underlying </p>
+<p>type, &quot;unsigned char&quot;</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Always</p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>Configuration independent</p>
+<p> </p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available. However, the code works properly and the compiler warnings can </p>
+<p>simply be ignored.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>72</p>
+<p><b>ESCAN00091367</b></p>
+<p><b>Compiler warning: unreferenced local variable for </b></p>
+<p><b>data conversion in task</b></p>
+<p><i><b>Component@Subcomponent:</b></i></p>
+<p>Rte_Core@Implementation</p>
+<p><i><b>First affected version:</b></i></p>
+<p>1.12.00</p>
+<p><i><b>Fixed in versions:</b></i></p>
+<p>1.13.00</p>
+<p><i><b>Problem Description:</b></i></p>
+<p>What happens (symptoms):</p>
+<p>-------------------------------------------------------------------</p>
+<p>There are unnecessary data declarations of type </p>
+<p>&lt;dataType&gt; dataSig&lt;dataType&gt;; </p>
+<p>at the beginning of a task.</p>
+<p>When does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The warning is issued by the compiler during compilation of the code in case the configuration is </p>
+<p>as described below. </p>
+<p>In which configuration does this happen:</p>
+<p>-------------------------------------------------------------------</p>
+<p>When all of the following conditions are fulfilled:</p>
+<p>- an P-Port is connected to an internal R-Port and an external P-Port</p>
+<p>- the data element of the external P-Port is mapped to a system signal with data conversion</p>
+<p>- an implicit read accesses is configured for the R-Port</p>
+<p>- a write access is configured for the internal P-Port and it is either not implicit or not mapped to </p>
+<p>the same task</p>
+<p>- there are no other implicit accesses using data conversion with the same basetype in the task on </p>
+<p>which the runnable with the implicit read access is mapped</p>
+<p> </p>
+<p><i><b>Resolution Description:</b></i></p>
+<p>Workaround:</p>
+<p>-------------------------------------------------------------------</p>
+<p>No workaround available. Try to modify one of the conditions leading to this warning.</p>
+<p>Resolution:</p>
+<p>-------------------------------------------------------------------</p>
+<p>The described issue is corrected by modification of all affected work-products.</p>
+<p> </p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>73</p>
+<p><b>3. New Issues for Information</b></p>
+<p>Issues which should not have an effect on the usage of the license as the issues are relevant for </p>
+<p>use cases other than those defined in the questionnaire. The list contains issues that have been </p>
+<p>detected since the last report.</p>
+<p>Issues listed in this section are not relevant for the use case that has been documented in the </p>
+<p>questionnaire provided to Vector. However, the issues may be relevant for other use cases.  Also </p>
+<p>issues that have been accepted or are tolerated by the OEM (as defined in the questionnaire) are </p>
+<p>reported here. </p>
+<p>No issue to be reported.</p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>74</p>
+<p><b>4. Report Legend</b></p>
+<h1 style="page-break-before:always; "></h1>
+<p><b>Issue Report</b></p>
+<p>75</p>
+<p><b>5. Quality Management Contact</b></p>
+<p>Quality Management </p>
+<p>Productline Embedded Software (PES)  </p>
+<p> </p>
+<p>Vector Informatik GmbH  </p>
+<p>Ingersheimer Str. 24  </p>
+<p>D-70499 Stuttgart  </p>
+<p> </p>
+<p>Phone: +49 711 80670-3700</p>
+<p>Fax: +49 711 80670-399  </p>
+<p>eMail: QualityPES@vector.com</p>
+</body>
+</html>
+{% endraw %}
